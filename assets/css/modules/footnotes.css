@@ -1,0 +1,61 @@
+
+
+.pagedjs_note[data-footnote-call]::after{
+    font-weight: bold;
+}
+
+
+
+/* CALL NOTES */
+.pagedjs_note[data-footnote-call]::after{ 
+    position: relative;
+    top: -2px;
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+
+/* NOTES */
+
+.pagedjs_footnote_area .pagedjs_note{
+    display: block;
+    position: relative;
+    font-size: var(--font-size-small);
+    line-height: calc(var(--baseline)*0.75);
+    padding-left: 4ch;
+} 
+
+.pagedjs_footnote_area .pagedjs_note::before{
+    font-weight: bold;
+    position: absolute;
+    left: 0px!important;
+}
+
+/* footnote area */
+
+.pagedjs_footnote_area{
+    position: relative;
+  }
+  .pagedjs_footnote_area::before{
+    content: '';
+    display: block;
+    width: 5ch;
+    border-top: 2px solid currentColor;
+    position: absolute;
+    top: calc(var(--baseline)*1.5);
+  }
+
+
+
+/* fix footnote issue of pagedjs */
+
+[data-footnote-marker]::marker{ display: none; }
+
+.pagedjs_footnote_area .pagedjs_note::before{
+    content: attr(data-counter-note) ".";
+}
+
+.pagedjs_note[data-footnote-call]::after{ 
+    content: attr(data-counter-fix);
+}

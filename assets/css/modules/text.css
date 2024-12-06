@@ -1,0 +1,23 @@
+p + p{
+    text-indent: 5ch;
+}
+
+p{
+    /* orphans: 3;
+    widows: 3; */
+}
+
+blockquote{
+    margin-left: 5ch;
+    margin-top: calc(var(--baseline)*0.5);
+    margin-bottom: calc(var(--baseline)*0.5);
+    font-style: italic;
+}
+
+blockquote em{
+    font-style: normal;
+}
+
+blockquote .pagedjs_note{
+    font-style: normal!important;
+}

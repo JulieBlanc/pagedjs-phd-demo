@@ -1,0 +1,76 @@
+
+@page{
+    size: A4;
+    margin-top: 26mm;
+    margin-bottom: 20mm;
+    @bottom-center{
+        content: counter(page);
+    } 
+    @footnote {
+        /* border-top: 2px solid currentColor; */
+        /* margin-top: calc(var(--baseline)*0.5); */
+        padding-top: calc(var(--baseline)*2);
+    }
+  }
+
+  @page:left{
+    margin-left: 26mm;
+    margin-right: 30mm;
+    @top-left{ 
+      content: "Composer avec les technologies du web";
+      font-family: var(--font-sans);
+      font-size: var(--font-size-small);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.01rem;
+    }
+  }
+  
+  @page:right{
+    margin-left: 30mm;
+    margin-right: 36mm;
+    @top-left{ 
+      content: string(title);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-small);
+      font-weight: 500;
+    }
+  }
+
+  .chapter{
+    break-before: right;
+  }
+
+  /* running title */
+  .chapter h2{
+    string-set: title content(text);
+  }
+  
+
+
+/* BLANK PAGE */
+@page:blank{
+@bottom-center{
+  content: none;
+} 
+}
+
+
+/* COVER */
+@page:first{
+  @bottom-center{
+    content: none;
+  } 
+}
+
+
+/* chapter (delete running on first chapter page) */
+.chapter{
+  page: chapter;
+}
+
+@page:chapter{
+  @top-left{ content: none; } /* don’t work for any reason */
+} 
+/* Hack */
+.pagedjs_chapter_first_page .pagedjs_margin-top .pagedjs_margin-content::after{ display: none; }

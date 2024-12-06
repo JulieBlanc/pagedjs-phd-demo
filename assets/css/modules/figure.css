@@ -1,0 +1,30 @@
+body{
+    counter-reset: fig;
+}
+
+figure{
+    width: 100%;
+    counter-increment: fig;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+img{
+    width: 100%;
+}
+
+figcaption{
+   font-family: var(--font-sans);
+   font-size: var(--font-size-small);
+   line-height: calc(var(--baseline)*0.75);
+   font-weight: 500;
+}
+
+figcaption::before{
+    content: "Figure " counter(fig) ". ";
+}
+
+/* SPECIFIC */
+#aldus-maker img{
+    border: 2px solid #cfcfcf;
+}

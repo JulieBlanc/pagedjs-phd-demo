@@ -1,0 +1,59 @@
+.chapter h2{
+    font-size: calc(var(--font-size)*2.6);
+    line-height: calc(var(--baseline)*1.6);
+    font-weight: normal;
+    font-variant: small-caps;
+    margin-bottom: calc(var(--baseline)*4);
+}
+
+.chapter h2::before{
+    display: block;
+    font-variant: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+    line-height: var(--baseline);
+    margin-bottom: var(--baseline);
+}
+
+
+.chapter h3{
+    break-after: avoid;
+    font-size: calc(var(--font-size)*1.8);
+    line-height: calc(var(--baseline)*1.2);
+    font-weight: normal;
+    font-variant: small-caps;
+    margin-top: calc(var(--baseline)*2);
+    margin-bottom: calc(var(--baseline)*1);
+}
+
+
+
+.chapter h4{
+    break-after: avoid;
+    font-weight: 800;
+    font-size: calc(var(--font-size)*1.4);
+    line-height: calc(var(--baseline)*1.2);
+    margin-top: calc(var(--baseline)*2);
+    margin-bottom: calc(var(--baseline)*1);
+}
+
+
+.chapter h5{
+    break-after: avoid;
+    font-weight: 800;
+    font-style: italic;
+    font-size: calc(var(--font-size)*1);
+    line-height: calc(var(--baseline)*1);
+    margin-top: calc(var(--baseline)*1);
+    margin-bottom: calc(var(--baseline)*0.5);
+}
+
+
+
+/* delete margin before first element of the page */
+.chapter[data-split-from] > :first-child{
+    margin-top: 0;
+}

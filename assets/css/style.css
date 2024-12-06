@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+#refs{ display: none; }
+
+
+@import "../fonts/Brill_webfont/stylesheet.css";
+@import "../fonts/WorkSans_webfonts/stylesheet.css";
+
+
+@import "modules/var.css";
+@import "modules/layout.css";
+@import "modules/text.css";
+@import "modules/figure.css";
+@import "modules/footnotes.css";
+@import "modules/titles-counter.css";
+@import "modules/titles.css";
+@import "modules/cover.css";
+@import "modules/frontmatter.css";
