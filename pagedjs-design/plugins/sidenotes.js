@@ -5,13 +5,24 @@ export class sidenotes extends Handler {
         super(chunker, polisher, caller);
         this.type = config.notes.type;
         this.notesClass = ".pagedjs_note";
-        this.position = config.notes.sidenote.position;
-        this.align = config.notes.sidenote.align;
+        this.position = "";
+        this.align = "";
         this.sidenoteOverflow = new Set();
       
     }
 
     afterParsed(content) {
+
+        if(config.notes.sidenote){
+            if(config.notes.sidenote.position){
+                this.position = config.notes.sidenote.position;
+            }
+            if(config.notes.sidenote.align){
+                this.align = config.notes.sidenote.align;
+            }
+        }
+     
+
 
         if(this.type == "sidenote"){
             let notesClass = this.notesClass;
@@ -30,19 +41,20 @@ export class sidenotes extends Handler {
     afterPageLayout(pageElement, page, breakToken) {
         let notes = pageElement.querySelectorAll(".pagedjs_sidenote");
 
+        console.log("afterPAge / this.position = " + this.position);
         let selectedMargin;
-        if (this.position && this.position == "left") { selectedMargin = ".pagedjs_margin-left" }
-        else if (this.position && this.position == "right") { selectedMargin = ".pagedjs_margin-right" }
-        else if (this.position && this.position == "outside" && pageElement.classList.contains('pagedjs_left_page')) {
+        if (this.position == "left") { selectedMargin = ".pagedjs_margin-left" }
+        else if (this.position == "right") { selectedMargin = ".pagedjs_margin-right" }
+        else if (this.position == "outside" && pageElement.classList.contains('pagedjs_left_page')) {
             selectedMargin = ".pagedjs_margin-left"
         }
-        else if (this.position && this.position == "outside" && pageElement.classList.contains('pagedjs_right_page')) {
+        else if (this.position == "outside" && pageElement.classList.contains('pagedjs_right_page')) {
             selectedMargin = ".pagedjs_margin-right"
         }
-        else if (this.position && this.position == "inside" && pageElement.classList.contains('pagedjs_left_page')) {
+        else if (this.position == "inside" && pageElement.classList.contains('pagedjs_left_page')) {
             selectedMargin = ".pagedjs_margin-right"
         }
-        else if (this.position && this.position == "inside" && pageElement.classList.contains('pagedjs_right_page')) {
+        else if (this.position == "inside" && pageElement.classList.contains('pagedjs_right_page')) {
             selectedMargin = ".pagedjs_margin-left"
         } else {
 

@@ -28,11 +28,7 @@
         "type": "sidenote",
         "sections": ".chapter",
         "callInput":".footnote-ref",
-        "containerNotes":"#footnotes",
-        "sidenote": { 
-            "position": "outside",
-            "align": ".first-paragraph"
-        }
+        "containerNotes":"#footnotes"
     }
     
  }

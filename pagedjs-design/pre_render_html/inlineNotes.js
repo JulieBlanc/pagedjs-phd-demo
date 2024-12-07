@@ -12,8 +12,6 @@ export function inlineNotes(config){
 
      if(config.section){
          let sections = document.querySelector("body").querySelectorAll(config.section);
-         console.log("SECTION ------------- ");
-         console.log(sections);
          if(sections.length > 0){
             sections.forEach(function (section, index) {
                 createNotes(section, input, container, type);
@@ -54,7 +52,6 @@ export function inlineNotes(config){
  
  function createNotes(section, input, container, type){
  
-     console.log("create notes");
      let noteContainer = document.querySelector(container);
 
  

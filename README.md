@@ -136,6 +136,8 @@ You can configure some paged.js feature in this file (works only with the pagedj
 
 #### Notes
 
+Determine if you want footnotes
+
 ```json
 "notes": {
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
@@ -146,7 +148,7 @@ You can configure some paged.js feature in this file (works only with the pagedj
     }
 ```
 
-It’s also possible to make sidenotes
+It’s also possible to make sidenotes:
 
 
 ```json
@@ -170,7 +172,7 @@ It’s also possible to make sidenotes
 ### To do
 
 - bibliography at the end
-- sidenotes
+- endnote (to section)
 - web version
 - metadata in pandoc template
 - change name of pagedjs-design to pagedjs-phd
