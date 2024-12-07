@@ -48,11 +48,10 @@
   
 
 
-/* BLANK PAGE */
+/* BLANK PAGE (delete generated elements) */
 @page:blank{
-@bottom-center{
-  content: none;
-} 
+  @bottom-center{ content: none; } 
+  @top-left{ content: none; } 
 }
 
 
