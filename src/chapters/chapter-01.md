@@ -81,7 +81,7 @@ L’activité du sujet est également orientée vers les autres. Cela est vrai 
 
 De même, le sujet est également « dans un rapport à lui-même : il&nbsp;se&nbsp;connaît, se&nbsp;gère et se&nbsp;transforme lui-même[^rapport-lui] ». Les médiations réflexives portent ce rapport du sujet à lui-même lorsqu’elles sont médiatisées par un&nbsp;instrument. 
 
-![Modèle quadripolaire des&nbsp;situations d’activité instrumentée présentant les&nbsp;rapports directs et médiatisés supporté par l’instrument (selon&nbsp;Bationo-Tillon et Rabardel, 2015, p. 113)](../images/modele-rabardel.png){#figure-acritive-instrumentee}
+![Modèle quadripolaire des&nbsp;situations d’activité instrumentée présentant les&nbsp;rapports directs et médiatisés supporté par l’instrument (selon&nbsp;Bationo-Tillon et Rabardel, 2015, p. 113)](modele-rabardel.png){#figure-acritive-instrumentee}
 
 
 #### L'instrument, une entité mixte
