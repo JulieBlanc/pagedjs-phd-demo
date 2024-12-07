@@ -14,10 +14,11 @@ Leur principale position ontologique est associée à l’hypothèse selon laque
 
 Nous nous focalisons plus particulièrement sur deux cadres conceptuels issus des théories de l’activité : 1) l’approche instrumentale portée par Pierre Rabardel et développée depuis une vingtaine d’année dans l’ergonomie francophone, et plus particulièrement à l’Université Paris 8 ; 2) la théorie historico-culturelle de l’activité portée par Yrgö Engeström depuis une trentaine d’années et très développée au plan international. Dans la première approche, la notion d’activité est focalisée sur les individus (et leurs relations) tandis que, dans la deuxième approche, l’accent est mis sur le fonctionnement de l’activité au niveau collectif. Toutefois, avant de présenter les concepts fondamentaux de ces deux approches et ce qui les distingue, intéressons-nous à leur filiation conceptuelle commune et au concept d’activité.
 
-[^bannon-bodker]: Liam Bannon et Susanne Bødker, « Beyond the Interface : Encountering Artifacts in Use », in *Designing Interaction : Psychology at the Human-Computer Interface*, éd. par John M. Carroll (New York : Cambridge University Press, 1991), 227‑53.
-[^rabardel-22-23]: Pierre Rabardel, *Les Hommes et Les Technologies ; Approche Cognitive Des Instruments Contemporains* (Armand Colin, 1995), pp. 22-23. 
-[^comparaison-cognition]:Victor Kaptelinin et Bonnie A.&nbsp;Nardi, *Acting with Technology. Activity Theory and Interaction Design* (The MIT Press, 2006) ; Liam&nbsp;Bannon et Susanne Bødker, « Beyond the Interface : Encountering Artifacts in Use », in&nbsp;*Designing Interaction : Psychology at&nbsp;the Human-Computer Interface*, éd. par John M. Carroll (New York : Cambridge University Press, 1991), 227‑53 ; Viviane Folcher et Pierre Rabardel, « Hommes, artefacts, activités : perspective instrumentale », in *Ergonomie*, Hors collection (Paris&nbsp;cedex 14 : Presses Universitaires de France, 2004), 251‑68.
-[^adamides]: @adamides_activity-based_2020 , p.3.
+
+[^bannon-bodker]: @bannon_beyond_1991.
+[^rabardel-22-23]: @rabardel_hommes-technologies_1995 
+[^comparaison-cognition]: @kaptelinin_acting_2006 ; @bannon_beyond_1991 ; @folcher_hommes_2004.
+[^adamides]: @adamides_activity-based_2020, p.3.
 [^kaptelinin-10-11]: Kaptelinin et Nardi, *Acting with&nbsp;Technology*, *op. cit.*, pp. 10-11. Notre traduction.
 
 
@@ -27,7 +28,7 @@ Nous nous focalisons plus particulièrement sur deux cadres conceptuels issus de
 Le concept d’activité trouve son origine dans la psychologie soviétique des années 1920 et 1930 et tout particulièrement dans les travaux de Lev&nbsp;Vygotsky, et de son disciple Alexis&nbsp;Leontiev. [^kozulin] Il est ainsi enraciné dans le paradigme constructiviste qui tente d’expliquer « les relations entre l’action humaine et les contextes culturels, institutionnels et historiques dans lesquels elle se produit [^wertsh-24] ».
 
 [^kozulin]: Pour une analyse historique de l’émergence du concept d’activité voir : @kozulin_concept_1986.
-[^wertsh-24]: @wertsch_mind_1998 , p. 24.
+[^wertsh-24]: @wertsch_mind_1998, p. 24.
 
 Afin d’expliquer ces relations, Vygotsky[^vygotskij_mind_1981], réinterprété plus tard par Leontiev[^leontev_problem_1974], a élaboré l’idée de médiation en établissant une triade dans laquelle les outils, qu’ils soient culturels, institutionnels ou matériels, façonnent le développement humain en tant qu’intermédiaire entre le sujet et ses intentions. L'activité humaine est ainsi envisagée selon trois pôles : le sujet, l’objet de l’activité (ce vers quoi est dirigée l’activité) et les outils socioculturels. L'idée est alors qu’un sujet ne peut agir directement sur l’objet de son activité sans le biais d’outils médiateurs et à travers des processus d’internalisation et d’externalisation.
 
@@ -43,16 +44,14 @@ En conclusion, le point de vue ontologique et épistémologie porté par Vygotsk
 
 Sur la base de ces postulats posés par la psychologie russe, les théories de l’activité ont évolué et se sont consolidées dans de nouvelles approches ; chacune puisant plus particulièrement dans un concept ou dans l’autre. Nous avons choisi d’inscrire notre travail dans deux de ces approches, l’approche instrumentale et la théorie historico-culturelle de l’activité. Chacune d’elle nous permet alors d’appréhender l’activité de manière plus spécifique au niveau individuel ou au niveau collectif.
 
-[^vygotskij_mind_1981]: Lev Semenovič Vygotski, *Mind in Society : The Development of&nbsp;Higher Psychological Processes* (Cambridge, Mass : Harvard Univ. Press, 1981)..
+[^vygotskij_mind_1981]: @vygotskij_mind_1981.
 [^leontev_problem_1974]: Alexis N. Leontiev, « The Problem of&nbsp;Activity in&nbsp;Psychology », *Soviet Psychology*&nbsp;13, nᵒ 2 (décembre 1974) : 4‑33.
 [^kaptelinin_acting_2006-70]: Kaptelinin et Nardi, *Acting with&nbsp;Technology*, *op. cit*, p. 70. Notre traduction.
 [^bronckart]: @bronckart_vygotsky_1985 , p.13.
-[^simon_sciences_1981]: Herbert A. Simon, *The Sciences of&nbsp;the Artificial* (Cambridge : The MIT Press, 1981).
-[^lemonie_laboratoire_2021-18]: Yannick Lémonie et Vincent Grosstephan, « Le laboratoire du&nbsp;changement : une méthodologie d’intervention au service de&nbsp;la&nbsp;transformation du travail. Perspectives méthodologiques pour une ergonomie développementale », *Revue d’Anthropologie des&nbsp;Connaissances* 15, nᵒ 2 (février 2021), p.18.
+[^simon_sciences_1981]: @simon_sciences_1981.
+[^lemonie_laboratoire_2021-18]: @lemonie_laboratoire_2021, p.18.
 [^kozulin-266]: Kozulin, « The concept of activity in Soviet psychology », *op. cit.*, p. 266.
-[^social-egalite]: Anna Stetsenko et Igor M.&nbsp;Arievitch, « Vygotskian Collaborative Project of Social Transformation : History, Politics, and&nbsp;Practice in Knowledge Construction », in *Collaborative Projects : An Interdisciplinary Study*, Studies in Critical Social Sciences (Leiden, Netherlands : Brill Sense, 2014), 217‑38.
-
-
+[^social-egalite]: @stetsenko_vygotskian_2014.
 
 
 ### L'approche instrumentale
@@ -68,7 +67,7 @@ Reprenant la proposition de Vygosky selon laquelle l’humain interagit avec l�
 L'approche instrumentale part du postulat que toute activité instrumentée est toujours située et que les situations ont une influence déterminante sur l’activité. Il faut ici entendre par instrument, « ce que l’homme met entre lui et son environnement pour atteindre ses buts, que ceux-ci visent à transformer cet environnement ou à le transformer lui-même[^lui-meme] ». L’unité d’analyse proposée par l’approche instrumentale est donc la situation d’activité instrumentée et médiatisée[^bationo-mediatisee] où l’instrument est placé en position de médiation dans le rapport du sujet à lui-même, à autrui et à l’objet de son activité. Afin de détailler ces différentes médiations, nous nous appuyons sur un article de Vivianne&nbsp;Folcher et Pierre&nbsp;Rabardel où ils prennent l’exemple de l’appareil photo numérique comme instrument mobilisé dans l’activité des sujets[^folcher-techno].
 
 [^lui-meme]: @rabardel_pouvoir-agir_2005 .
-[^bationo-mediatisee]: Anne Bationo-Tillon et&nbsp;Pierre&nbsp;Rabardel, « L’approche instrumentale : conceptualiser et&nbsp;concevoir pour le développement », in&nbsp;*L’ergonomie orientée enfants*, éd.&nbsp;par Françoise Decortis (Presses Universitaires de France, 2015), 109‑45.
+[^bationo-mediatisee]: @bationo-tillon_approche-instrumentale_2015.
 [^folcher-techno]: Folcher et Rabardel, « Hommes, artefacts, activités », *op.&nbsp;cit.*, p. 257.
 
 L’activité du sujet est principalement orientée vers l’objet de l’activité à travers des médiations épistémiques et pragmatiques. Les médiations épistémiques visent principalement la prise de connaissance de l’objet (de ses propriétés, de ses évolutions en fonction des actions du sujet…). Elles contribuent donc à la connaissance d’un dispositif technique lorsque celui-ci est placé en tant qu’objet de l’activité : « Dans le cas de l’appareil photo numérique, l’écran permet, par exemple, une médiation épistémique au cliché qui vient d’être réalisé. Le sujet peut l’analyser immédiatement et ainsi décider de le conserver ou de le refaire en tenant compte des caractéristiques de l’image rejetée[^rejetee] ». Les médiations pragmatiques sont orientées vers l’action sur l’objet notamment par des processus de transformation. « L’ensemble des commandes de l’appareil photo numérique permettant la prise de vue ou la manipulation des clichés (modification, destruction…) relève de ce type de médiation[^type-mediation] ». 
@@ -91,7 +90,7 @@ Approfondissons maintenant la notion d’instrument que nous avons jusqu’à pr
 [^mediation-interpersonnelles]: *Idem*.
 [^rapport-lui]: Bationo-Tillon et Rabardel, « L’approche instrumentale : conceptualiser et concevoir pour le développement », *op.&nbsp;cit.*, p. 254.
 [^propre-activite]: Rabardel, *Les hommes et&nbsp;les&nbsp;technologies*, *op.&nbsp;cit*.
-[^leroi-gourhan]: André Leroi-Gourhan, *Le geste et la parole* (Paris, France : Éditions Albin Michel, 1964)
+[^leroi-gourhan]: @leroi-gourhan_geste_1964.
 
 Les instruments sont les moyens de l’action du sujet, en ce sens, ils sont constitués d’une composante liée à l’action. Les instruments sont ainsi des entités mixtes ; ils sont constitués :
 
@@ -112,7 +111,7 @@ Le concept de schème s’appuie sur les travaux de Piaget[^piaget] et Vergnaud[
 L'étude des instruments dans le contexte des activités humaines implique donc une analyse de la manière dont ils sont intégrés dans une activité spécifique. Un instrument est toujours rattaché à une situation et c’est donc dans l’activité, dans l’usage, que les outils techniques peuvent devenir instruments pour les individus[^samurcay]. En cela, l’instrument n’est pas d’emblée offert au sujet, il se développe dans l’activité par des processus de genèses instrumentales. 
 
 
-[^rabardel-moment]: Pierre Rabardel et Gaëtan Bourmaud, « Instruments et systèmes d’instruments », in *Modèles du sujet pour la conception. Dialectiques, activité, développement*, éd. par Pierre Rabardel et Pierre Pastré, Travail & activité humaine (Octarès Éditions, 2005), 211‑29, p. 211.
+[^rabardel-moment]: @rabardel_instruments_2005, p. 211.
 [^samurcay]: @rabardel_apprentissage_2006 .
 
 
@@ -134,8 +133,8 @@ Le concept de genèse instrumentale constitue un outil conceptuel intéressant p
 Ainsi l’instrumentalisation désigne le processus par lequel le sujet met l’artefact « à sa main » en fonction des caractéristiques de l’outil (ses potentialités et ses contraintes)[^trouche-contraintes] pour l’adapter à ses besoins en fonction des situations qu’il rencontre dans son activité. 
 
 [^rabardel-determiner]: Rabardel, *Les hommes et&nbsp;les technologies*, *op.&nbsp;cit.*, p. 111.
-[^materiellement]: Pascal Béguin, « Concevoir pour&nbsp;les genèses professionnelles », in *Modèles du sujet pour la&nbsp;lconception : dialectiques, activités, développement*, éd. par Pierre Pastré et Pierre Rabardel, Octarès (Toulouse, 2005), 31‑52, p. 13.
-[^trouche-contraintes]: Luc Trouche, « Environnements Informatisés et Mathématiques : quels usages pour quels apprentis-sages ? », *Educational Studies in Mathematics, 55, 181-197*, mars 2004.
+[^materiellement]: @beguin_concevoir_2005, p. 13.
+[^trouche-contraintes]: @trouche_environnements_2004.
 
 
 ###### Les processus d’instrumentation 
@@ -152,7 +151,7 @@ Selon Rabardel, les processus de genèses instrumentales impliquent, de la part 
 
 
 [^rabardel-118]: *Idem*, p. 118.
-[^weill]: Annie Weill-Fassina, Pierre&nbsp;Rabardel, et Danièle Dubois, éd., *Représentations pour l’action* (Toulouse, France : Octares éd, 1993).
+[^weill]: @rabardel_micro-geneses_1993.
 [^weill-representations]: Pierre Rabardel, « Représentations dans des situations d’Activités Instrumentées », in&nbsp;*Représentations pour l’action*, *op.&nbsp;cit.*, 97‑111, p. 108.
 
 Il convient aussi de souligner que les schèmes d’utilisation ont à la fois une dimension privée et une dimension sociale. La dimension privée est propre à chaque individu. La&nbsp;dimension sociale (c’est-à-dire le fait que le schème soit largement répandu dans un groupe social) tient à ce que les schèmes s’élaborent au cours d’un processus où les individus ne sont pas isolés.
@@ -160,8 +159,6 @@ Il convient aussi de souligner que les schèmes d’utilisation ont à la fois 
 > Les autres utilisateurs, mais aussi les concepteurs des artefacts, contribuent à cette émergence des schèmes. Les schèmes font l’objet de transmissions, de transferts, plus ou moins formalisés : depuis les renseignements transmis d’un utilisateur à l’autre, jusqu’aux formations structurées autour des systèmes techniques complexes, en passant par les divers types d’aides à l’utilisateur (notices, modes d’emploi, assistances diverses incorporées ou non dans l’artefact lui-même). C’est pourquoi nous parlerons de ‹ schèmes sociaux d’utilisation ›. C’est ce caractère social des schèmes d’utilisation qui rend possible l’invention et la diffusion d’artefacts au sein d’une même collectivité, et qui rend interchangeables les artefacts appartenant à une même classe. Vygotski dans la perspective historico-culturelle avait déjà exprimé l’idée que les formes et fonctions des comportements artificiels ou instrumentaux sont le produit du développement historique et des acquisitions successives de l’humanité. Les schèmes d’utilisations capitalisent, dans leur forme sociale, ces acquis historico-culturels en matière d’action.[^matiere-action] 
 
 [^matiere-action]: Béguin et Rabardel, « Concevoir pour les activités instrumentées », *op.&nbsp;cit.*, p.11. 
-
-
 
 L’instrumentation et l’instrumentalisation sont donc deux processus corrélatifs qui résultent de l’activité du sujet. Ce qui les distingue, c’est leur orientation. « Dans le processus d’instrumentation, l’activité est en développement, alors que dans le processus d’instrumentalisation, c’est l’artefact qui évolue. Les deux processus contribuent solidairement, et souvent de manière dialectique, à la constitution et à l’évolution des instruments, même si, selon les situations, l’un d’eux peut être plus développé, dominant, voire seul mis en œuvre[^mise-en-œuvre]. »
 
@@ -172,15 +169,13 @@ La genèse instrumentale peut donc être comprise comme un processus de transfor
 [^mise-en-œuvre]: Béguin, « Concevoir pour les&nbsp;genèses professionnelles », *op.&nbsp;cit.*, p. 10.
 
 
-
-
 #### L'activité constructive ou le développement de l’activité
 
 Le processus de genèse instrumentale est donc crucial lorsque l’on s’intéresse à l’appropriation d’un dispositif technique par des sujets[^folcher-constructive]. 
 Ces transformations peuvent être durables et peuvent devenir des ressources pour l’activité future. On distingue pour cela deux types d’orientations dialectiques dans l’activité : une dimension productive et une dimension constructive. L'activité productive est « une activité finalisée, orientée et contrôlée par le sujet psychologique pour réaliser les tâches qu’il doit accomplir en fonction des caractéristiques de la situation[^samurcay-166] ». L'élaboration de ressources internes et externes (instruments, savoirs, schèmes, etc.) est l’activité constructive par laquelle l’humain produit les conditions et les ressources pour l’activité future. L'activité constructive est ainsi une activité orientée et contrôlée par le sujet qui la réalise pour construire et faire évoluer ses compétences en fonction des situations et de son domaine professionnel[^rabardel-apprentissage]. Elle s’inscrivent donc dans des horizons temporels longs « caractéristiques du développement du sujet[^pouvoir] ».
 
-[^folcher-constructive]: Viviane Folcher, « Des formes de l’activité aux formes des instruments : un exemple dans le champ du travail collectif assisté par ordinateur. Interface homme-machine » (Thèse de doctorat, Université Paris VIII Vincennes-Saint Denis, 1999).
-[^samurcay-166]: Pierre Rabardel et Renan Samurçay, « Modèles pour l’analyse de&nbsp;l’activité et des compétences, propositions », in *Recherches en&nbsp;didactique professionnelle*, éd. par Renan Samurçay et Pierre Pastré (Toulouse : Octarès, 2004), 163‑80, p. 166.
+[^folcher-constructive]: @folcher_formes_1999.
+[^samurcay-166]: @rabardel_modeles_2004, p. 166.
 [^rabardel-apprentissage]: Rabardel et Samurçay, *De&nbsp;l’apprentissage par les artefacts à&nbsp;l’apprentissage médiatisé par les instruments*, *op.&nbsp;cit.*
 [^pouvoir]: Rabardel, « Instrument, activité et&nbsp;développement du pouvoir d’agir », *op.&nbsp;cit.*, p. 254.
 
@@ -202,8 +197,6 @@ L’activité constructive est également orientée vers le développement des p
 > Le sujet capable est à la fois sujet d’activités productives au quotidien et sujet d’activités constructives, par lesquelles il modèle ses systèmes de ressources et de valeurs, ses domaines, situations et conditions d’activités pour le futur. Il est sujet en développement, et sujet de son développement, sur l’ensemble des dimensions pertinentes et valides pour ses activités. Le sujet capable est un sujet de l’agir en devenir, dont le développement se réalise à chaque moment par les activités constructives, sous des formes et selon des modalités qui articulent son histoire propre et celle de ses communautés, collectivités et groupes sociaux d’appartenance et de vie, dans un triple mouvement d’appropriation, de renouvellement et de mise en patrimoine.[^sujet-capable] 
 
 [^sujet-capable]: Pierre Rabardel, « Instrument subjectif et développement du pouvoir d’agir », in *Modèles du sujet pour la conception : dialectiques activités développement*, *op.&nbsp;cit.*, p. 13.
-
-
 
 
 
