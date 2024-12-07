@@ -9,16 +9,16 @@ window.addEventListener('load', async () => {
 
   console.log("// PAGEDJS DESIGN -------------- // ")
   // Load stylesheets and js
-  loadCSS('/pagedjs-design/css/pagedjs.css');
-  loadJS('/pagedjs-design/dependencies/csstree.min.js');
+  loadCSS('/pagedjs-phd/css/pagedjs.css');
+  loadJS('/pagedjs-phd/dependencies/csstree.min.js');
 
 
   // Load global configuration file
   try {
-    const response = await fetch('/pagedjs-design-config.json');
+    const response = await fetch('/pagedjs-phd-config.json');
     window.config = await response.json();
   } catch (error) {
-    console.error('Error loading pagedjs-design-config.json:', error);
+    console.error('Error loading pagedjs-phd-config.json:', error);
   }
 
   // Wait for preRenderHTML() to complete
@@ -63,9 +63,9 @@ function displayContent(contentdoc, cssPaths, config) {
   }
 
   // Add CSS for plugins
-  cssPaths.push("/pagedjs-design/pre_render_html/createToc.css");
+  cssPaths.push("/pagedjs-phd/pre_render_html/createToc.css");
   if(window.config.notes && window.config.notes.type == "footnote"){
-    cssPaths.push("/pagedjs-design/plugins/footnotes.css");
+    cssPaths.push("/pagedjs-phd/plugins/footnotes.css");
   }
 
   // Preview the content using Paged.js

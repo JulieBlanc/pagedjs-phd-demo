@@ -90,7 +90,7 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
 
 - `update-image-paths.lua` → a script for Pandoc to update the image file paths by standardizing them to the base directory (`../src/images/`)
 
-- `js/` → Folder where you can add your custom Javascript. Use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js. Don’t forget to load your custom file in `pagedjs-design-config.json`
+- `js/` → Folder where you can add your custom Javascript. Use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js. Don’t forget to load your custom file in `pagedjs-phd-config.json`
 
 ### output/
 
@@ -98,7 +98,7 @@ Create this directory if doesn’t exist, before launching Pandoc command. It’
 
 
 
-### pagedjs-design/
+### pagedjs-phd/
 
 A ready-to-start Paged.js environnement with some preloaded plugins and interface to see pages. Licence: MIT licence, Julie Blanc.
 
@@ -106,9 +106,9 @@ Normaly, you don’t need to touch anything here.
 
 
 
-### pagedjs-design-config.json
+### pagedjs-phd-config.json
 
-You can configure some paged.js feature in this file (works only with the pagedjs-design environnement):
+You can configure some paged.js feature in this file (works only with the pagedjs-phd environnement):
 
 #### Update the path of your stylesheet
 
@@ -193,9 +193,8 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 
 ### To do
 
-- bibliography at the end
 - endnote (to section)
 - web version
-- metadata in pandoc template
-- change name of pagedjs-design to pagedjs-phd
+- metadata in pandoc template for cover ?
+- change name of pagedjs-phd to pagedjs-phd
 - ajouter une page si ce n’est pas un multiple de 2 ou 4
