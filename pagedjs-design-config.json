@@ -25,7 +25,7 @@
      },
      "notes":{
         "enabled": true,
-        "type": "footnote",
+        "type": "sidenote",
         "position": "outside",
         "chapters":".chapter",
         "callInput":".footnote-ref",

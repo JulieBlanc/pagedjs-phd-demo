@@ -126,7 +126,7 @@ You can configure some paged.js feature in this file (works only with the pagedj
            ".chapter h3" 
 						// List of title levels to include in the table of contents; additional levels can be added or removed
         ],
-        "style": "leaders", // Add leaders dots for the style  of the table of contents
+        "style": "leaders", // Default visual style of the toc, only "leaders" option is avaible, if you don’t want it, write  "false"
         "counters": "true", // Add counters before titles (if you dont’t want, set to "false")
         "beforepagenumber": "" // Customizes text or symbols to display before the page number (if applicable)
      },
@@ -136,7 +136,7 @@ You can configure some paged.js feature in this file (works only with the pagedj
 
 #### Notes
 
-```
+```json
 "notes": {
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
         "type": "footnote", // Specifies the type of notes: "footnote" or "sidenote"
@@ -159,3 +159,4 @@ You can configure some paged.js feature in this file (works only with the pagedj
 - sidenotes
 - web version
 - metadata in pandoc template
+- change name of pagedjs-design to pagedjs-phd

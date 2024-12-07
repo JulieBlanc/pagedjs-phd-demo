@@ -1,0 +1,37 @@
+.pagedjs_left_page .sidenote-container{
+    padding-left: 6mm;
+    padding-right: 3mm;
+}
+
+.pagedjs_right_page .sidenote-container{
+    padding-left: 3mm;
+    padding-right: 6mm;
+}
+
+.sidenote-container .pagedjs_note{
+    display: block;
+    position: relative;
+    font-size: var(--font-size-small);
+    line-height: calc(var(--baseline)*0.75);
+    margin-bottom: calc(var(--baseline)*0.5);
+}
+
+
+/* MARKER ----------------------- */
+.sidenote-container .note-marker::after{
+    content: ". "
+}
+.sidenote-container .note-marker{
+    font-weight:  bold;
+}
+
+
+/* CALL ----------------------- */
+.note-call{
+    position: relative;
+    top: -3px;
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    padding-left: 2px;
+    font-style: normal;
+}

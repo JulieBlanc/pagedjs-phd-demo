@@ -21,3 +21,8 @@ blockquote em{
 blockquote .pagedjs_note{
     font-style: normal!important;
 }
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
