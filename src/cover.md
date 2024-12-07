@@ -1,4 +1,3 @@
-<section id="cover">
 
 - Université Paris 8, Vincennes – Saint Denis / ED 224, EA 349
 - EUR ArTec
@@ -19,4 +18,3 @@ Sous la direction de Anne Bationo-Tillon, la co-direction de&nbsp;Samuel Bianchi
 Soutenue le 7 juin 2023<br>
 au Musée des Arts Décoratifs de Paris
 
-</section>

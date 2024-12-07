@@ -1,5 +1,3 @@
-<section class="chapter chapter-num" id="chapitre-02">
-
 ## Faire état de l’art {data-chapter="2"}
 
 
@@ -527,8 +525,3 @@ Enfin notons que la culture du logiciel libre milite pour la transformation des 
 [^broca-25]: Broca, *Utopie du logiciel libre*, *op.&nbsp;cit.*, p. 25
 [^broca-preface]: *Ibid*, préface ; pp. 10-11. 
 
-
-
-
-
-</section>

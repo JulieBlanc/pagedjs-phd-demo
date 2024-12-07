@@ -1,5 +1,3 @@
-<section class="frontmatter" id="abstract">
-<div lang="en">
 
 # Abstract
 
@@ -14,5 +12,3 @@ Through three empirical studies and the collective design of a tool called paged
 # Keywords {.keywords}
 
 Cultural Historical Activity Theory, Community of practice, <br> Instrumental approach, Development, <br>Graphic design, Layout and typesetting, Web technologies. 
-</div>
-</section>

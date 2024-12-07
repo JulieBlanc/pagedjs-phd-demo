@@ -1,4 +1,4 @@
-.chapter h2{
+section[data-id*="chapter"] h2{
     font-size: calc(var(--font-size)*2.6);
     line-height: calc(var(--baseline)*1.6);
     font-weight: normal;
@@ -6,7 +6,7 @@
     margin-bottom: calc(var(--baseline)*4);
 }
 
-.chapter h2::before{
+section[data-id*="chapter"] h2::before{
     display: block;
     font-variant: none;
     text-transform: uppercase;
@@ -19,7 +19,7 @@
 }
 
 
-.chapter h3{
+[data-id*="chapter"] h3{
     break-after: avoid;
     font-size: calc(var(--font-size)*1.8);
     line-height: calc(var(--baseline)*1.2);
@@ -29,9 +29,7 @@
     margin-bottom: calc(var(--baseline)*1);
 }
 
-
-
-.chapter h4{
+section[data-id*="chapter"] h4{
     break-after: avoid;
     font-weight: 800;
     font-size: calc(var(--font-size)*1.4);
@@ -41,7 +39,7 @@
 }
 
 
-.chapter h5{
+section[data-id*="chapter"] h5{
     break-after: avoid;
     font-weight: 800;
     font-style: italic;
@@ -54,6 +52,6 @@
 
 
 /* delete margin before first element of the page */
-.chapter[data-split-from] > :first-child{
+section[data-id*="chapter"][data-split-from] > :first-child{
     margin-top: 0;
 }

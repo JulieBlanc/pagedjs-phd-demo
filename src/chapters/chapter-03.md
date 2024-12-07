@@ -1,6 +1,3 @@
-<section class="chapter chapter-num" id="chapitre-03">
-
-
 ## Situer la recherche : problématique scientifique et&nbsp;démarche de recherche {data-chapter="3"}
 
 
@@ -70,6 +67,3 @@ L'approche instrumentale nous permettra de décrire très finement comment s’�
 [^methodo-dumez]: Hervé Dumez, *Méthodologie de&nbsp;la&nbsp;recherche qualitative. Les questions clés de la démarche compréhensive*, 2e édition (Vuibert, 2016).
 
 [^methodo-cahour]: Béatrice Cahour et Christian Licoppe, « Confrontations aux traces de son activité : Compréhension, développement et régulation de l’agir dans un monde de plus en plus réflexif », *Revue d’anthropologie des&nbsp;rconnaissances* Vol 4, n 2, nᵒ 2 (septembre 2010) : 243‑53, p. 246.
-
-
-</section>

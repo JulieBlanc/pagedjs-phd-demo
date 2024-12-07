@@ -1,4 +1,4 @@
-<section class="chapter chapter-num" id="chapitre-01">
+
 
 ## Poser les cadres théoriques {data-chapter="1"}
 
@@ -429,14 +429,3 @@ Mais c’est surtout le caractère pratique de cette théorie, ancrée dans les 
 [^barbier]: Jean-Marie Barbier, « Cultures d’action et modes partagés d’organisation des constructions de&nbsp;sens », *Revue d’anthropologie des&nbsp;connaissances*, vol 4, nᵒ 1 (juillet 2010) : 163‑94, p. 171.
 [^adamides-changement]: Adamides, « Activity-Based Analysis of Sociotechnical Change », *op. cit.*, p. 10. Notre traduction.
 [^nicolini-104]: Davide Nicolini, *Practice Theory, Work, and Organization : An&nbsp;Introduction*, First edition (Oxford : Oxford University Press, 2013), p. 104. Notre traduction.
-
-
-
-
-
-
-
-
-
-
-</section>
