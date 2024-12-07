@@ -84,6 +84,8 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
 
 - `update-image-paths.lua` → a script for Pandoc to update the image file paths by standardizing them to the base directory (`../src/images/`)
 
+- `js/` → Folder where you can add your custom Javascript. Use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js. Don’t forget to load your custom file in `pagedjs-design-config.json`
+
 ### output/
 
 Create this directory if doesn’t exist, before launching Pandoc command. It’s where your content is generate
@@ -102,7 +104,7 @@ Normaly, you don’t need to touch anything here.
 
 You can configure some paged.js feature in this file (works only with the pagedjs-design environnement):
 
-#### Upadte the path of your stylesheet
+#### Update the path of your stylesheet
 
 ```json
  "style": {
@@ -165,6 +167,20 @@ It’s also possible to make sidenotes:
     }
 ```
 
+#### Custom Script (handlers)
+
+You can add your custom Javascript. For this, use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js [(see documentation)](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/). Add your files in `/assets/js/` and load your custom file like this:
+
+
+```json
+"customHandlers": {
+    "directory": "/assets/js", // path of the directory
+    "files": [
+        "custom-handler-example-1.js",
+        "custom-handler-example-2.js" // your js files   
+    ]
+}
+```
 
 
 

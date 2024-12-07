@@ -1,9 +1,8 @@
 {
-    "customHandlers": {
-        "directory": "js",
+    "style": {
+        "directory": "/assets/css", 
         "files": [
-            "custom-handler-example-1.js",
-            "custom-handler-example-2.js"
+            "style.css"
         ]
     },
     "toc":{
@@ -16,6 +15,13 @@
         "style":"leaders",
         "counters":"true",
         "beforepagenumber":""
-     }
+     },
+     "customHandlers": {
+        "directory": "/assets/js",
+        "files": [
+            "custom-handler-example-1.js",
+            "custom-handler-example-2.js"
+        ]
+    }
     
  }

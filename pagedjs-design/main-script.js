@@ -68,13 +68,6 @@ function displayContent(contentdoc, cssPaths, config) {
     cssPaths.push("/pagedjs-design/plugins/footnotes.css");
   }
 
-
-  // console.log("FOOTNOTES");
-  // console.log(config.footnote);
-
-  // cssPaths.push("pagedjs-design/plugins/footnotes.css");
-
-
   // Preview the content using Paged.js
   previewer.preview(
     contentdoc,

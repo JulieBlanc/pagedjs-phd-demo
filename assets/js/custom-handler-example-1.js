@@ -1,5 +1,5 @@
 // PreviewHandler.js
-import { Handler } from '../pagedjs-design/paged.esm.js';
+import { Handler } from '/pagedjs-design/paged.esm.js';
 
 export default class myCustomHandler1 extends Handler {
     constructor(chunker, polisher, caller) {
