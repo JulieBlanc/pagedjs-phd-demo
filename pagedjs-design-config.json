@@ -22,6 +22,15 @@
             "custom-handler-example-1.js",
             "custom-handler-example-2.js"
         ]
+    },
+    "notes": {
+        "enabled": true,
+        "type": "footnote", 
+        "chapters": ".chapter", 
+        "callInput": ".footnote-ref", 
+        "containerNotes": "#footnotes"
+
     }
+
     
  }

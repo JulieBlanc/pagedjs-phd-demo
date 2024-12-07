@@ -6,8 +6,6 @@
 
 
 
-#refs{ display: none; }
-
 
 @import "../fonts/Brill_webfont/stylesheet.css";
 @import "../fonts/WorkSans_webfonts/stylesheet.css";
@@ -23,3 +21,4 @@
 @import "modules/titles.css";
 @import "modules/cover.css";
 @import "modules/frontmatter.css";
+@import "modules/biblio.css";

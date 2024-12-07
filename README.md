@@ -155,7 +155,7 @@ It’s also possible to make sidenotes:
 
 ```json
 "notes": {
-        "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
+        "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandoc)
         "type": "sidenote", // Specifies the type of notes: "footnote" or "sidenote"
         "chapters": ".chapter", // where the notes restart
         "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
@@ -192,3 +192,4 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 - web version
 - metadata in pandoc template
 - change name of pagedjs-design to pagedjs-phd
+- ajouter une page si ce n’est pas un multiple de 2 ou 4

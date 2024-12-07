@@ -70,8 +70,6 @@
   page: chapter;
 }
 
-@page:chapter{
+@page chapter:first{
   @top-left{ content: none; } /* don’t work for any reason */
 } 
-/* Hack */
-.pagedjs_chapter_first_page .pagedjs_margin-top .pagedjs_margin-content::after{ display: none; }
