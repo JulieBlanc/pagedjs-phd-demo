@@ -2,7 +2,9 @@
 
 ## Poser les cadres théoriques {data-chapter="1"}
 
-Nous nous intéressons àune nouvelle technologie introduite dans la pratique du design graphique et à ses effets sur cette pratique, elle-même ancrée dans un contexte social. Comme Bannon et Bodker[^bannon-bodker] l’ont souligné, les artefacts techniques ne doivent pas seulement être analysés pour eux-mêmes et de façon isolée, ils doivent aussi être analysés dans leur cadre d’usage qui évolue et se développe dans le temps, dans leur contexte. C'est aussi ce que préconise Rabardel :
+<p class="first-paragraph">
+Nous nous intéressons à une nouvelle technologie introduite dans la pratique du design graphique et à ses effets sur cette pratique, elle-même ancrée dans un contexte social. Comme Bannon et Bodker[^bannon-bodker] l’ont souligné, les artefacts techniques ne doivent pas seulement être analysés pour eux-mêmes et de façon isolée, ils doivent aussi être analysés dans leur cadre d’usage qui évolue et se développe dans le temps, dans leur contexte. C'est aussi ce que préconise Rabardel : 
+</p>
 
 > La technique c’est la façon dont quelqu’un fait quelque chose aécrit l’historien Lynn White dans une formule dont l’intérêt (…) est de nous rappeler que le « quelqu’un est essentiel », parce que c’est lui qui nous indique la bonne échelle. Une technique n’existe que lorsqu’elle est pratiquée, c’est-à-dire lorsqu’elle passe par quelqu’un qui, l’ayant apprise ou inventée, la met en œuvre de façon efficace. Il n’y a pas de technique sans cette efficacité et les habiletés humaines qu’elle implique. C'est donc là où ces habiletés sont produites qu’il faut observer les techniques.[^rabardel-22-23] 
 

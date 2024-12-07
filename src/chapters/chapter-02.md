@@ -3,7 +3,9 @@
 ## Faire état de l’art {data-chapter="2"}
 
 
-Nous nous proposons de diviser cet état de l’art en trois parties. Dans un premier temps, nous retraçons l’évolution historico-culturelle de l’activité de composition en nous basant sur l’idée que les contradictions actuelles d’un système d’activité ne peuvent s’éclairer qu’à la lumière de son histoire passée. Dans un deuxième temps, nous évoquons les relations entretenues entre l’activité de composition et l’histoire du web. Nous y rappelons que le web a principalement été créé pour la publication de documents et nous y discutons les caractéristiques uniques du langage CSS vis-à-vis des pratiques de design graphique. Enfin, dans un troisième temps, nous nous emploierons à contextualiser la culture du logiciel libre et particulièrement les valeurs qui l’encadrent. 
+<p class="first-paragraph">
+Nous nous proposons de diviser cet état de l’art en trois parties. Dans un premier temps, nous retraçons l’évolution historico-culturelle de l’activité de composition en nous basant sur l’idée que les contradictions actuelles d’un système d’activité ne peuvent s’éclairer qu’à la lumière de son histoire passée. Dans un deuxième temps, nous évoquons les relations entretenues entre l’activité de composition et l’histoire du web. Nous y rappelons que le web a principalement été créé pour la publication de documents et nous y discutons les caractéristiques uniques du langage CSS vis-à-vis des pratiques de design graphique. Enfin, dans un troisième temps, nous nous emploierons à contextualiser la culture du logiciel libre et particulièrement les valeurs qui l’encadrent.
+</p>
 
 
 ### Formation historico-culturelle de&nbsp;l’activité de composition

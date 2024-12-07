@@ -6,28 +6,24 @@ export class sidenotes extends Handler {
         this.type = config.notes.type;
         this.notesClass = ".pagedjs_note";
         this.position = config.notes.position;
+        this.align = config.notes.align;
         this.sidenoteOverflow = new Set();
       
     }
 
     afterParsed(content) {
 
-
         if(this.type == "sidenote"){
             let notesClass = this.notesClass;
-
-   
             let notes = content.querySelectorAll(notesClass)
             notes.forEach(function (note, index) {
                 note.style.position = "absolute";
                 note.style.top = "0px";
                 note.style.left = "0px";
                 note.classList.add("pagedjs_sidenote");
-            });
-           
+            });  
         }
 
-       
     }
 
 
@@ -72,32 +68,17 @@ export class sidenotes extends Handler {
             container.className = "sidenote-container";
             marginbox.appendChild(container);
 
-            let paddingTopContainer;
 
-
-            if (this.elemAlignTo == undefined) {
-                paddingTopContainer = 0;
-            } else {
-                let firstElem = pageElement.querySelector(this.elemAlignTo);
+            if(this.align){
+                let paddingTopContainer;
+                let firstElem = pageElement.querySelector(this.align);
+                let pageAera = pageElement.querySelector(".pagedjs_area");
                 if (firstElem) {
-                    let textHeight = firstElem.offsetTop;
-                    let textPadding = parseInt(firstElem.style.paddingTop);
-                    let sidenoteTop;
-
-                    if (textPadding) {
-                        sidenoteTop = textHeight + textPadding;
-
-                    } else {
-                        sidenoteTop = textHeight;
-                    }
-                    paddingTopContainer = sidenoteTop;
-                } else {
-                    paddingTopContainer = 0;
+                    paddingTopContainer = firstElem.getBoundingClientRect().top - pageAera.getBoundingClientRect().top;
                 }
+                container.style.paddingTop = paddingTopContainer + "px";
             }
-
-
-            container.style.paddingTop = paddingTopContainer + "px";
+            
 
 
             // Put notes from previous page ------------------------
@@ -136,7 +117,16 @@ export class sidenotes extends Handler {
 
 
 
+// FROM TOP
+// function fromTop(parent, child){
+//     const parentRect = parentElement.getBoundingClientRect();
+//     const childRect = childElement.getBoundingClientRect();
 
+//     const childHeight = childRect.height;
+//     const childOffset = childRect.top - parentRect.top;
+
+//     return childOffset
+// }
 
 
 // MARGINS

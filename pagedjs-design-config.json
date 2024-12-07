@@ -27,6 +27,7 @@
         "enabled": true,
         "type": "sidenote",
         "position": "outside",
+        "align": ".first-paragraph",
         "chapters":".chapter",
         "callInput":".footnote-ref",
         "containerNotes":"#footnotes"

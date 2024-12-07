@@ -6,7 +6,9 @@
 
 ### L'activité de composition 
 
-Les cadres théoriques dans lesquels cette recherche s’inscrit nous invitent à conceptualiser les&nbsp;pratiques des designers graphiques qui nous intéressent du&nbsp;point de&nbsp;vue de&nbsp;l’activité. En&nbsp;ce&nbsp;sens, nous&nbsp;employons le&nbsp;terme d’« activité de composition » pour désigner l’activité des designers graphiques engagé·e·s dans la conception, la&nbsp;mise en page et la&nbsp;composition d’ouvrages imprimés. 
+<p class="first-paragraph">
+Les cadres théoriques dans lesquels cette recherche s’inscrit nous invitent à conceptualiser les&nbsp;pratiques des designers graphiques qui nous intéressent du&nbsp;point de&nbsp;vue de&nbsp;l’activité. En&nbsp;ce&nbsp;sens, nous&nbsp;employons le&nbsp;terme d’« activité de composition » pour désigner l’activité des designers graphiques engagé·e·s dans la conception, la&nbsp;mise en page et la&nbsp;composition d’ouvrages imprimés.
+</p>
 
 Nous avons choisi cette désignation pour deux raisons. Premièrement, elle&nbsp;permet de mettre l’accent sur un domaine précis du design graphique, celui de la conception d’ouvrages éditoriaux. En effet, dans le vocabulaire du métier, la « composition » désigne au départ le travail qui consiste à assembler les caractères (de plomb) pour former des lignes de texte. Il nous paraît donc ici particulièrement opportun à adopter.  Deuxièmement, de manière générale, le terme « composition » se réfère à l’action de&nbsp;combiner ou d’assembler des éléments pour former quelque chose de nouveau. Il&nbsp;nous permet donc d’insister sur le caractère développemental de l’activité qui nous&nbsp;intéresse. 
 

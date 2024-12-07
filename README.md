@@ -141,7 +141,8 @@ You can configure some paged.js feature in this file (works only with the pagedj
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
         "type": "footnote", // Specifies the type of notes: "footnote" or "sidenote"
         "position": "outside", // Determines the placement of the sitenotes: "outside", "inside", "left", "right"
-        "chapters": ".chapter", // where the notes restart to 1
+        "align": ".first-paragraph", // Determines the top alignment of the sidenote relative to this element (the first on the page)
+        "chapters": ".chapter", // where the notes restart
         "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
         "containerNotes": "#footnotes" // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
     }
