@@ -56,6 +56,11 @@
   @top-left{ content: none; } 
 }
 
+/* bug fix */
+@page:nth(2){
+  @bottom-center{ content: none; } 
+  @top-left{ content: none; } 
+}
 
 /* COVER */
 @page:first{

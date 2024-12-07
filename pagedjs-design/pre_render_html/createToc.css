@@ -42,6 +42,7 @@
 
     #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-1::before{ 
         content: counter(counterTocLevel1) ". ";
+        white-space: nowrap;
         padding-right: 5px;
     }
 
@@ -51,6 +52,7 @@
 
     #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-2::before{ 
         content: counter(counterTocLevel1) ". " counter(counterTocLevel2) ". ";
+        white-space: nowrap;
         padding-right: 5px;
     }
 
