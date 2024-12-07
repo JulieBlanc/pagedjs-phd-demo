@@ -6,12 +6,6 @@
             "custom-handler-example-2.js"
         ]
     },
-    "style": {
-        "directory": "/assets/css",
-        "files": [
-            "style.css"        
-        ]
-    },
     "toc":{
         "enabled": true,
         "container":"#toc-here",

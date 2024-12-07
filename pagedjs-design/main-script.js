@@ -36,9 +36,9 @@ window.addEventListener('load', async () => {
   await loadCustomHandlers(handlerPaths);
 
   // Generate CSS paths from the configuration
-  const cssPaths = window.config.style.files.map(file => 
-    window.config.style.directory + "/" + file
-  );
+  const cssPaths = window.config?.style?.files 
+  ? window.config.style.files.map(file => window.config.style.directory + "/" + file)
+  : ["/assets/css/style.css"];
 
 
   // Display Paged.js content and load panel events

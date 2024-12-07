@@ -1,0 +1,16 @@
+// PreviewHandler.js
+import { Handler } from '../pagedjs-design/paged.esm.js';
+
+export default class myCustomHandler1 extends Handler {
+    constructor(chunker, polisher, caller) {
+        super(chunker, polisher, caller);
+      }
+
+  
+  afterParsed(content) {
+    console.log("[pagedjs-design] Example custom handler 1 with afterParsed hook (see js/custom-handler-example-2.js")
+  
+  }
+}
+
+
