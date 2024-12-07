@@ -12,10 +12,16 @@ export function inlineNotes(config){
 
      if(config.section){
          let sections = document.querySelector("body").querySelectorAll(config.section);
-         sections.forEach(function (section, index) {
-             createNotes(section, input, container, type);
- 
-         })
+         console.log("SECTION ------------- ");
+         console.log(sections);
+         if(sections.length > 0){
+            sections.forEach(function (section, index) {
+                createNotes(section, input, container, type);
+            })
+         }else{
+            let section = document.querySelector("body");
+            createNotes(section, input, container, type);
+         }
      }else{
          let section = document.querySelector("body");
          createNotes(section, input, container, type);
