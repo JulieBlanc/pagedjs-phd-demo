@@ -26,10 +26,9 @@
     "notes": {
         "enabled": true,
         "type": "footnote", 
-        "chapters": ".chapter", 
+        "sections": ".chapter", 
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"
-
     }
 
     

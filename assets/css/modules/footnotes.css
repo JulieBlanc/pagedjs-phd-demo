@@ -49,7 +49,7 @@
 
 
 
-/* fix footnote issue of pagedjs */
+/* fix footnote issues of pagedjs (when footnotes restart to a new section) */
 
 [data-footnote-marker]::marker{ display: none; }
 
@@ -59,4 +59,4 @@
 
 .pagedjs_note[data-footnote-call]::after{ 
     content: attr(data-counter-fix);
-}
+} 

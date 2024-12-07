@@ -157,7 +157,7 @@ It’s also possible to make sidenotes:
 "notes": {
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandoc)
         "type": "sidenote", // Specifies the type of notes: "footnote" or "sidenote"
-        "chapters": ".chapter", // where the notes restart
+        "sections": ".chapter", // where the notes restart
         "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
         "containerNotes": "#footnotes", // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
         "sidenote": { // settings for sidenotes (apply only if "type": "sidenote")
