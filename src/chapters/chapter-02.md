@@ -40,7 +40,7 @@ Une fois que le texte est imprimé, une nouvelle étape – la distribution – 
 
 [^huard]: Charles-Lucien Huard, *La&nbsp;Typographie*, L. Boulanger, <br>Le livre pour tous, 1892.
 
-![Atelier d’imprimerie, XVII<sup>e</sup>– XVIII<sup>e</sup> siècle](./images/atelier-imprimerie-17eme.jpg){#atelier-imprimerie}
+![Atelier d’imprimerie, XVII<sup>e</sup>– XVIII<sup>e</sup> siècle](../images/atelier-imprimerie-17eme.jpg){#atelier-imprimerie}
 
 #### Le plomb mécanique : la naissance de l’industrie graphique 
 
@@ -60,7 +60,7 @@ Ces machines répondent à plusieurs problématiques du travail des ouvriers typ
 est une machine de près d’une tonne qui est composée d’un clavier de 90&nbsp;caractères où chaque frappe est liée à une matrice en cuivre ou laiton dans un magasin. Chaque matrice correspond à l’empreinte d’un caractère. Entre chaque mot, la Linotype insére des « blancs » ajustables lorsque l’opérateur presse la touche *espace* tout à la gauche du clavier. Ces blancs permettent de résoudre mécaniquement l’opération de justification (le fait d’aligner le texte à gauche et à droite afin d’obtenir un bloc). Lorsque la ligne est composée, le typographe presse un levier à la droite du clavier qui transfère cette ligne dans la chambre de coulée puis il lève le levier de justification, ce qui pousse simultanément les écarteurs d’espace à la même hauteur afin que les matrices occupent toute la largeur de la ligne. La machine coule un alliage étain-plomb-antimoine à bas point de fusion sur la ligne-bloc, qui sert de moule. La machine crée ainsi une ligne typographique d’un seul tenant qui n’a plus qu’à être encrée pour faire l’impression. Une fois que les lignes sont coulées, les matrices sont amenées dans une machine qui se charge de les ranger (les distribuer) grâce aux différents crans des moules. Triées, elles sont ramenées dans les magasins des machines à composer. Par ailleurs, les magasins de matrices sont assez grands pour contenir les matrices des caractères en romain et en italique, ce qui facilite la manipulation d’un style à l’autre. 
 
 
-![compositeur sur machine Linotype (Imprimerie du journal *Kieler Nachrichten*, Allemagne, 1966)](./images/Druckerei_der_Kieler_Nachrichten.jpg){#fig-linotype}
+![compositeur sur machine Linotype (Imprimerie du journal *Kieler Nachrichten*, Allemagne, 1966)](../images/Druckerei_der_Kieler_Nachrichten.jpg){#fig-linotype}
 
 
 
@@ -79,7 +79,7 @@ D’une part, le système Monotype facilite la correction (puisque les caractèr
 
 La composition mécanique s’impose d’abord rapidement et massivement dans la presse quotidienne via la Linotype. La vitesse moyenne de composition sur Linotype est de l’ordre de 5 000 signes par heure, soit 5 fois plus qu’en composition manuelle. Surtout, la manipulation sur le marbre est facilitée par les lignes-blocs faciles à empiler et à déplacer en cours de mise en page. La Monotype est plutôt privilégiée dans l’édition d’ouvrages de qualité, restant toutefois en concurrence avec la composition manuelle pour certains travaux mineurs et spécialisés.
 
-![Les deux unités du&nbsp;système Monotype : machine de&nbsp;frappe et machine de fonte.](./images/monotype-keboard-and-caster.jpeg){#fig-monotype}
+![Les deux unités du&nbsp;système Monotype : machine de&nbsp;frappe et machine de fonte.](../images/monotype-keboard-and-caster.jpeg){#fig-monotype}
 
 
 
@@ -145,7 +145,7 @@ La copie annotée est alors envoyée aux entreprises de composition, qui renvoie
 La maquettes et ses différents éléments (les pages types, les bandes de textes photocomposés et les images originales) sont ensuite envoyés aux imprimeries où les préparateurs et monteurs se chargent d’assembler tous les éléments pour faire des pages complètes sur film transparent. Ils s’occupent ensuite d’imposer les pages – c’est-à-dire grouper les pages afin qu’après pliage de la feuille imprimée, elles soient dans l’ordre voulu – et enfin de les « flasher », c’est-à-dire transférer les films sur les plaques offsets destinés à l’impression par un processus d’insolation. 
 
 
-![Graphiste travaillant sur sa table de montage](./images/graphic-means_1.jpeg){#fig-photocompo-1}
+![Graphiste travaillant sur sa table de montage](../images/graphic-means_1.jpeg){#fig-photocompo-1}
 
 
 
@@ -164,7 +164,7 @@ La photocomposition est une véritable industrie à son époque, avec des avanc�
 [^seybold]: Pour plus de développement sur&nbsp;ces divers aspects : @seybold_world_1984 , *op. cit*.
 [^structured-documents]: @andre_structured_1989 .
 
-![Trois exemplaires de&nbsp;la&nbsp;Lumitype 200 dans les ateliers de la Sirlo (siège du Figaro, rue du Louvre) >fin des années 1950](./images/ateliers-sirlo.jpg){#fig-photocompo-2}
+![Trois exemplaires de&nbsp;la&nbsp;Lumitype 200 dans les ateliers de la Sirlo (siège du Figaro, rue du Louvre) >fin des années 1950](../images/ateliers-sirlo.jpg){#fig-photocompo-2}
 
 
 ##### La chaîne graphique, une organisation complexe
@@ -239,7 +239,7 @@ Pendant une dizaine d’année, entre 1984 et 1994 environ, la photocomposition 
 
 
 
-![Interface d’Aldus PageMaker, 1986](./images/IE-037-e1427506336607.png){#aldus-maker}
+![Interface d’Aldus PageMaker, 1986](../images/IE-037-e1427506336607.png){#aldus-maker}
 
 
 ##### Un environnement de production hybride jusqu’au milieu des années 1990
