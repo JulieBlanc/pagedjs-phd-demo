@@ -55,7 +55,6 @@ function displayContent(contentdoc, cssPaths, config) {
 
 
   // Register default handlers
-  console.log(1)
   handlers.forEach(handler => previewer.registerHandlers(handler));
 
   // Register custom handlers if any are loaded
@@ -65,7 +64,7 @@ function displayContent(contentdoc, cssPaths, config) {
 
   // Add CSS for plugins
   cssPaths.push("/pagedjs-design/pre_render_html/createToc.css");
-  if(window.config.notes.type == "footnote"){
+  if(window.config.notes && window.config.notes.type == "footnote"){
     cssPaths.push("/pagedjs-design/plugins/footnotes.css");
   }
 

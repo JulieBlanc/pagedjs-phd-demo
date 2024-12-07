@@ -22,13 +22,6 @@
         "style":"leaders",
         "counters":"true",
         "beforepagenumber":""
-     },
-     "notes":{
-        "enabled": true,
-        "type": "sidenote",
-        "sections": ".chapter",
-        "callInput":".footnote-ref",
-        "containerNotes":"#footnotes"
-    }
+     }
     
  }

@@ -3,7 +3,6 @@ import { Handler } from '../paged.esm.js';
 export class sidenotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.type = config.notes.type;
         this.notesClass = ".pagedjs_note";
         this.position = "";
         this.align = "";
@@ -13,7 +12,7 @@ export class sidenotes extends Handler {
 
     afterParsed(content) {
 
-        if(config.notes.sidenote){
+        if(config.notes && config.notes.sidenote){
             if(config.notes.sidenote.position){
                 this.position = config.notes.sidenote.position;
             }
@@ -23,8 +22,7 @@ export class sidenotes extends Handler {
         }
      
 
-
-        if(this.type == "sidenote"){
+        if(config.notes && config.notes.type && config.notes.type == "sidenote"){
             let notesClass = this.notesClass;
             let notes = content.querySelectorAll(notesClass)
             notes.forEach(function (note, index) {
@@ -41,7 +39,6 @@ export class sidenotes extends Handler {
     afterPageLayout(pageElement, page, breakToken) {
         let notes = pageElement.querySelectorAll(".pagedjs_sidenote");
 
-        console.log("afterPAge / this.position = " + this.position);
         let selectedMargin;
         if (this.position == "left") { selectedMargin = ".pagedjs_margin-left" }
         else if (this.position == "right") { selectedMargin = ".pagedjs_margin-right" }
