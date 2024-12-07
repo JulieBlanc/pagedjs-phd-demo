@@ -26,11 +26,13 @@
      "notes":{
         "enabled": true,
         "type": "sidenote",
-        "position": "outside",
         "sections": ".chapter",
-        "align": ".first-paragraph",
         "callInput":".footnote-ref",
-        "containerNotes":"#footnotes"
+        "containerNotes":"#footnotes",
+        "sidenote": { 
+            "position": "outside",
+            "align": ".first-paragraph"
+        }
     }
     
  }
