@@ -1,6 +1,5 @@
 import { Previewer, Handler } from './paged.esm.js';
-import { handlers } from './pluginsRegistry.js';
-import { cssPlugins } from './pluginsRegistry.js';
+import { getHandlersAndCSS } from './pluginsRegistry.js'; // Importer la fonction
 import { preRenderHTML } from './preRenderHtmlRegistry.js';
 import { moveFast } from './plugins/reload-in-place.js';
 
@@ -30,8 +29,10 @@ window.addEventListener('load', async () => {
   }
   document.body.innerHTML = ''; // Clear the body
 
+  // Appeler la fonction getHandlersAndCSS avec la config une fois chargée
+  const { handlers, cssPlugins } = getHandlersAndCSS(window.config);
 
-  // Load custom handlers from the configuration file
+  // Register custom handlers from the configuration file
   const handlerPaths = window.config.customHandlers.files.map(file => 
     "../" + window.config.customHandlers.directory + "/" + file
   );
@@ -43,7 +44,7 @@ window.addEventListener('load', async () => {
     : ["/assets/css/style.css"];
 
   // Display Paged.js content and load panel events
-  displayContent(contentdoc, cssPaths);
+  displayContent(contentdoc, cssPaths, handlers, cssPlugins);
 
   // Activate fast reload
   moveFast();
@@ -53,7 +54,7 @@ window.addEventListener('load', async () => {
 /* -- PREVIEW & DISPLAY CONTENT -------------------------------------------
 --------------------------------------------------------------------------- */
 
-function displayContent(contentdoc, cssPaths) {
+function displayContent(contentdoc, cssPaths, handlers, cssPlugins) {
   const previewer = new Previewer();
 
   // Register default handlers (plugins)
@@ -61,11 +62,6 @@ function displayContent(contentdoc, cssPaths) {
 
   // Register css for default handlers (plugins)
   cssPlugins.forEach(css => cssPaths.push("/pagedjs-phd/plugins/" + css));
-
-  // Register custom handlers if any are loaded
-  if (window.customHandlers) {
-    window.customHandlers.forEach(handler => previewer.registerHandlers(handler));
-  }
 
   // Preview the content using Paged.js
   previewer.preview(
