@@ -8,7 +8,7 @@
     padding-right: 6mm;
 }
 
-.sidenote-container .pagedjs_note{
+.sidenote-container .pagedjs_sidenote{
     display: block;
     position: relative;
     font-size: var(--font-size-small);

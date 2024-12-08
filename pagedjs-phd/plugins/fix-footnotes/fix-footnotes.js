@@ -35,18 +35,19 @@ export class fixFootnotes extends Handler {
         let footnotes = pageElement.querySelectorAll(".pagedjs_footnote_content [data-counter-note]");
 
        
-        let callnotes = pageElement.querySelectorAll('a.pagedjs_note');
+        let callnotes = pageElement.querySelectorAll('a.pagedjs_footnote');
         callnotes.forEach((call, index) => {
-            this.counter = this.counter + 1;
+            this.counter = this.counter + 1; // increment
+            let num = this.counter - 1;
 
             // update data-counter for call
-            call.setAttribute('data-data-counter-footnote-increment', this.counter);
-            call.style.counterReset = "footnote " + this.counter;
+            call.setAttribute('data-data-counter-footnote-increment', num);
+            call.style.counterReset = "footnote " + num;
 
             // update data-counter for marker
             let footnote = footnotes[index];
-            footnote.setAttribute('data-counter-note', this.counter);
-            footnote.style.counterReset = "footnote-marker " + this.counter;
+            footnote.setAttribute('data-counter-note', num);
+            footnote.style.counterReset = "footnote-marker " + num;
 
 
         });

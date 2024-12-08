@@ -1,6 +1,5 @@
 import { Previewer, Handler } from './paged.esm.js';
 import { getHandlersAndCSS } from './pluginsRegistry.js'; 
-import { preRenderHTML } from './preRenderHtmlRegistry.js';
 import { moveFast } from './plugins/reload-in-place.js';
 
 window.config = {};
@@ -18,9 +17,6 @@ window.addEventListener('load', async () => {
   } catch (error) {
     console.error('Error loading pagedjs-phd-config.json:', error);
   }
-
-  // Wait for preRenderHTML() to complete
-  preRenderHTML();
 
   // Load the content for Paged.js as a DocumentFragment
   const contentdoc = document.createDocumentFragment();

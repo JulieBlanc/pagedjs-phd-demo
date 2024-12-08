@@ -1,13 +1,15 @@
 import { Handler } from '../paged.esm.js';
 
+
 export class sidenotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.notesClass = ".pagedjs_note"; // ← CSS selector for the note element (must be inline in the HTML)
+        this.notesClass = ".pagedjs_sidenote"; // ← CSS selector for the note element (must be inline in the HTML)
         this.position = "outside";   // ← Specifies the position of sidenotes relative to the main text: options are "outside", "inside", "left", "right"
         this.align = ""; // ← Element to align the first note of the page to, if present on the page
         this.sidenoteOverflow = new Set();
     }
+
 
     afterParsed(content) {
 

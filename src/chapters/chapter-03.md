@@ -47,7 +47,7 @@ Notre démarche est celle d’une praticienne qui s’inscrit dans un travail de
 La recherche par et pour la pratique est ainsi au cœur de notre démarche. Autrement dit, notre objectif est de comprendre et d’accompagner le développement d’une communauté de pratique à travers une approche de recherche transformatrice et développementale. Pour reprendre les termes de Findeli, notre problématique de design est donc non seulement de **contribuer à outiller la réflexivité de la communauté de pratique sur sa dynamique développementale, mais aussi de participer de cette dynamique**. L'approche transitionnelle nous permettra de discuter des apports de la thèse pour cette communauté de pratique. 
 
 
-[^demarche-lapassade]: @lapassade_observation_2016.
+[^demarche-lapassade]: @lapassade_observation_2016 .
 [^demarche-stetsenko]: Anna Stetsenko, « Theory for and&nbsp;as Social Practice of Realizing the&nbsp;Future », in *The Wiley Handbook of&nbsp;Theoretical and Philosophical Psychology*, éd. par Jack Matin, Jeff&nbsp;Sugarman, et Kathleen L.&nbsp;Slaney (John Wiley & Sons, Ltd, 2015), 102‑16, pp. 112-113. Notre&nbsp;traduction.
 
 

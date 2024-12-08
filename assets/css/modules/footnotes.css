@@ -11,7 +11,7 @@
 
 /* NOTES */
 
-.pagedjs_footnote_area .pagedjs_note{
+.pagedjs_footnote_area .pagedjs_footnote{
     font-size: var(--font-size-small);
     line-height: calc(var(--baseline)*0.75);
     padding-left: 4ch;
@@ -21,7 +21,7 @@
 
 
 /*  Hack for markers (because ::marker disappears when .paged_note is displayed as block) */
-.pagedjs_footnote_area .pagedjs_note::before{
+.pagedjs_footnote_area .pagedjs_footnote::before{
     content: attr(data-counter-note) ".";
     font-weight: bold;
     position: absolute;
