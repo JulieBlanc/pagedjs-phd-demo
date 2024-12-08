@@ -192,5 +192,5 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 - endnote (to section)
 - web version
 - metadata in pandoc template for cover ?
-- change name of pagedjs-phd to pagedjs-phd
 - ajouter une page si ce n’est pas un multiple de 2 ou 4
+- changer le reset des notes pas un element inline

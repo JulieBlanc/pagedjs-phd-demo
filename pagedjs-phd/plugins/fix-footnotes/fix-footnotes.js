@@ -38,7 +38,7 @@ export class fixFootnotes extends Handler {
         let callnotes = pageElement.querySelectorAll('a.pagedjs_footnote');
         callnotes.forEach((call, index) => {
             this.counter = this.counter + 1; // increment
-            let num = this.counter - 1;
+            let num = this.counter;
 
             // update data-counter for call
             call.setAttribute('data-data-counter-footnote-increment', num);

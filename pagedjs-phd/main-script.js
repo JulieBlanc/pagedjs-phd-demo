@@ -79,22 +79,17 @@ function displayContent(contentdoc, cssPaths, handlers, cssPlugins) {
 async function loadCustomHandlers(handlerPaths) {
   const customHandlers = [];
   for (const path of handlerPaths) {
-    console.log(`Attempting to load handler from: ${path}`);
     try {
       const module = await import(path);
-      console.log(`Module loaded successfully from ${path}:`, module);
       const handlerClass = module.default || module;
       if (handlerClass.prototype instanceof Handler) {
         customHandlers.push(handlerClass);
-        console.log(`Valid handler loaded: ${path}`);
       } else {
-        console.error(`The handler from ${path} is not a valid Handler.`);
       }
     } catch (error) {
       console.error(`Error loading handler from ${path}:`, error);
     }
   }
-  console.log(`Loaded custom handlers:`, customHandlers);
   return customHandlers;
 }
 
