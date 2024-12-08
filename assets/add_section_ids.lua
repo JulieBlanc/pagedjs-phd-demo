@@ -13,9 +13,15 @@ function Pandoc(doc)
   for _, filename in ipairs(filenames) do
     -- Extract the ID from the filename (the name without the extension)
     local section_id = filename:match("([^/]+)%.md$")
-    
-    -- Add a section for each file
-    table.insert(blocks, pandoc.RawBlock("html", "<section id=\"" .. section_id .. "\">"))
+    local section_class = ""
+
+    -- Check if the filename contains "chapter"
+    if filename:match("chapter") then
+      section_class = " class=\"chapter\""
+    end
+
+    -- Add a section for each file with the optional class
+    table.insert(blocks, pandoc.RawBlock("html", "<section id=\"" .. section_id .. "\"" .. section_class .. ">"))
     
     -- Read the content of the file as raw text
     local file = io.open(filename, "r")

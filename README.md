@@ -63,7 +63,7 @@ for file in src/chapters/*.md; do
 
 Folder with all your content. 
 
-- `chapters` → the markdown files of each chapter, please respect the denomination (`chapter-01.md`, `chapter-02.md`, etc.)
+- `chapters` → the markdown files of each chapter, please respect the denomination for the chapters (`chapter-01.md`, `chapter-02.md`, etc.)
 - `toc.md` → a special file for the generated table of content with paged.js
 - `cover.md`, `abstract.md`, `acknowledgements.md` → qdd directly the mardown files you need (don’t forget to add this style to your pandoc command line)
 - `images/` → put here the images of your content

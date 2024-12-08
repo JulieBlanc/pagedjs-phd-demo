@@ -37,7 +37,7 @@
     }
   }
 
-  section[data-id*="chapter"]{
+  .chapter{
     break-before: right;
   }
 
@@ -69,7 +69,7 @@
 
 
 /* chapter (delete running on first chapter page) */
-section[data-id*="chapter"]{
+.chapter{
   page: chapter;
 }
 
