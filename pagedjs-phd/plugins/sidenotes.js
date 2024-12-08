@@ -113,6 +113,7 @@ export class sidenotes extends Handler {
                 notes[n].style.position = "relative";
             }
 
+
             // Push notes tha overflow ------------------------
             let maxHeight = marginbox.offsetHeight;
             checkOverflownote(this.notesClass, pageElement, maxHeight, this.sidenoteOverflow, container);
@@ -170,8 +171,7 @@ function biggestMargin(a, b) {
 
 function checkOverflownote(notesClass, pageElement, maxHeight, arrayOverflow, container) {
     let notes = pageElement.querySelectorAll(notesClass);
-
-
+   
     let notesHeightAll = [];
 
     for (let n = 0; n < notes.length; ++n) {
@@ -192,10 +192,10 @@ function checkOverflownote(notesClass, pageElement, maxHeight, arrayOverflow, co
         // Calculate if all notes fit on the page;
         let reducer = (accumulator, currentValue) => accumulator + currentValue;
         let allHeight = notesHeightAll.reduce(reducer);
-        let paddingContainer = parseInt(container.style.paddingTop);
-
+        let paddingTop = getComputedStyle(container).paddingTop;
+        let paddingContainer = parseInt(paddingTop);
+             
         let totalHeight = allHeight + paddingContainer;
-
 
         if (totalHeight > maxHeight) {
 
