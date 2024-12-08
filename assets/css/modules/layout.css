@@ -7,9 +7,8 @@
         content: counter(page);
     } 
     @footnote {
-        /* border-top: 2px solid currentColor; */
-        /* margin-top: calc(var(--baseline)*0.5); */
-        padding-top: calc(var(--baseline)*2);
+        padding-top: calc(var(--baseline)*1);
+        /* Don’t use margin here → affect overflow */
     }
   }
 

@@ -1,62 +1,48 @@
 
 
-.pagedjs_note[data-footnote-call]::after{
+::footnote-call{
     font-weight: bold;
 }
 
-
-
-/* CALL NOTES */
-.pagedjs_note[data-footnote-call]::after{ 
-    position: relative;
-    top: -2px;
-    font-size: var(--font-size-small);
+::footnote-marker{
     font-weight: bold;
-    padding-left: 2px;
-    font-style: normal;
 }
 
 
 /* NOTES */
 
 .pagedjs_footnote_area .pagedjs_note{
-    display: block;
-    position: relative;
     font-size: var(--font-size-small);
     line-height: calc(var(--baseline)*0.75);
     padding-left: 4ch;
+    display: block;
+    position: relative;
 } 
 
+
+/*  Hack for markers (because ::marker disappears when .paged_note is displayed as block) */
 .pagedjs_footnote_area .pagedjs_note::before{
+    content: attr(data-counter-note) ".";
     font-weight: bold;
     position: absolute;
     left: 0px!important;
 }
 
-/* footnote area */
+/* Style footnote area ---------------- */
+/* Don’t use padding or margin here → affect overflow */
 
-.pagedjs_footnote_area{
+.pagedjs_footnote_content{
     position: relative;
-  }
-  .pagedjs_footnote_area::before{
-    content: '';
-    display: block;
-    width: 5ch;
-    border-top: 2px solid currentColor;
-    position: absolute;
-    top: calc(var(--baseline)*1.5);
-  }
-
-
-
-/* fix footnote issues of pagedjs (when footnotes restart to a new section) */
-
-[data-footnote-marker]::marker{ display: none; }
-
-.pagedjs_footnote_area .pagedjs_note::before{
-    content: attr(data-counter-note) ".";
 }
 
-.pagedjs_note[data-footnote-call]::after{ 
-    content: attr(data-counter-fix);
-} 
+.pagedjs_footnote_content::before{
+content: '';
+display: block;
+width: 5ch;
+border-top: 2px solid currentColor;
+position: absolute;
+top: calc(var(--baseline)*0.5);
+}
+
+
+

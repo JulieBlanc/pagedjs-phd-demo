@@ -1,31 +1,35 @@
-import { beforeHandler } from './plugins/beforeHandler.js';
 import { createTocHandler } from './plugins/createToc/createToc.js';
 import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
 import { pagedjsEnded } from './plugins/reload-in-place.js';
 import { sidenotes } from './plugins/sidenotes.js';
-import { fixFootnotes } from './plugins/fix-footnotes.js';
+import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 
 // Export the array of plugin handlers
 export function getHandlersAndCSS(config) {
   const handlers = [
-    createTocHandler,
-    beforeHandler,
     sidenotes,
     moveElems,
     fullPageHandler,
-    fixFootnotes,
     pagedjsEnded
   ];
 
   // Export the array of CSS of the plugins (path from the "plugins" folder)
   let cssPlugins = ['footnotes.css'];
 
-  // If TOC is enabled in the configuration, add its CSS file
+  // createToc
   if (config.toc?.enabled) { 
     cssPlugins.push('createToc/createToc.css'); 
     handlers.push(createTocHandler);
   }
+
+  // fix-footnotes
+  if (config.notes?.enabled && config.notes?.type === "footnote") {
+    cssPlugins.push('fix-footnotes/fix-footnotes.css'); 
+    handlers.push(fixFootnotes);  
+  }
+
+
 
   return { handlers, cssPlugins };
 }

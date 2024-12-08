@@ -6,17 +6,14 @@ export class createTocHandler extends Handler {
     }
 
     beforeParsed(content){
-      
-            createToc({
-                content: content,
-                tocElement: config.toc.container, 
-                titleElements: config.toc.titles || ['h1', 'h2'],
-                tocStyle: config.toc.style || 'none',
-                tocCounters: config.toc.counters || "false",
-                before: config.toc.beforepagenumber || ""
-            });
-
-        
+      createToc({
+          content: content,
+          tocElement: config.toc.container, 
+          titleElements: config.toc.titles || ['h1', 'h2'],
+          tocStyle: config.toc.style || 'none',
+          tocCounters: config.toc.counters || "false",
+          before: config.toc.beforepagenumber || ""
+      });
     }
     
 }
