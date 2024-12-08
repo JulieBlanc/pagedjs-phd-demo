@@ -8,7 +8,6 @@ import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 // Export the array of plugin handlers
 export function getHandlersAndCSS(config) {
   const handlers = [
-    sidenotes,
     moveElems,
     fullPageHandler,
     pagedjsEnded
@@ -29,6 +28,11 @@ export function getHandlersAndCSS(config) {
     handlers.push(fixFootnotes);  
   }
 
+
+  // sidenotes
+  if (config.notes?.enabled && config.notes?.type === "sidenote") {
+    handlers.push(sidenotes);  
+  }
 
 
   return { handlers, cssPlugins };

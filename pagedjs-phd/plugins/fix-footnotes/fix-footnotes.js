@@ -3,7 +3,7 @@ import { Handler } from '../../paged.esm.js';
 export class fixFootnotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.section = "section"; // reset on section 
+        this.section = "body"; // reset on this element
         this.counter = 0; 
     }
 

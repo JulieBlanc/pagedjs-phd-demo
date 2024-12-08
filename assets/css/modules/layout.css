@@ -13,8 +13,8 @@
   }
 
   @page:left{
-    margin-left: 26mm;
-    margin-right: 30mm;
+    margin-left: 50mm;
+    margin-right: 20mm;
     @top-left{ 
       content: "Composer avec les technologies du web";
       font-family: var(--font-sans);
@@ -26,8 +26,8 @@
   }
   
   @page:right{
-    margin-left: 30mm;
-    margin-right: 26mm;
+    margin-left: 20mm;
+    margin-right: 50mm;
     @top-left{ 
       content: string(title);
       font-family: var(--font-sans);

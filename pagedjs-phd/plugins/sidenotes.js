@@ -3,15 +3,17 @@ import { Handler } from '../paged.esm.js';
 export class sidenotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.notesClass = ".pagedjs_note";
-        this.position = "";
-        this.align = "";
+        this.notesClass = ".pagedjs_note"; // ← CSS selector for the note element (must be inline in the HTML)
+        this.position = "outside";   // ← Specifies the position of sidenotes relative to the main text: options are "outside", "inside", "left", "right"
+        this.align = ""; // ← Element to align the first note of the page to, if present on the page
         this.sidenoteOverflow = new Set();
-      
     }
 
     afterParsed(content) {
 
+        /** pagedjs-design
+         * Specific to pagedjs-design, overwrite values
+        **/
         if(config.notes && config.notes.sidenote){
             if(config.notes.sidenote.position){
                 this.position = config.notes.sidenote.position;
@@ -20,18 +22,18 @@ export class sidenotes extends Handler {
                 this.align = config.notes.sidenote.align;
             }
         }
+        /* */
      
 
-        if(config.notes && config.notes.type && config.notes.type == "sidenote"){
-            let notesClass = this.notesClass;
-            let notes = content.querySelectorAll(notesClass)
-            notes.forEach(function (note, index) {
-                note.style.position = "absolute";
-                note.style.top = "0px";
-                note.style.left = "0px";
-                note.classList.add("pagedjs_sidenote");
-            });  
-        }
+        let notesClass = this.notesClass;
+        let notes = content.querySelectorAll(notesClass)
+        notes.forEach(function (note, index) {
+            note.style.position = "absolute";
+            note.style.top = "0px";
+            note.style.left = "0px";
+            note.classList.add("pagedjs_sidenote");
+        });  
+        
 
     }
 
