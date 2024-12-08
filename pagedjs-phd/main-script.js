@@ -4,7 +4,7 @@ import { moveFast } from './plugins/reload-in-place.js';
 
 window.config = {};
 window.addEventListener('load', async () => {
-  console.log("// PAGEDJS DESIGN -------------- // ");
+  console.log("pagedjs-design loaded");
   
   // Load stylesheets and JS
   loadCSS('/pagedjs-phd/css/pagedjs.css');
@@ -25,24 +25,27 @@ window.addEventListener('load', async () => {
   }
   document.body.innerHTML = ''; // Clear the body
 
-  // Appeler la fonction getHandlersAndCSS avec la config une fois chargée
-  const { handlers, cssPlugins } = getHandlersAndCSS(window.config);
+  // Get default handlers and CSS from pluginsRegistry.js
+  const { handlers: defaultHandlers, cssPlugins } = getHandlersAndCSS(window.config);
 
   // Register custom handlers from the configuration file
   const handlerPaths = window.config.customHandlers.files.map(file => 
-    "../" + window.config.customHandlers.directory + "/" + file
+    window.config.customHandlers.directory + "/" + file
   );
-  await loadCustomHandlers(handlerPaths);
+  const customHandlers = await loadCustomHandlers(handlerPaths);
+
+  // Combine default handlers and custom handlers
+  const allHandlers = [...defaultHandlers, ...customHandlers];
 
   // Generate CSS paths from the configuration
   const cssPaths = window.config?.style?.files 
     ? window.config.style.files.map(file => window.config.style.directory + "/" + file)
     : ["/assets/css/style.css"];
 
-  // Display Paged.js content and load panel events
-  displayContent(contentdoc, cssPaths, handlers, cssPlugins);
+  // Display Paged.js content 
+  displayContent(contentdoc, cssPaths, allHandlers, cssPlugins);
 
-  // Activate fast reload
+  // reload-in-place
   moveFast();
 });
 
@@ -50,16 +53,18 @@ window.addEventListener('load', async () => {
 /* -- PREVIEW & DISPLAY CONTENT -------------------------------------------
 --------------------------------------------------------------------------- */
 
+
 function displayContent(contentdoc, cssPaths, handlers, cssPlugins) {
   const previewer = new Previewer();
 
-  // Register default handlers (plugins)
-  handlers.forEach(handler => previewer.registerHandlers(handler));
+  handlers.forEach(handler => {
+    previewer.registerHandlers(handler);
+  });
 
-  // Register css for default handlers (plugins)
-  cssPlugins.forEach(css => cssPaths.push("/pagedjs-phd/plugins/" + css));
+  cssPlugins.forEach(css => {
+    cssPaths.push("/pagedjs-phd/plugins/" + css);
+  });
 
-  // Preview the content using Paged.js
   previewer.preview(
     contentdoc,
     cssPaths,
@@ -67,19 +72,21 @@ function displayContent(contentdoc, cssPaths, handlers, cssPlugins) {
   );
 }
 
+
 /* -- Dynamically load custom handlers ------------------------------------
 --------------------------------------------------------------------------- */
 
 async function loadCustomHandlers(handlerPaths) {
-  window.customHandlers = [];
+  const customHandlers = [];
   for (const path of handlerPaths) {
+    console.log(`Attempting to load handler from: ${path}`);
     try {
       const module = await import(path);
+      console.log(`Module loaded successfully from ${path}:`, module);
       const handlerClass = module.default || module;
-
-      // Ensure the handlerClass is a valid Handler class
       if (handlerClass.prototype instanceof Handler) {
-        window.customHandlers.push(handlerClass);
+        customHandlers.push(handlerClass);
+        console.log(`Valid handler loaded: ${path}`);
       } else {
         console.error(`The handler from ${path} is not a valid Handler.`);
       }
@@ -87,10 +94,14 @@ async function loadCustomHandlers(handlerPaths) {
       console.error(`Error loading handler from ${path}:`, error);
     }
   }
+  console.log(`Loaded custom handlers:`, customHandlers);
+  return customHandlers;
 }
 
-/* -- Add CSS & JS files to the document ----------------------------------
+
+/* -- Function to add CSS & JS files to the document ----------------------------------
 --------------------------------------------------------------------------- */
+
 
 function loadCSS(filename) {
   const link = document.createElement('link');

@@ -9,7 +9,7 @@ export default class myCustomHandler2 extends Handler {
   
     afterPageLayout(pageElement, page, breakToken) {
       if(pageElement.id == "page-1"){
-        console.log("[pagedjs-phd] Example custom handler 2 with afterPageLayout hook (see js/custom-handler-example-2.js")
+        console.log("[CUSTOM] Example custom handler 2 with afterPageLayout hook (see assets/js/custom-handler-example-2.js")
 
       }
     }
