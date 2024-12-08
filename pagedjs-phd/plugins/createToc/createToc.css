@@ -3,6 +3,7 @@
     #list-toc-generated[data-toc-style="leaders"]{ 
         list-style: none;
         padding-left: 0px;
+        --toc-indent: 3ch;
     }
 
     #list-toc-generated{
@@ -20,7 +21,23 @@
     }
 
     #list-toc-generated[data-toc-style="leaders"] .toc-element-level-2{
-        margin-left: 25px;
+        margin-left: calc(var(--toc-indent)*1);
+    }
+
+    #list-toc-generated[data-toc-style="leaders"] .toc-element-level-3{
+        margin-left: calc(var(--toc-indent)*2);
+    }
+
+    #list-toc-generated[data-toc-style="leaders"] .toc-element-level-4{
+        margin-left: calc(var(--toc-indent)*3);
+    }
+
+    #list-toc-generated[data-toc-style="leaders"] .toc-element-level-5{
+        margin-left: calc(var(--toc-indent)*4);
+    }
+
+    #list-toc-generated[data-toc-style="leaders"] .toc-element-level-6{
+        margin-left: calc(var(--toc-indent)*5);
     }
 
 
@@ -48,10 +65,51 @@
 
     #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-2{ 
         counter-increment: counterTocLevel2; 
+        counter-reset: counterTocLevel3;
     }
 
     #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-2::before{ 
-        content: counter(counterTocLevel1) ". " counter(counterTocLevel2) ". ";
+        content: counter(counterTocLevel1) "." counter(counterTocLevel2) ". ";
+        white-space: nowrap;
+        padding-right: 5px;
+    }
+
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-3{ 
+        counter-increment: counterTocLevel3; 
+        counter-reset: counterTocLevel4;
+    }
+
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-3::before{ 
+        content: counter(counterTocLevel1) "." counter(counterTocLevel2) "." counter(counterTocLevel3) ". ";
+        white-space: nowrap;
+        padding-right: 5px;
+    }
+
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-4{ 
+        counter-increment: counterTocLevel4; 
+        counter-increment: counterTocLevel5; 
+    }
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-4::before{ 
+        content: counter(counterTocLevel1) "." counter(counterTocLevel2) "." counter(counterTocLevel3) "."counter(counterTocLevel4) ". ";
+        white-space: nowrap;
+        padding-right: 5px;
+    }
+
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-5{ 
+        counter-increment: counterTocLevel5; 
+        counter-increment: counterTocLevel6; 
+    }
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-5::before{ 
+        content: counter(counterTocLevel1) "." counter(counterTocLevel2) "." counter(counterTocLevel3) "." counter(counterTocLevel4) "." counter(counterTocLevel5) ". ";
+        white-space: nowrap;
+        padding-right: 5px;
+    }
+
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-6{ 
+        counter-increment: counterTocLevel6; 
+    }
+    #list-toc-generated[data-toc-set-counter="true"] .toc-element-level-6::before{ 
+        content: counter(counterTocLevel1) "." counter(counterTocLevel2) "." counter(counterTocLevel3) "." counter(counterTocLevel4) "." counter(counterTocLevel5) "." counter(counterTocLevel6) ". ";
         white-space: nowrap;
         padding-right: 5px;
     }

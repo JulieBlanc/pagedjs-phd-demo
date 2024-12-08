@@ -1,5 +1,6 @@
 import { Previewer, Handler } from './paged.esm.js';
 import { handlers } from './pluginsRegistry.js';
+import { cssPlugins } from './pluginsRegistry.js';
 import { preRenderHTML } from './preRenderHtmlRegistry.js';
 import { moveFast } from './plugins/reload-in-place.js';
 
@@ -42,35 +43,33 @@ window.addEventListener('load', async () => {
     : ["/assets/css/style.css"];
 
   // Display Paged.js content and load panel events
-  displayContent(contentdoc, cssPaths, window.config);
+  displayContent(contentdoc, cssPaths);
 
   // Activate fast reload
   moveFast();
 });
 
+
 /* -- PREVIEW & DISPLAY CONTENT -------------------------------------------
 --------------------------------------------------------------------------- */
 
-function displayContent(contentdoc, cssPaths, config) {
+function displayContent(contentdoc, cssPaths) {
   const previewer = new Previewer();
 
-  // Register default handlers
+  // Register default handlers (plugins)
   handlers.forEach(handler => previewer.registerHandlers(handler));
+
+  // Register css for default handlers (plugins)
+  cssPlugins.forEach(css => cssPaths.push("/pagedjs-phd/plugins/" + css));
 
   // Register custom handlers if any are loaded
   if (window.customHandlers) {
     window.customHandlers.forEach(handler => previewer.registerHandlers(handler));
   }
 
-  // Add CSS for plugins
-  cssPaths.push("/pagedjs-phd/pre_render_html/createToc.css");
-  if (window.config.notes && window.config.notes.type === "footnote") {
-    cssPaths.push("/pagedjs-phd/plugins/footnotes.css");
-  }
-
   // Preview the content using Paged.js
   previewer.preview(
-    contentdoc, // Pass the DocumentFragment here
+    contentdoc,
     cssPaths,
     document.body
   );

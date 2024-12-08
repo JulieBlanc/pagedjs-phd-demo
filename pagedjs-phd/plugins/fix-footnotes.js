@@ -4,8 +4,6 @@ export class fixFootnotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
         this.counter = 0; 
-
-      
     }
 
     
@@ -24,11 +22,6 @@ export class fixFootnotes extends Handler {
             call.dataset.counterFix = this.counter;
         });
 
-      
-
      
     }
-
-
-   
 }

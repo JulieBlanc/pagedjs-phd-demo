@@ -31,10 +31,6 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 
 Create print.html file (all content)
 
-```
-pandoc src/cover.md src/abstract.md src/toc.md src/chapters/*.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
-
-```
 
 ```
 pandoc src/cover.md src/abstract.md src/toc.md src/chapters/*.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
