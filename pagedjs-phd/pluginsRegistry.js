@@ -30,8 +30,6 @@ export function getHandlersAndCSS(config) {
     handlers.push(fixFootnotes);  
   }
 
-
-
   // sidenotes
   if (config.notes?.enabled && config.notes?.type === "sidenote") {
     handlers.push(inlineNotesHandler);  

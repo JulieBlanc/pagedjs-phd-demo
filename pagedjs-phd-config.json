@@ -27,14 +27,10 @@
     },
     "notes": {
         "enabled": true,
-        "type": "sidenote",
+        "type": "footnote",
         "sections": ".chapter", 
         "callInput": ".footnote-ref", 
-        "containerNotes": "#footnotes",
-        "sidenote": { 
-            "position": "outside", 
-            "align": ".first-paragraph" 
-        }
+        "containerNotes": "#footnotes"
 
     }
 
