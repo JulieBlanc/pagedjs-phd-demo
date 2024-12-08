@@ -6,7 +6,7 @@ export class createTocHandler extends Handler {
     }
 
     beforeParsed(content){
-        if(config.toc && config.toc.enabled){
+      
             createToc({
                 content: content,
                 tocElement: config.toc.container, 
@@ -16,7 +16,7 @@ export class createTocHandler extends Handler {
                 before: config.toc.beforepagenumber || ""
             });
 
-        }
+        
     }
     
 }

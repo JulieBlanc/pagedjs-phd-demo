@@ -22,7 +22,10 @@ export function getHandlersAndCSS(config) {
   let cssPlugins = ['footnotes.css'];
 
   // If TOC is enabled in the configuration, add its CSS file
-  if (config.toc?.enabled) { cssPlugins.push('createToc/createToc.css'); }
+  if (config.toc?.enabled) { 
+    cssPlugins.push('createToc/createToc.css'); 
+    handlers.push(createTocHandler);
+  }
 
   return { handlers, cssPlugins };
 }

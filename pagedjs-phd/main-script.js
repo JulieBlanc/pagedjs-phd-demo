@@ -1,5 +1,5 @@
 import { Previewer, Handler } from './paged.esm.js';
-import { getHandlersAndCSS } from './pluginsRegistry.js'; // Importer la fonction
+import { getHandlersAndCSS } from './pluginsRegistry.js'; 
 import { preRenderHTML } from './preRenderHtmlRegistry.js';
 import { moveFast } from './plugins/reload-in-place.js';
 
