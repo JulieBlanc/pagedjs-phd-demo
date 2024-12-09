@@ -1,18 +1,19 @@
 import { Handler } from '../paged.esm.js';
-// A simple plugin to inline notes
-// https://gitlab.com/JulieBlanc, 2024
 
-export class inlineNotesHandler extends Handler {
+export class inlineNotesCountersHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
         this.section = ""; // ← CSS selector where you want reset note counter
+        this.reset = ".chapter h2";
         this.input = ".footnote-ref"; // ← CSS selector of the call element 
         this.containerNotes = "#footnotes"; // ← CSS selector of the container of the footnote
         this.type = "footnote"; // ← Type of notes: options are "footnote", "sidenote"
     }
 
 
-    beforeParsed(content){   
+    beforeParsed(content){    
+        
+        console.log("Inline notes & counters --------- ")
 
          /** pagedjs-design
          * Specific to pagedjs-design, overwrite values
@@ -24,6 +25,21 @@ export class inlineNotesHandler extends Handler {
                 if(config.notes.containerNotes){ this.containerNotes = config.notes.containerNotes; }
             }
         /* */
+
+        // Reset
+        if(this.reset && this.reset != ""){
+            const elements = content.querySelectorAll(`${this.reset}, ${this.input}`);
+            let resetEligible = false;
+            elements.forEach(element => {
+                if (element.matches(this.reset)) {
+                    resetEligible = true;
+                } else if (resetEligible && element.matches(this.input)) {
+                    console.log('Adding reset to:', element);
+                    element.classList.add('reset');
+                    resetEligible = false;
+                }
+            });
+        }
 
  
         inlineNotes({
@@ -44,15 +60,31 @@ function inlineNotes(params){
     let content = params.content;
     let input = params.input;
     let type = params.type;
+
+    // if(params.section != ""){
+    //     let sections = content.querySelectorAll(params.section);
+    //     if(sections.length > 0){
+    //         sections.forEach(function (section, index) {
+    //             createNotes(content, section, input, type);
+    //         });
+    //     }else{
+    //         createNotes(content, content, input, type);
+    //     }
+    // }else{
+    //     createNotes(content, content, input, type);
+    // }
+
+    createNotes(content, input, type);
     
-    createNotes(content, content, input, type);
   
      let noteContainer = content.querySelector(params.containerNotes);
      if(noteContainer){
         noteContainer.remove();
      }
+
+
  
-}
+ }
  
  
  function getBlocks(element){
@@ -73,9 +105,9 @@ function inlineNotes(params){
  }
  
  
- function createNotes(content, section, input, type){
+ function createNotes(content, input, type){
  
-     let calls = section.querySelectorAll(input);
+     let calls = content.querySelectorAll(input);
      calls.forEach( (call, index) => {
  
     
@@ -91,9 +123,16 @@ function inlineNotes(params){
          let num = index + 1;
          inline_note.dataset.counterNote = num;
 
-         inline_note.innerHTML = unwrapBlockChildren(note).innerHTML;
-         call.after(inline_note);
- 
+
+        inline_note.innerHTML = '<span class="note-marker">' + num + '</span>' + unwrapBlockChildren(note).innerHTML;
+        call.after(inline_note);
+     
+        let ref_note = document.createElement('span');
+        ref_note.className = "note-call";
+        ref_note.dataset.counterNote = num;
+        ref_note.innerHTML = num;
+        call.after(ref_note);
+        
          call.parentElement.removeChild(call);
  
  

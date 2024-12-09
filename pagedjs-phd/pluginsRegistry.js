@@ -3,6 +3,7 @@ import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
 import { pagedjsEnded } from './plugins/reload-in-place.js';
 import { inlineNotesHandler } from './plugins/inlineNotes.js';
+import { inlineNotesCountersHandler } from './plugins/inlineNotesCounters.js';
 import { sidenotes } from './plugins/sidenotes.js';
 import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 
@@ -32,7 +33,7 @@ export function getHandlersAndCSS(config) {
 
   // sidenotes
   if (config.notes?.enabled && config.notes?.type === "sidenote") {
-    handlers.push(inlineNotesHandler);  
+    handlers.push(inlineNotesCountersHandler);  
     handlers.push(sidenotes);  
   }
 
