@@ -1,4 +1,6 @@
 import { Handler } from '../../paged.esm.js';
+// Fix for footnote reset
+// https://gitlab.com/JulieBlanc, 2024
 
 export class fixFootnotes extends Handler {
     constructor(chunker, polisher, caller) {
@@ -30,7 +32,7 @@ export class fixFootnotes extends Handler {
             this.counter = 0;  
         }
 
-        // reset 
+        // reset on specific element
         let newchapter = pageElement.querySelector('.reset-fix-footnote');
         if(newchapter){
             this.counter = 0;        
@@ -53,11 +55,9 @@ export class fixFootnotes extends Handler {
             footnote.setAttribute('data-counter-note', num);
             footnote.style.counterReset = "footnote-marker " + num;
 
-
         });
      
     }
-
   
 }
 
