@@ -1,4 +1,6 @@
 import { Handler } from '../paged.esm.js';
+// A simple plugin to inline notes and add call & markers
+// https://gitlab.com/JulieBlanc, 2024
 
 export class inlineNotesCountersHandler extends Handler {
     constructor(chunker, polisher, caller) {
@@ -6,7 +8,7 @@ export class inlineNotesCountersHandler extends Handler {
         this.reset = ""; // ← CSS selector where you want reset note counter
         this.input = ".footnote-ref"; // ← CSS selector of the call element 
         this.containerNotes = "#footnotes"; // ← CSS selector of the container of the footnote
-        this.type = "footnote"; // ← Type of notes: options are "footnote", "sidenote"
+        this.type = "sidenote"; // ← Type of notes (just to add a class: ".pagedjs_sidenote")
     }
 
 
@@ -60,29 +62,14 @@ function inlineNotes(params){
     let input = params.input;
     let type = params.type;
 
-    // if(params.section != ""){
-    //     let sections = content.querySelectorAll(params.section);
-    //     if(sections.length > 0){
-    //         sections.forEach(function (section, index) {
-    //             createNotes(content, section, input, type);
-    //         });
-    //     }else{
-    //         createNotes(content, content, input, type);
-    //     }
-    // }else{
-    //     createNotes(content, content, input, type);
-    // }
 
     createNotes(content, input, type);
     
-  
      let noteContainer = content.querySelector(params.containerNotes);
      if(noteContainer){
         noteContainer.remove();
      }
 
-
- 
  }
  
  

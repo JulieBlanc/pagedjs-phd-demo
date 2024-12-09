@@ -5,10 +5,9 @@ import { Handler } from '../paged.esm.js';
 export class inlineNotesHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.section = ""; // ← CSS selector where you want reset note counter
         this.input = ".footnote-ref"; // ← CSS selector of the call element 
         this.containerNotes = "#footnotes"; // ← CSS selector of the container of the footnote
-        this.type = "footnote"; // ← Type of notes: options are "footnote", "sidenote"
+        this.type = "footnote"; // ← Type of notes (just to add a class: ".pagedjs_footnote")
     }
 
 
@@ -19,7 +18,6 @@ export class inlineNotesHandler extends Handler {
         **/
             if(config.notes){
                 if(config.notes.type){ this.type = config.notes.type; }
-                if(config.notes.sections){ this.section = config.notes.sections; }
                 if(config.notes.callInput){ this.input = config.notes.callInput; }
                 if(config.notes.containerNotes){ this.containerNotes = config.notes.containerNotes; }
             }
@@ -28,7 +26,6 @@ export class inlineNotesHandler extends Handler {
  
         inlineNotes({
                 content: content,
-                section: this.section,
                 input: this.input,
                 containerNotes: this.containerNotes,
                 type: this.type
@@ -45,7 +42,7 @@ function inlineNotes(params){
     let input = params.input;
     let type = params.type;
     
-    createNotes(content, content, input, type);
+    createNotes(content, input, type);
   
      let noteContainer = content.querySelector(params.containerNotes);
      if(noteContainer){
@@ -73,9 +70,9 @@ function inlineNotes(params){
  }
  
  
- function createNotes(content, section, input, type){
+ function createNotes(content, input, type){
  
-     let calls = section.querySelectorAll(input);
+     let calls = content.querySelectorAll(input);
      calls.forEach( (call, index) => {
  
     
