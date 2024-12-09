@@ -29,7 +29,6 @@
         "enabled": true,
         "type": "footnote",
         "resetCounter": ".chapter",
-        "sections": ".chapter", 
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"
 

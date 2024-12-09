@@ -146,7 +146,7 @@ Determine if you want footnotes
 "notes": {
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
         "type": "footnote", // Specifies the type of notes: "footnote" or "sidenote"
-        "chapters": ".chapter", // where the notes restart
+        "resetCounter": ".chapter", // CSS element where the counter note reset (if you want to reset on the page: "page", reset on the page work only  with footnotes)
         "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
         "containerNotes": "#footnotes" // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
     }

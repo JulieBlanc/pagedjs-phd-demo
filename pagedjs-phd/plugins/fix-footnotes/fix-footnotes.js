@@ -3,29 +3,33 @@ import { Handler } from '../../paged.esm.js';
 export class fixFootnotes extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.section = "body"; // reset on this element
+        this.reset = ".chapter"; // reset on this element(s), if you want to reset on the page: "page"
         this.counter = 0; 
     }
 
-
     afterParsed(content){
     
-        if(config.notes.sections){
-            this.section = config.notes.sections;
+        if(config.notes.resetCounter){
+            this.reset = config.notes.resetCounter;
         }
 
-        let sections = content.querySelectorAll(this.section);        
-        sections.forEach(function (section, index) {
-            var div = document.createElement('div');
-            div.classList.add("reset-fix-footnote");
-            div.style.position = "absolute";
-            section.insertBefore(div, section.firstChild);
+        let elems = content.querySelectorAll(this.reset);        
+        elems.forEach(function (elem, index) {
+            var span = document.createElement('span');
+            span.classList.add("reset-fix-footnote");
+            span.style.position = "absolute";
+            elem.insertBefore(span, elem.firstChild);
         });
     }
 
 
     afterPageLayout(pageElement, page, breakToken){
   
+        // reset on pages
+        if(this.reset === "page"){
+            this.counter = 0;  
+        }
+
         // reset 
         let newchapter = pageElement.querySelector('.reset-fix-footnote');
         if(newchapter){
