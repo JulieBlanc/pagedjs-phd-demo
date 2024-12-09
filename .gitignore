@@ -8,4 +8,4 @@ src/images/*
 output/chapter-01-print.html
 output/chapter-02-print.html
 output/chapter-03-print.html
-print.html
+output/print.html
