@@ -3,8 +3,7 @@ import { Handler } from '../paged.esm.js';
 export class inlineNotesCountersHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.section = ""; // ← CSS selector where you want reset note counter
-        this.reset = ".chapter h2";
+        this.reset = ""; // ← CSS selector where you want reset note counter
         this.input = ".footnote-ref"; // ← CSS selector of the call element 
         this.containerNotes = "#footnotes"; // ← CSS selector of the container of the footnote
         this.type = "footnote"; // ← Type of notes: options are "footnote", "sidenote"
@@ -20,7 +19,7 @@ export class inlineNotesCountersHandler extends Handler {
         **/
             if(config.notes){
                 if(config.notes.type){ this.type = config.notes.type; }
-                if(config.notes.sections){ this.section = config.notes.sections; }
+                if(config.notes.resetCounter){ this.reset = config.notes.resetCounter; }
                 if(config.notes.callInput){ this.input = config.notes.callInput; }
                 if(config.notes.containerNotes){ this.containerNotes = config.notes.containerNotes; }
             }
@@ -35,7 +34,7 @@ export class inlineNotesCountersHandler extends Handler {
                     resetEligible = true;
                 } else if (resetEligible && element.matches(this.input)) {
                     console.log('Adding reset to:', element);
-                    element.classList.add('reset');
+                    element.classList.add('reset-note-counter');
                     resetEligible = false;
                 }
             });
@@ -108,19 +107,24 @@ function inlineNotes(params){
  function createNotes(content, input, type){
  
      let calls = content.querySelectorAll(input);
+     let resetNum = 0;
      calls.forEach( (call, index) => {
- 
-    
          let note = content.querySelector(call.getAttribute('href'));
 
          let back = note.querySelector(".footnote-back");
          if(back){
             back.remove();
          }
+
+         // reset counter
+         console.log(call);
+         if(call.classList.contains('reset-note-counter')){
+            resetNum = index;
+         }
         
          let inline_note = document.createElement('span');
          inline_note.className = "pagedjs_" + type;
-         let num = index + 1;
+         let num = index + 1 - resetNum;
          inline_note.dataset.counterNote = num;
 
 

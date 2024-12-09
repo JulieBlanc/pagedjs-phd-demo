@@ -28,6 +28,7 @@
     "notes": {
         "enabled": true,
         "type": "sidenote",
+        "resetCounter": ".chapter",
         "sections": ".chapter", 
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"
