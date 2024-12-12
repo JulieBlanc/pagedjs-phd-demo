@@ -5,6 +5,13 @@
             "style.css"
         ]
     },
+    "customHandlers": {
+        "directory": "/assets/js",
+        "files": [
+            "custom-handler-example-1.js",
+            "custom-handler-example-2.js"
+        ]
+    },
     "toc":{
         "enabled": true,
         "container": "#toc-here",
@@ -19,13 +26,6 @@
         "counters": true,
         "beforepagenumber": ""
      },
-     "customHandlers": {
-        "directory": "/assets/js",
-        "files": [
-            "custom-handler-example-1.js",
-            "custom-handler-example-2.js"
-        ]
-    },
     "notes": {
         "enabled": true,
         "type": "footnote",

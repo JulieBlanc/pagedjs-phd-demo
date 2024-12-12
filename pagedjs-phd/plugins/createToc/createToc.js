@@ -12,8 +12,6 @@ export class createTocHandler extends Handler {
     }
 
     beforeParsed(content){
-
-
       /** pagedjs-design
          * Specific to pagedjs-design, overwrite values
         **/
@@ -25,9 +23,6 @@ export class createTocHandler extends Handler {
         if(config.toc.beforepagenumber || config.toc.beforepagenumber == ""){ this.beforePageNumber  = config.toc.beforepagenumber; }
       }
     /* */
-
-
-    console.log("this.beforePageNumbe = " + this.beforePageNumber);
    
 
       createToc({
