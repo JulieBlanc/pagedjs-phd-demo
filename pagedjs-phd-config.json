@@ -7,7 +7,7 @@
     },
     "toc":{
         "enabled": true,
-        "container":"#toc-here",
+        "container": "#toc-here",
         "titles":[
            ".chapter h2",
            ".chapter h3",
@@ -15,8 +15,9 @@
            ".chapter h5"
         ],
         "style":"leaders",
-        "counters":"true",
-        "beforepagenumber":""
+        "leaders": true,
+        "counters": true,
+        "beforepagenumber": ""
      },
      "customHandlers": {
         "directory": "/assets/js",

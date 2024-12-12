@@ -16,7 +16,7 @@ export function getHandlersAndCSS(config) {
   ];
 
   // Export the array of CSS of the plugins (path from the "plugins" folder)
-  let cssPlugins = ['footnotes.css'];
+const cssPlugins = ['footnotes.css'];
 
   // createToc
   if (config.toc?.enabled) { 

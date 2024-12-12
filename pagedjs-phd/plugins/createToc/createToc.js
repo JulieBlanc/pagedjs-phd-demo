@@ -3,17 +3,43 @@ import { Handler } from '../../paged.esm.js';
 export class createTocHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
+        this.tocContainer = "#toc"; // ← The element inside you want generate the table of content
+        this.tocTitles = ["h2", "h3"]; // ← List of title levels to include in the table of contents
+        this.leaders = false;  // ← Set on true if you want leaders
+        this.counters = false; // ← Set on true if you want counters before titles 
+        this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
+    
     }
 
     beforeParsed(content){
+
+
+      /** pagedjs-design
+         * Specific to pagedjs-design, overwrite values
+        **/
+      if(config.toc && config.toc.enabled){
+        if(config.toc.container){ this.tocContainer  = config.toc.container; }
+        if(config.toc.titles){ this.tocTitles  = config.toc.titles; }
+        if(config.toc.leaders || config.toc.leaders === false){ this.leaders  = config.toc.leaders; }
+        if(config.toc.counters || config.toc.counters === false){ this.counters  = config.toc.counters; }
+        if(config.toc.beforepagenumber || config.toc.beforepagenumber == ""){ this.beforePageNumber  = config.toc.beforepagenumber; }
+      }
+    /* */
+
+
+    console.log("this.beforePageNumbe = " + this.beforePageNumber);
+   
+
       createToc({
           content: content,
-          tocElement: config.toc.container, 
-          titleElements: config.toc.titles || ['h1', 'h2'],
-          tocStyle: config.toc.style || 'none',
-          tocCounters: config.toc.counters || "false",
-          before: config.toc.beforepagenumber || ""
+          container: config.toc.container, 
+          titleElements: this.tocTitles,
+          leaders: this.leaders,
+          counters: this.counters,
+          before: this.beforePageNumber
       });
+    
+    
     }
     
 }
@@ -21,9 +47,12 @@ export class createTocHandler extends Handler {
 
 function createToc(config) {
 
-    const content = config.content
-    const tocElement = config.tocElement
-    const titleElements = config.titleElements
+ 
+    const content = config.content;
+    const tocElement = config.container;
+    const titleElements = config.titleElements;
+
+
   
   
     let tocElementDiv = content.querySelector(tocElement)
@@ -31,9 +60,18 @@ function createToc(config) {
     tocElementDiv.innerHTML = ''
     let tocUl = document.createElement('ul')
     tocUl.id = 'list-toc-generated'
-    tocUl.setAttribute('data-toc-style', config.tocStyle);
-    tocUl.setAttribute('data-toc-set-counter', config.tocCounters);
-    tocUl.style.setProperty('--toc-before-page', '"' + config.before + '"');
+
+    if(config.leaders){
+      tocUl.setAttribute('data-toc-style', 'leaders');
+    }
+    if(config.counters){
+      tocUl.setAttribute('data-toc-set-counter', 'true');
+    }
+    if(config.before){
+      tocUl.style.setProperty('--toc-before-page', '"' + config.before + '"');
+    }
+ 
+   
   
   
     tocElementDiv.appendChild(tocUl)
