@@ -24,6 +24,7 @@
 @import "modules/frontmatter.css";
 @import "modules/biblio.css";
 
-#figure-2{
-  --pagedjs-float-img: bottom;
+#fig-cycle-conception{
+  --pagedjs-float-elem: next-page;
+
 }
