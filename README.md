@@ -122,16 +122,16 @@ You can configure some paged.js feature in this file (works only with the pagedj
 
 ```json
 "toc": {
-        "enabled": true,
-        "container": "#toc-here",
-        "titles": [
-           ".chapter h2", 
-           ".chapter h3"
-        ],
-        "style": "leaders",
-        "counters": "true",
-        "beforepagenumber": "" 
-     },
+    "enabled": true,
+    "container": "#toc-here",
+    "titles": [
+        ".chapter h2", 
+        ".chapter h3"
+    ],
+    "style": "leaders",
+    "counters": "true",
+    "beforepagenumber": "" 
+}
 ```
 
 - `"enabled": true` → Enables or disables the table of contents display 
@@ -148,12 +148,12 @@ Determine if you want footnotes
 
 ```json
 "notes": {
-        "enabled": true,
-        "type": "footnote",
-        "resetCounter": ".chapter",
-        "callInput": ".footnote-ref", 
-        "containerNotes": "#footnotes"
-    }
+    "enabled": true,
+    "type": "footnote",
+    "resetCounter": ".chapter",
+    "callInput": ".footnote-ref", 
+    "containerNotes": "#footnotes"
+}
 ```
 
 - `"enabled": true` →  Enables or disables the notes feature (it will inline the notes in list from Pandoc)
@@ -168,16 +168,16 @@ It’s also possible to make sidenotes (`"type": "sidenote"`) or margin notes (`
 
 ```json
 "notes": {
-        "enabled": true, 
-        "type": "sidenote", 
-        "resetCounter": ".chapter", 
-        "callInput": ".footnote-ref", 
-        "containerNotes": "#footnotes", 
-        "params": { 
-            "position": "outside", 
-            "align": ".first-paragraph" 
-        }
+    "enabled": true, 
+    "type": "sidenote", 
+    "resetCounter": ".chapter", 
+    "callInput": ".footnote-ref", 
+    "containerNotes": "#footnotes", 
+    "params": { 
+        "position": "outside", 
+        "align": ".first-paragraph" 
     }
+}
 ```
 
 - `"position"` → Determines the placement of the notes in the page: `"outside"`, `"inside"`, `"left"`, `"right"` / default: `"outside"`
@@ -191,15 +191,33 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 
 ```json
 "customHandlers": {
-    "directory": "/assets/js", // path of the directory
+    "directory": "/assets/js", 
     "files": [
         "custom-handler-example-1.js",
-        "custom-handler-example-2.js" // your js files   
+        "custom-handler-example-2.js" 
     ]
 }
 ```
 
+- `"directory"` → path of the directory
+- `"files"` → yout js files with custom handlers   
 
+
+Template to create handlers with paged.esm.js (module ECMAScript.):
+
+```javascript
+import { Handler } from '/pagedjs-phd/paged.esm.js';
+
+export default class myCustomHandler extends Handler {
+    constructor(chunker, polisher, caller) {
+        super(chunker, polisher, caller);
+    }
+
+    beforeParsed(content){
+        // ...
+    }
+}
+```
 
 
 ### To do
