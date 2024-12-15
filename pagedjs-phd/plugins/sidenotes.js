@@ -16,12 +16,12 @@ export class sidenotes extends Handler {
         /** pagedjs-design
          * Specific to pagedjs-design, overwrite values
         **/
-        if(config.notes && config.notes.sidenote){
-            if(config.notes.sidenote.position){
-                this.position = config.notes.sidenote.position;
+        if(config.notes && config.notes.params){
+            if(config.notes.params.position){
+                this.position = config.notes.params.position;
             }
-            if(config.notes.sidenote.align){
-                this.align = config.notes.sidenote.align;
+            if(config.notes.params.align){
+                this.align = config.notes.params.align;
             }
         }
         /* */

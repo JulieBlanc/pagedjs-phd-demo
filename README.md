@@ -152,18 +152,18 @@ Determine if you want footnotes
     }
 ```
 
-It’s also possible to make sidenotes:
+It’s also possible to make sidenotes (`"type": "sidenote"`) or margin notes (`"type": "margin-note"`) and specify some parameters:
 
 
 ```json
 "notes": {
         "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandoc)
-        "type": "sidenote", // Specifies the type of notes: "footnote" or "sidenote"
-        "sections": ".chapter", // where the notes restart
+        "type": "sidenote", // Specifies the type of notes: "footnote", "sidenote" or "margin-note"
+        "resetCounter": ".chapter", // where the notes restart
         "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
         "containerNotes": "#footnotes", // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
-        "sidenote": { // settings for sidenotes (apply only if "type": "sidenote")
-            "position": "outside", // Determines the placement of the sitenotes: "outside", "inside", "left", "right"
+        "params": { // settings for sidenotes & margin notes
+            "position": "outside", // Determines the placement of the notes in the page: "outside", "inside", "left", "right" (default: "outside")
             "align": ".first-paragraph" // Determines the top alignment of the sidenote relative to this element (the first on the page)
         }
     }

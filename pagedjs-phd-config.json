@@ -28,10 +28,14 @@
      },
     "notes": {
         "enabled": true,
-        "type": "margin-note",
+        "type": "sidenote",
         "resetCounter": ".chapter",
         "callInput": ".footnote-ref", 
-        "containerNotes": "#footnotes"
+        "containerNotes": "#footnotes",
+        "params":  { 
+            "position": "outside",
+            "align": ".first-paragraph"
+        }
 
     }
 

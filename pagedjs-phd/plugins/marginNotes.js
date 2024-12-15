@@ -11,6 +11,17 @@ export class marginNotes extends Handler {
 
     beforeParsed(content) {
 
+        /** pagedjs-design
+         * Specific to pagedjs-design, overwrite values
+        **/
+        if(config.notes && config.notes.params){
+            if(config.notes.params.position){
+                this.position = config.notes.params.position;
+            }
+        }
+        /* */
+     
+
         let notes = content.querySelectorAll(this.notesClass);
         notes.forEach(function (note, index) {
             note.style.position = "absolute";
@@ -190,21 +201,5 @@ function addcss(css) {
     s.appendChild(document.createTextNode(css));
   }
   head.appendChild(s);
-}
-
-
-// CAMEL CLASS NOTE
-
-function toCamelClassNote(elem) {
-  let splitClass = elem.split("-");
-  if (splitClass.length > 1) {
-    for (let s = 1; s < splitClass.length; ++s) {
-      let strCapilize = splitClass[s].charAt(0).toUpperCase() + splitClass[s].slice(1)
-      splitClass[s] = strCapilize;
-    }
-  }
-  let reducer = (accumulator, currentValue) => accumulator + currentValue;
-  let classCamel = splitClass.reduce(reducer);
-  return classCamel;
 }
 
