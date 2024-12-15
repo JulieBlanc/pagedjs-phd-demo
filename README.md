@@ -15,10 +15,7 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 - Web browser (caution: there may be differences in rendering between browsers)
 
 
-
-
-
-## Use
+## Use
 
 - Every time you change something in the markdown file, use the Pandoc command to regenerate yout html file.
 - Launch Live server to see the result in the browser.
@@ -88,7 +85,7 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
 
 - `js/` → Folder where you can add your custom Javascript. Use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js. Don’t forget to load your custom file in `pagedjs-phd-config.json`
 
-### output/
+### output/
 
 Create this directory if doesn’t exist, before launching Pandoc command. It’s where your content is generate
 
@@ -169,6 +166,8 @@ It’s also possible to make sidenotes (`"type": "sidenote"`) or margin notes (`
     }
 ```
 
+**Be careful, remove the comment from your JSON file because JSON doesn't support comments.**
+
 #### Custom Script (handlers)
 
 You can add your custom Javascript. For this, use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js [(see documentation)](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/). Add your files in `/assets/js/` and load your custom file like this:
@@ -193,4 +192,3 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 - web version
 - metadata in pandoc template for cover ?
 - ajouter une page si ce n’est pas un multiple de 2 ou 4
-- changer le reset des notes pas un element inline
