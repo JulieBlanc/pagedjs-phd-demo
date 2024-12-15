@@ -14,8 +14,6 @@ export class inlineNotesCountersHandler extends Handler {
 
     beforeParsed(content){    
         
-        console.log("Inline notes & counters --------- ")
-
          /** pagedjs-design
          * Specific to pagedjs-design, overwrite values
         **/
@@ -35,7 +33,6 @@ export class inlineNotesCountersHandler extends Handler {
                 if (element.matches(this.reset)) {
                     resetEligible = true;
                 } else if (resetEligible && element.matches(this.input)) {
-                    console.log('Adding reset to:', element);
                     element.classList.add('reset-note-counter');
                     resetEligible = false;
                 }
@@ -104,7 +101,6 @@ function inlineNotes(params){
          }
 
          // reset counter
-         console.log(call);
          if(call.classList.contains('reset-note-counter')){
             resetNum = index;
          }

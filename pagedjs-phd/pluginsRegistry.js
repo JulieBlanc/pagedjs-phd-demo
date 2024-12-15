@@ -5,6 +5,8 @@ import { pagedjsEnded } from './plugins/reload-in-place.js';
 import { inlineNotesHandler } from './plugins/inlineNotes.js';
 import { inlineNotesCountersHandler } from './plugins/inlineNotesCounters.js';
 import { sidenotes } from './plugins/sidenotes.js';
+import { marginNotes } from './plugins/marginNotes.js';
+
 import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 
 // Export the array of plugin handlers
@@ -35,6 +37,12 @@ const cssPlugins = ['footnotes.css'];
   if (config.notes?.enabled && config.notes?.type === "sidenote") {
     handlers.push(inlineNotesCountersHandler);  
     handlers.push(sidenotes);  
+  }
+
+  // marginnotes
+  if (config.notes?.enabled && config.notes?.type === "margin-note") {
+    handlers.push(inlineNotesCountersHandler);  
+    handlers.push(marginNotes);  
   }
 
 
