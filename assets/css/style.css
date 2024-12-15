@@ -24,7 +24,12 @@
 @import "modules/frontmatter.css";
 @import "modules/biblio.css";
 
-#fig-cycle-conception{
+/* #fig-cycle-conception{
   --pagedjs-float-elem: next-page;
 
+} */
+
+
+#fig-photocompo-2{
+  --pagedjs-float-elem: next-page;
 }
