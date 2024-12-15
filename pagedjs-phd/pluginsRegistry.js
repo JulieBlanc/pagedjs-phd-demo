@@ -1,6 +1,7 @@
 import { createTocHandler } from './plugins/createToc/createToc.js';
 import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
+import { floatElems } from './plugins/floatElems.js';
 import { pagedjsEnded } from './plugins/reload-in-place.js';
 import { inlineNotesHandler } from './plugins/inlineNotes.js';
 import { inlineNotesCountersHandler } from './plugins/inlineNotesCounters.js';
@@ -13,6 +14,7 @@ import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 export function getHandlersAndCSS(config) {
   const handlers = [
     moveElems,
+    floatElems,
     fullPageHandler,
     pagedjsEnded
   ];

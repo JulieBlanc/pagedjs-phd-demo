@@ -23,3 +23,7 @@
 @import "modules/cover.css";
 @import "modules/frontmatter.css";
 @import "modules/biblio.css";
+
+#figure-2{
+  --pagedjs-float-img: bottom;
+}

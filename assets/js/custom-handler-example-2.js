@@ -1,4 +1,3 @@
-// PreviewHandler.js
 import { Handler } from '/pagedjs-phd/paged.esm.js';
 
 export default class myCustomHandler2 extends Handler {
