@@ -8,11 +8,8 @@ export class floatElems extends Handler {
         this.selectorTop = new Set();
         this.selectorNextPage = new Set();
         this.nextPageElem = new Set();
-
     }
 
-
-   
 
     onDeclaration(declaration, dItem, dList, rule) {
         // Read customs properties
@@ -54,12 +51,14 @@ export class floatElems extends Handler {
           let elems = parsed.querySelectorAll(item);
           for (let elem of elems) {
               elem.classList.add("float-elem_next-page");
-              elem.style.position = "absolute";
           }
       }
     } 
 
 
+
+  // positionning TOP & BOTTOM -------------------
+  
   afterPageLayout(pageElement, page, breakToken){
 		let floatTopPage = pageElement.querySelector(".float-elem_top");
     let pageContent = pageElement.querySelector(".pagedjs_page_content");
@@ -74,27 +73,26 @@ export class floatElems extends Handler {
       floatBottomPage.style.bottom = "0px";
     }
 
-
-    let nextPageElems = pageElement.querySelectorAll(".float-elem_next-page:not([data-processed])");
-    nextPageElems.forEach((elem) => {
-      this.nextPageElem.add(elem); 
-      elem.setAttribute("data-processed", "true"); 
-      elem.remove();
-    });
 	}
 
 
-  onOverflow(overflow, rendered, bounds) {
-    for (let elem of this.nextPageElem) {
-      if (!elem.hasAttribute("data-handled")) {
-        const copy = elem.cloneNode(true);
-        copy.style.position = "relative";
-        rendered.insertBefore(copy, rendered.firstChild);
-        elem.setAttribute("data-handled", "true"); // Marque comme traité
+
+
+    // positionning NEXT PAGE -------------------
+
+    renderNode(clone, node) {
+      if (node.nodeType == 1 && node.classList.contains("float-elem_next-page")) {
+        clone.style.display = "none";
+        this.nextPageElem.add(node);
       }
+    } 
+
+    onPageLayout(page, Token, layout) {
+      for (let elem of this.nextPageElem) {
+        page.insertBefore(elem, page.firstChild);
+      }
+      this.nextPageElem.clear();
     }
-    this.nextPageElem.clear();
-  }
 
 
   
