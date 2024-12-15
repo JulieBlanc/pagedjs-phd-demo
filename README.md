@@ -107,32 +107,39 @@ You can configure some paged.js feature in this file (works only with the pagedj
 
 ```json
  "style": {
-        "directory": "/assets/css", // path of the directory
+        "directory": "/assets/css",
         "files": [
-            "style.css"  // files of the style, you can add multiple ones      
+            "style.css"   
         ]
     },
 ```
 
+- `"directory"` → path of the directory
+- `"files"` → files of the style, you can add multiple ones    
 
 
 #### Table of content
 
 ```json
 "toc": {
-        "enabled": true, // Enables or disables the table of contents display
-        "container": "#toc-here", // Specifies the container element where the table of contents will be inserted (find it in toc.md)
+        "enabled": true,
+        "container": "#toc-here",
         "titles": [
            ".chapter h2", 
-           ".chapter h3" 
-						// List of title levels to include in the table of contents; additional levels can be added or removed
+           ".chapter h3"
         ],
-        "style": "leaders", // Default visual style of the toc, only "leaders" option is avaible, if you don’t want it, write  "false"
-        "counters": "true", // Add counters before titles (if you dont’t want, set to "false")
-        "beforepagenumber": "" // Customizes text or symbols to display before the page number (if applicable)
+        "style": "leaders",
+        "counters": "true",
+        "beforepagenumber": "" 
      },
 ```
 
+- `"enabled": true` → Enables or disables the table of contents display 
+- `"container"` → Specifies the container element where the table of contents will be inserted (find it in toc.md)
+- `"titles"` → List of title levels to include in the table of contents; additional levels can be added or removed / by default: "h2", "h3"
+- `"style": "leaders"` → Default visual style of the toc, only "leaders" option is avaible, if you don’t want it, write "false" / by default: false
+- `"counters": "true"` → Add counters before titles (if you dont’t want, set to "false") / by default: false
+- `"beforepagenumber"` → Customizes text or symbols to display before the page number (if applicable)
 
 
 #### Notes
@@ -141,32 +148,41 @@ Determine if you want footnotes
 
 ```json
 "notes": {
-        "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandox)
-        "type": "footnote", // Specifies the type of notes: "footnote" or "sidenote"
-        "resetCounter": ".chapter", // CSS element where the counter note reset (if you want to reset on the page: "page", reset on the page work only  with footnotes)
-        "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
-        "containerNotes": "#footnotes" // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
+        "enabled": true,
+        "type": "footnote",
+        "resetCounter": ".chapter",
+        "callInput": ".footnote-ref", 
+        "containerNotes": "#footnotes"
     }
 ```
+
+- `"enabled": true` →  Enables or disables the notes feature (it will inline the notes in list from Pandoc)
+- `"type"` → Specifies the type of notes. Option avaible: `"footnote"`, `"sidenote"`, `"margin-notes"`
+- `"resetCounter"`→ CSS element where the counter note reset (if you want to reset on the page: "page", reset on the page work only  with footnotes)
+- `"callInput"` → Identifies the elements used to reference notes in the text / by default: ".footnote-ref"
+- `"containerNotes"` → Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering) / by default: "#footnotes" 
+
 
 It’s also possible to make sidenotes (`"type": "sidenote"`) or margin notes (`"type": "margin-note"`) and specify some parameters:
 
 
 ```json
 "notes": {
-        "enabled": true, // Enables or disables the notes feature (it will inline the notes in list from Pandoc)
-        "type": "sidenote", // Specifies the type of notes: "footnote", "sidenote" or "margin-note"
-        "resetCounter": ".chapter", // where the notes restart
-        "callInput": ".footnote-ref", // Identifies the elements used to reference notes in the text
-        "containerNotes": "#footnotes", // Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering)
-        "params": { // settings for sidenotes & margin notes
-            "position": "outside", // Determines the placement of the notes in the page: "outside", "inside", "left", "right" (default: "outside")
-            "align": ".first-paragraph" // Determines the top alignment of the sidenote relative to this element (the first on the page)
+        "enabled": true, 
+        "type": "sidenote", 
+        "resetCounter": ".chapter", 
+        "callInput": ".footnote-ref", 
+        "containerNotes": "#footnotes", 
+        "params": { 
+            "position": "outside", 
+            "align": ".first-paragraph" 
         }
     }
 ```
 
-**Be careful, remove the comment from your JSON file because JSON doesn't support comments.**
+- `"position"` → Determines the placement of the notes in the page: `"outside"`, `"inside"`, `"left"`, `"right"` / default: `"outside"`
+- `"align"` → Determines the top alignment of the sidenote relative to this element (the first on the page) / works only for sidenotes
+
 
 #### Custom Script (handlers)
 
