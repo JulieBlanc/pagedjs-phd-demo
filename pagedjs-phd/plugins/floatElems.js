@@ -58,7 +58,7 @@ export class floatElems extends Handler {
 
 
   // positionning TOP & BOTTOM -------------------
-  
+
   afterPageLayout(pageElement, page, breakToken){
 		let floatTopPage = pageElement.querySelector(".float-elem_top");
     let pageContent = pageElement.querySelector(".pagedjs_page_content");
@@ -82,8 +82,12 @@ export class floatElems extends Handler {
 
     renderNode(clone, node) {
       if (node.nodeType == 1 && node.classList.contains("float-elem_next-page")) {
-        clone.style.display = "none";
+        console.log(getAllParents(node));
+        console.log(buildCssSelector(node));
+        console.log(cleaningCssSelector(node));
+        clone.remove();
         this.nextPageElem.add(node);
+        
       }
     } 
 
@@ -100,3 +104,59 @@ export class floatElems extends Handler {
 
 
 
+// FONCTIONS --------------------------------------------------------------------------
+
+// Array of the parents
+function getAllParents(element) {
+  let parents = [];
+  let current = element;
+
+  while (current.parentNode) {
+      parents.push(current.parentNode);
+      current = current.parentNode;
+  }
+
+  return parents;
+}
+
+
+// Function to build the CSS selector from the parents.
+function buildCssSelector(element) {
+  const parents = getAllParents(element);
+  let selector = [];
+
+  for (let i = parents.length - 1; i >= 0; i--) {
+      const parent = parents[i];
+      let parentSelector = parent.nodeName.toLowerCase();
+
+      if (parent.id) {
+          parentSelector += `#${parent.id}`;
+      }
+
+      if (parent.className) {
+          parentSelector += `.${parent.className.split(' ').join('.')}`;
+      }
+
+      selector.push(parentSelector);
+  }
+
+  // Selector of the element
+  // let elementSelector = element.nodeName.toLowerCase();
+  // if (element.id) {
+  //     elementSelector += `#${element.id}`;
+  // }
+  // if (element.className) {
+  //     elementSelector += `.${element.className.split(' ').join('.')}`;
+  // }
+  // selector.push(elementSelector);
+
+  return selector.join(' > ');
+}
+
+// delete dociment fragment
+function cleaningCssSelector(element) {
+  let string = buildCssSelector(element);
+  string = string.replace('#document-fragment > ', '');
+  string = string.replace('#document-fragment', ''); // if there is no parents
+  return string;
+}

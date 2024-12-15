@@ -149,7 +149,7 @@ La maquettes et ses différents éléments (les pages types, les bandes de texte
 
 
 
-
+<section class="travail-compo">
 
 ##### Le travail de composition 
 
@@ -166,6 +166,8 @@ La photocomposition est une véritable industrie à son époque, avec des avanc�
 
 ![Trois exemplaires de&nbsp;la&nbsp;Lumitype 200 dans les ateliers de la Sirlo (siège du Figaro, rue du Louvre) >fin des années 1950](../images/ateliers-sirlo.jpg){#fig-photocompo-2}
 
+
+</section>
 
 ##### La chaîne graphique, une organisation complexe
 
