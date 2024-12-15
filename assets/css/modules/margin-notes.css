@@ -1,0 +1,37 @@
+.pagedjs_margin-note{
+
+    text-indent: 0px;
+    font-size: var(--font-size-small);
+    line-height: calc(var(--baseline)*0.75);
+    padding-bottom: calc(var(--baseline)*0.5);
+    break-inside: avoid;
+}
+
+.pagedjs_left_page .pagedjs_margin-note{
+    padding-left: 6mm;
+    padding-right: 4mm;
+}
+
+.pagedjs_right_page .pagedjs_margin-note{
+    padding-left: 4mm;
+    padding-right: 6mm;
+}
+
+/* MARKER ----------------------- */
+.pagedjs_margin-note .note-marker::after{
+    content: ". "
+}
+.pagedjs_margin-note .note-marker{
+    font-weight:  bold;
+}
+
+
+/* CALL ----------------------- */
+.note-call{
+    position: relative;
+    top: -3px;
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    padding-left: 2px;
+    font-style: normal;
+}
