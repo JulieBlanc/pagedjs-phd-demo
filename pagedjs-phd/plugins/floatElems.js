@@ -8,6 +8,7 @@ export class floatElems extends Handler {
         this.selectorTop = new Set();
         this.selectorNextPage = new Set();
         this.nextPageElem = new Set();
+        this.nextPageElemTemp = new Set();
     }
 
 
@@ -73,6 +74,16 @@ export class floatElems extends Handler {
       floatBottomPage.style.bottom = "0px";
     }
 
+    for (let elem of this.nextPageElemTemp) {
+      let parent = pageElement.querySelector(elem.parentSelector);
+      let node = elem.elem;
+      if(parent){
+        parent.insertBefore(node, parent.firstChild);
+      }
+    }
+    this.nextPageElemTemp.clear();
+    
+
 	}
 
 
@@ -82,19 +93,21 @@ export class floatElems extends Handler {
 
     renderNode(clone, node) {
       if (node.nodeType == 1 && node.classList.contains("float-elem_next-page")) {
-        console.log(buildCssSelector(node.parentNode));
         clone.remove();
-        this.nextPageElem.add(node);
-        
+        this.nextPageElem.add({ elem: node, parentSelector: buildCssSelector(node.parentNode) });
       }
     } 
 
     onPageLayout(page, Token, layout) {
       for (let elem of this.nextPageElem) {
-        page.insertBefore(elem, page.firstChild);
+        page.insertBefore(elem.elem, page.firstChild);
+        this.nextPageElemTemp.add(elem);
+        console.log(this.nextPageElemTemp);
       }
       this.nextPageElem.clear();
     }
+
+    
 
 
   
@@ -113,7 +126,7 @@ function buildCssSelector(element) {
       let currentSelector = current.nodeName.toLowerCase();
 
       if (current.id) {
-          currentSelector += `#${current.id}`;
+          currentSelector += `[data-id="${current.id}"]`;
       }
 
       if (current.className) {

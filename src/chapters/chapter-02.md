@@ -125,6 +125,9 @@ L'introduction progressive de la photocomposition dans les ateliers d’imprimer
 [^debergny]: Les premières photocomposeuses Lumitype sont mises en service par&nbsp;la&nbsp;fonderie Deberny & Peignot à&nbsp;partir&nbsp;de 1954 mais il faudra attendre une&nbsp;dizaine d’année avant que ces&nbsp;machines s’imposent dans l’industrie graphique et éditoriale. Voir Wlassikoff, *Histoire du&nbsp;graphisme en&nbsp;France*, *op. cit.* p. 178.
 [^marshall]: Alan Marshall, historien, a consacré de nombreux écrits à&nbsp;ces&nbsp;transformations, dont une thèse mené à l’Institut de recherche en informatique et systèmes aléatoires de Renne et publiée en 1992 : « Ruptures et continuité dans un changement de système technique : le&nbsp;remplacement du plomb par&nbsp;la&nbsp;lumière dans la composition typographique ».
 
+
+<section class="travail-compo">
+
 ##### Le travail de conception graphique et d’assemblage
 
 Le travail de mise en page commence dans l’atelier de graphisme, où le.la graphiste schématise des idées et imagine l’organisation des ouvrages à partir d’une copie manuscrite envoyée par l’éditeur. Une fois les choix de mise en page effectués, la copie est annotée avec, pour chaque élément, les indications du choix des caractères, leur taille, l’interlignage, l’interlettrage et la justification. Les graphistes qui conçoivent la maquette doivent avoir une grande habileté de projection. Pour les aider à imaginer le résultats, ils·elles disposent d’un ensemble d’ouvrages et d’instruments : catalogues de fonderies avec les caractères disponibles, guides de références divers, instruments de calculs, etc. Malgré ces aides, la projection du résultat final lors de la conception reste difficile. Compositeur et designer graphique, Taylor Conrad déplore ainsi le manque de visualisation amené par les processus de photocomposition :
@@ -149,13 +152,11 @@ La maquettes et ses différents éléments (les pages types, les bandes de texte
 
 
 
-<section class="travail-compo">
 
 ##### Le travail de composition 
 
 Au sein des ateliers de composition, le traditionnel compositeur est remplacé par le photocompositeur, opérateur en charge de ces imposantes machines munies d’un clavier sur lequel il peut saisir le texte et les instructions de composition. Dès la deuxième génération (au milieu des années 70), les photocomposeuses sont équipée de calculateurs électroniques (micro-ordinateurs) permettant de répartir automatiquement les caractères et les mots sur la ligne de justification et d’assurer la coupures de mots. Le développement de machines de traitement de texte séparé introduit des systèmes de balisage des textes produisant des supports magnétiques pouvant ensuite être introduits dans les machines, séparant alors les étapes de&nbsp;saisie et de&nbsp;composition[^seybold]. À la fin des années 1970, les langages de balisages standardisés se développent pour décrire la structure des documents à composer et mettre en page ces mêmes documents avec les photocomposeuses et les machines de traitements de texte informatiques[^structured-documents].
 
-Au sein des ateliers de composition, le traditionnel compositeur est remplacé par le photocompositeur, opérateur en charge de ces imposantes machines munies d’un clavier sur lequel il peut saisir le texte et les instructions de composition. Dès la deuxième génération (au milieu des années 70), les photocomposeuses sont équipée de calculateurs électroniques (micro-ordinateurs) permettant de répartir automatiquement les caractères et les mots sur la ligne de justification et d’assurer la coupures de mots. Le développement de machines de traitement de texte séparé introduit des systèmes de balisage des textes produisant des supports magnétiques pouvant ensuite être introduits dans les machines, séparant alors les étapes de&nbsp;saisie et de&nbsp;composition. À la fin des années 1970, les langages de balisages standardisés se développent pour décrire la structure des documents à composer et mettre en page ces mêmes documents avec les photocomposeuses et les machines de traitements de texte informatiques.
 
 La saisie et le balisage des textes sur des machines spécifiques ouvrent la voie au recrutement d’opératrices spécialisées – les dactylographes – bien souvent des femmes moins bien payées, moins organisées en syndicats et plus facilement remplaçables que les compositeurs. La saisie s’effectue alors de plus en plus en dehors des milieux traditionnels de l’imprimerie et de la composition, préfigurant ce qui deviendra un travail de bureautique de plus en plus pris en charge par les secrétaires de rédaction.
 
@@ -167,7 +168,7 @@ La photocomposition est une véritable industrie à son époque, avec des avanc�
 ![Trois exemplaires de&nbsp;la&nbsp;Lumitype 200 dans les ateliers de la Sirlo (siège du Figaro, rue du Louvre) >fin des années 1950](../images/ateliers-sirlo.jpg){#fig-photocompo-2}
 
 
-</section>
+
 
 ##### La chaîne graphique, une organisation complexe
 
@@ -208,7 +209,7 @@ La facilité du mélange des médias visuels et typographiques est alors à l’
 [^richaudeau-ecole]: François Richaudeau, <br>*École de Lure*, 1956. / retranscrit dans&nbsp;« Dialogues typographiques » <br>(*ibid*, p. 88).
 [^ecole-lure]: Au départ appelée « école de Lure ».
 
-
+</section>
 
 #### La Publication Assistée par Ordinateur : *what you see is what you get*
 
