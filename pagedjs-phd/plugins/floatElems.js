@@ -82,8 +82,7 @@ export class floatElems extends Handler {
 
     renderNode(clone, node) {
       if (node.nodeType == 1 && node.classList.contains("float-elem_next-page")) {
-        console.log(buildCssSelector(node));
-        console.log(cleaningCssSelector(node));
+        console.log(buildCssSelector(node.parentNode));
         clone.remove();
         this.nextPageElem.add(node);
         
@@ -105,7 +104,7 @@ export class floatElems extends Handler {
 
 // FONCTIONS --------------------------------------------------------------------------
 
-// Function to build the CSS selector from the element and its parents.
+// Function to build the CSS selector from the element and its parents
 function buildCssSelector(element) {
   let selector = [];
   let current = element;
