@@ -43,6 +43,6 @@
 }
 
 #fig-photocompo-1{
-  --x-move-elem: 7;
-  display: none;
+  /* --x-move-elem: 7; */
+  /* display: none; */
 }

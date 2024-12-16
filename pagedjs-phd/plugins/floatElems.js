@@ -107,9 +107,6 @@ export class floatElems extends Handler {
       this.nextPageElem.clear();
     }
 
-    
-
-
   
 }
 
