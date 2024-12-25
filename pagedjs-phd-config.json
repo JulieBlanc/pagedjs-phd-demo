@@ -16,7 +16,7 @@
         "enabled": true,
         "container": "#toc",
         "titles":[
-            ".chapter h1",
+            "h1",
             ".chapter h2",
             ".chapter h3",
             ".chapter h4",

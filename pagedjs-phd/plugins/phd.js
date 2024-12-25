@@ -6,6 +6,9 @@ export class phd extends Handler {
     }
 
     beforeParsed(content){
+
+        console.log(" -- CREATE PHD PHD ------------------------------")
+
         
 
         let defaultItems = ['cover', 'abstract', 'table of content', 'table of figures', 'foreword', 'introduction', 'chapters', 'conclusion', 'bibliography', 'glossary', 'appendix', 'acknowledgements', 'credits'];
@@ -96,7 +99,6 @@ function reorderSections(content, orderArray) {
 
             // Handle specific exceptions
             if (exception.multi) {
-                console.log(generateTitle(exception.idPrefix));
                 // Handle "chapters" by finding all sections with IDs starting with the prefix
                 const matchingSections = allSections.filter(el =>
                     el.id && el.id.startsWith(exception.idPrefix)
