@@ -24,25 +24,7 @@
 @import "modules/frontmatter.css";
 @import "modules/biblio.css";
 
-/* #fig-cycle-conception{
-  --pagedjs-float-elem: next-page;
 
-} */
-
-
-
-.chapter figure img{
-  border: 3px solid violet;
-}
 #fig-photocompo-2{
   --pagedjs-float-elem: next-page;
-}
-
-.chapter{
-  color: purple;
-}
-
-#fig-photocompo-1{
-  /* --x-move-elem: 7; */
-  /* display: none; */
 }

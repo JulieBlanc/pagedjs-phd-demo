@@ -58,22 +58,27 @@ export class floatElems extends Handler {
 
 
 
-  // positionning TOP & BOTTOM -------------------
-
   afterPageLayout(pageElement, page, breakToken){
+
+    // TOP (positionning)
 		let floatTopPage = pageElement.querySelector(".float-elem_top");
-    let pageContent = pageElement.querySelector(".pagedjs_page_content");
     if(floatTopPage){
-      pageContent.insertBefore(floatTopPage, pageContent.firstChild);
+      let selector = buildCssSelector(floatTopPage.parentNode);
+      parent = pageElement.querySelector(selector)
+      parent.insertBefore(floatTopPage, parent.firstChild);
     }
 
+    // BOTTOM (positionning)
     let floatBottomPage = pageElement.querySelector(".float-elem_bottom");
     if(floatBottomPage){
-      pageContent.insertBefore(floatBottomPage, pageContent.firstChild);
+      let selector = buildCssSelector(floatBottomPage.parentNode);
+      parent = pageElement.querySelector(selector);
+      parent.insertBefore(floatBottomPage, parent.firstChild);
       floatBottomPage.style.position = "absolute";
       floatBottomPage.style.bottom = "0px";
     }
 
+    // NEXT PAGE (positionning into parent section)
     for (let elem of this.nextPageElemTemp) {
       let parent = pageElement.querySelector(elem.parentSelector);
       let node = elem.elem;
@@ -89,7 +94,7 @@ export class floatElems extends Handler {
 
 
 
-    // positionning NEXT PAGE -------------------
+    // NEXT PAGE (pass to next page) -------------------
 
     renderNode(clone, node) {
       if (node.nodeType == 1 && node.classList.contains("float-elem_next-page")) {
@@ -102,7 +107,6 @@ export class floatElems extends Handler {
       for (let elem of this.nextPageElem) {
         page.insertBefore(elem.elem, page.firstChild);
         this.nextPageElemTemp.add(elem);
-        console.log(this.nextPageElemTemp);
       }
       this.nextPageElem.clear();
     }
@@ -120,6 +124,10 @@ function buildCssSelector(element) {
   let current = element;
 
   while (current) {
+    if (current.classList && current.classList.contains('pagedjs_page_content')) {
+      break; // Stop if the parent with class 'pagedjs_page_content' is found
+  }
+
       let currentSelector = current.nodeName.toLowerCase();
 
       if (current.id) {
@@ -135,7 +143,7 @@ function buildCssSelector(element) {
   }
 
   selector = selector.join(' > ');
-  selector = selector.replace(/#document-fragment( > )?/g, ''); // Clean the CSS selector by removing '#document-fragment'
+  // selector = selector.replace(/#document-fragment( > )?/g, ''); // Clean the CSS selector by removing '#document-fragment'
 
   return selector;
 }
