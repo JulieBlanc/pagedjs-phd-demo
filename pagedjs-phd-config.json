@@ -14,7 +14,7 @@
     },
     "toc":{
         "enabled": true,
-        "container": "#toc-here",
+        "container": "#toc",
         "titles":[
            ".chapter h2",
            ".chapter h3",
@@ -32,7 +32,24 @@
         "resetCounter": ".chapter",
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"
+    },
+    "menu": {
+        "lang": "fr",
+        "items": [
+            "cover",
+            "acknowledgements",
+            "abstract",
+            "table of content",
+            "table of figures",
+            "introduction",
+            "chapters",
+            "conclusion",
+            "bibliography",
+            "credits"
+          
+        ]
     }
+
 
     
  }

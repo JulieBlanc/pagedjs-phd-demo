@@ -1,3 +1,4 @@
+import { phd } from './plugins/phd.js';
 import { createTocHandler } from './plugins/createToc/createToc.js';
 import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
@@ -7,12 +8,12 @@ import { inlineNotesHandler } from './plugins/inlineNotes.js';
 import { inlineNotesCountersHandler } from './plugins/inlineNotesCounters.js';
 import { sidenotes } from './plugins/sidenotes.js';
 import { marginNotes } from './plugins/marginNotes.js';
-
 import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 
 // Export the array of plugin handlers
 export function getHandlersAndCSS(config) {
   const handlers = [
+    phd,
     moveElems,
     floatElems,
     fullPageHandler,

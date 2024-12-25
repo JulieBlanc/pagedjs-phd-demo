@@ -30,9 +30,25 @@ Create print.html file (all content)
 
 
 ```
-pandoc src/cover.md src/abstract.md src/toc.md src/chapters/*.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
+pandoc src/cover.md src/abstract.md src/chapters/*.md src/credits.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
 ```
 
+```
+for file in src/cover.md src/abstract.md src/toc.md; do
+  [ -f "$file" ] || echo "" > "$file.tmp"
+done
+
+pandoc $(for file in src/cover.md src/abstract.md src/toc.md; do [ -f "$file" ] && echo "$file" || echo "$file.tmp"; done) src/chapters/*.md \
+  --template=assets/templates/print.html \
+  --metadata-file=meta.yaml \
+  --lua-filter=assets/add_section_ids.lua \
+  --lua-filter=assets/update-image-paths.lua \
+  --citeproc \
+  -o output/print.html
+
+# Nettoyage des fichiers temporaires
+rm -f src/*.tmp
+```
 
 
 Create a file for each printed chapter

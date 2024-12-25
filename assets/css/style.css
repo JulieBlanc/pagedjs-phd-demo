@@ -28,3 +28,8 @@
 #fig-photocompo-2{
   --pagedjs-float-elem: next-page;
 }
+
+
+#credits{
+  break-before: page;
+}

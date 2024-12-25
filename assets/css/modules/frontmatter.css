@@ -1,8 +1,10 @@
-#abstract, #toc{
+#abstract, 
+#section_table-of-content,
+#section_table-of-figures{
     break-before: right;
 }
 
-#remerciements, #toc-section{
+#remerciements{
     break-before: right;
 } 
 
