@@ -37,16 +37,15 @@
         "lang": "fr",
         "items": [
             "cover",
-            "acknowledgements",
             "abstract",
             "table of content",
+            "acknowledgements",
             "table of figures",
             "introduction",
             "chapters",
             "conclusion",
             "bibliography",
             "credits"
-          
         ]
     }
 

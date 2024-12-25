@@ -30,12 +30,12 @@ export class phd extends Handler {
             let arrayItemsId = []; 
 
             items.forEach(function (item, index) {
-                arrayItemsId.push(generateId(item));
-                
-                let itemTitle = generateTitle(item);
+                arrayItemsId.push({
+                    id: generateId(item),       
+                    title: generateTitle(item) 
+                });
             });
 
-            console.log(arrayItemsId);
 
             reorderSections(content, arrayItemsId);
 
@@ -68,7 +68,8 @@ function generateTitle(id) {
 
 
 
-function reorderSections(content, order) {
+function reorderSections(content, orderArray) {
+    console.log(orderArray);
     const container = content; 
     const allSections = Array.from(container.children); // Get all initial sections as an array
     const processedIds = new Set(); // Keep track of IDs that have already been processed
@@ -91,7 +92,9 @@ function reorderSections(content, order) {
     };
 
     // Iterate over the specified order
-    order.forEach(id => {
+    orderArray.forEach(order => {
+        let id = order.id;
+        let title = order.title;
         let section;
 
         if (exceptions[id]) {
@@ -118,9 +121,9 @@ function reorderSections(content, order) {
         } else {
             // For regular sections, find them by ID
             section = content.getElementById(id);
-            console.log('id=' + id); 
-            console.log(section); 
         }
+
+
 
         if (section) {
             fragment.appendChild(section); // Add the section to the temporary container
@@ -128,6 +131,8 @@ function reorderSections(content, order) {
         } else {
             console.warn(`${id} does not exist. Please create the corresponding md file.`);
         }
+
+        console.log(processedIds);
     });
 
     // Add remaining sections at the end
