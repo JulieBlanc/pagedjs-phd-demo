@@ -80,10 +80,7 @@ function createToc(config) {
       titleElement.forEach(function (element) {
         // check if shouldbe shown
         if (
-          !(
-            element.closest('section').classList.contains('toc-ignore') ||
-            element.closest('section').classList.contains('toc')
-          )
+          !element.classList.contains('toc-ignore')
         ) {
           // add classes to the element
           element.classList.add('title-element')
@@ -113,14 +110,14 @@ function createToc(config) {
       tocNewLi.classList.add('toc-element-level-' + tocElement.dataset.titleLevel)
   
       let classes = [
-        ...tocElement.className.split(' '),
-        ...tocElement.closest('section')?.className.split(' '),
-      ]
-  
+        ...(tocElement.className ? tocElement.className.split(' ') : []),
+        ...(tocElement.closest('section')?.className ? tocElement.closest('section')?.className.split(' ') : []),
+      ];
+      
       classes.forEach((meta) => {
-        if (meta == 'title-element' || meta == undefined || meta == '') return
-        tocNewLi.classList.add(`toc-${meta}`)
-      })
+        if (!meta || meta === 'title-element') return;
+        tocNewLi.classList.add(`toc-${meta}`);
+      });
   
       //get the exisiting class
       // Keep class of title elements

@@ -3,11 +3,11 @@
 - EUR ArTec
 - EnsadLab, Reflective Interaction
 
-### Julie Blanc
+### Julie Blanc {.toc-ignore}
 
 
-# Composer avec les&nbsp;technologies du&nbsp;web
-## Genèses instrumentales collectives <br>pour le développement d'une communauté <br>de pratique de designers graphiques 
+# Composer avec les&nbsp;technologies du&nbsp;web {.toc-ignore}
+## Genèses instrumentales collectives <br>pour le développement d'une communauté <br>de pratique de designers graphiques {.toc-ignore}
 
 
 
