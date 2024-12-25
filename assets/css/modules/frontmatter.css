@@ -1,21 +1,48 @@
+#abstract,
 #abstract, 
+#resume,
+#acknowledgments,
+#remerciements,
 #table-of-content,
-#table-of-figures{
+#table-of-figures,
+#table-of-tables,
+#preface,
+#foreword, 
+#avant-propos{
     break-before: right;
+    page: frontmatter;
 }
 
-#remerciements{
-    break-before: right;
+@page frontmatter{
+    @top-left{ content: none; } 
 } 
 
-#abstract h1{
+
+#abstract h1,
+#abstract h1, 
+#resume h1,
+#acknowledgments h1,
+#remerciements h1,
+#table-of-content h1,
+#table-of-figures h1,
+#table-of-tables h1,
+#preface h1,
+#foreword h1, 
+#avant-propos h1{
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-family: var(--font-sans);
     font-size: var(--font-size);
     line-height: var(--baseline);
-    margin-bottom: calc(var(--baseline)*1);
-    margin-top: calc(var(--baseline)*2);
-}
+    margin-bottom: calc(var(--baseline)*2);
+} 
 
+
+/* Keywords */
+#resume p + h1,
+#abstract p + h1{
+    margin-top: calc(var(--baseline)*2);
+    margin-bottom: var(--baseline)!important;
+
+}

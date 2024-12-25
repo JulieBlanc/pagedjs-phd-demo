@@ -1,4 +1,6 @@
-.chapter h1{
+.chapter h1,
+#introduction h1,
+#conclusion h1{
     font-size: calc(var(--font-size)*2.6);
     line-height: calc(var(--baseline)*1.6);
     font-weight: normal;
@@ -20,6 +22,8 @@
 }
 
 
+#introduction h2,
+#conclusion h2,
 .chapter h2{
     break-after: avoid;
     font-size: calc(var(--font-size)*1.8);
@@ -30,6 +34,8 @@
     margin-bottom: calc(var(--baseline)*1);
 }
 
+#introduction h3,
+#conclusion h3,
 .chapter h3{
     break-after: avoid;
     font-weight: 800;
@@ -39,7 +45,8 @@
     margin-bottom: calc(var(--baseline)*1);
 }
 
-
+#introduction h4,
+#conclusion h4,
 .chapter h4{
     break-after: avoid;
     font-weight: 800;

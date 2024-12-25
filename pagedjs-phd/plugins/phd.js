@@ -8,20 +8,11 @@ export class phd extends Handler {
     beforeParsed(content){
         
 
-        let defaultItemsEn = ['cover', 'abstract', 'table of content', 'table of figures', 'foreword', 'introduction', 'chapters', 'conclusion', 'bibliography', 'glossary', 'appendix', 'acknowledgements', 'credits'];
-        let defaultItemsFr = ['couverture', 'résumé', 'table des matières', 'table des figures', 'avant-propos', 'introduction', 'chapitres', 'conclusion', 'bibliographie', 'glossaire', 'appendices', 'remerciements', 'crédits'];
-        let items;
-
-
-
-
+        let defaultItems = ['cover', 'abstract', 'table of content', 'table of figures', 'foreword', 'introduction', 'chapters', 'conclusion', 'bibliography', 'glossary', 'appendix', 'acknowledgements', 'credits'];
+        let items = defaultItems;
 
         if(config.menu){
-            if(config.menu.lang == "fr"){
-                items = defaultItemsFr;
-            }else{
-                items = defaultItemsEn;
-            }
+         
 
             if(config.menu.items){
                 items = config.menu.items;
@@ -78,7 +69,7 @@ function reorderSections(content, orderArray) {
     function createSection(id, title, contentDivId) {
         const section = document.createElement('section'); 
         section.id = id; 
-        section.innerHTML = `<h1>${title}</h1><div id="${contentDivId}"></div>`; 
+        section.innerHTML = `<h1 class="generated-title">${title}</h1><div id="${contentDivId}"></div>`; 
         return section; 
     }
 

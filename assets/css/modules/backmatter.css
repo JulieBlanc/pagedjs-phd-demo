@@ -1,0 +1,24 @@
+#credits h1,
+#glossary h1,
+#glossaire h1,
+#index h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+    line-height: var(--baseline);
+    margin-bottom: calc(var(--baseline)*1);
+}
+
+
+#glossary,
+#glossaire,
+#index{
+    break-before: right;
+
+}
+
+#credits{
+    break-before: page;
+}

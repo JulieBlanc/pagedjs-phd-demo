@@ -41,7 +41,9 @@
   }
 
   /* running title */
-  .chapter h2{
+  #introduction h1,
+  #conclusion h1,
+  .chapter h1{
     string-set: title content(text);
   }
   

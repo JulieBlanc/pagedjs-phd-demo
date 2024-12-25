@@ -20,18 +20,15 @@
 /* @import "modules/margin-notes.css"; */
 @import "modules/titles-counter.css";
 @import "modules/titles.css";
+@import "modules/introduction-conclusion.css";
 @import "modules/cover.css";
 @import "modules/frontmatter.css";
 @import "modules/biblio.css";
+@import "modules/backmatter.css";
+
 
 
 #fig-photocompo-2{
   --pagedjs-float-elem: next-page;
 }
 
-
-#credits{
-  break-before: page;
-}
-
-.generated-title{ color: red; }

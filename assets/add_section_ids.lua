@@ -16,7 +16,7 @@ function Pandoc(doc)
     local section_class = ""
 
     -- Check if the filename contains "chapter"
-    if filename:match("chapter") or filename:match("chapitre") then
+    if filename:match("chapter") then
       section_class = " class=\"chapter\""
     end
 
