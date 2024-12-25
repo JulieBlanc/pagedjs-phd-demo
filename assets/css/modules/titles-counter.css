@@ -7,9 +7,6 @@ body {
     counter-reset: h3;
 }
 
-.chapter h2::before {
-    content: "Chapitre " counter(h2) " ";
-}
 
 .chapter h3 {
     counter-increment: h3;

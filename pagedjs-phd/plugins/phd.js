@@ -105,16 +105,31 @@ function reorderSections(content, orderArray) {
 
             // Handle specific exceptions
             if (exception.multi) {
+                console.log(generateTitle(exception.idPrefix));
                 // Handle "chapters" by finding all sections with IDs starting with the prefix
                 const matchingSections = allSections.filter(el =>
                     el.id && el.id.startsWith(exception.idPrefix)
                 );
+            
+                let chapterNumber = 1; // Initialize chapter number counter
+            
                 matchingSections.forEach(el => {
-                    fragment.appendChild(el); // Add each matching section to the temporary container
+                    // Create a <p> element with the chapter number
+                    const numParagraph = document.createElement('p');
+                    numParagraph.className = 'generate-num-chapter';
+                    numParagraph.textContent = generateTitle(exception.idPrefix) + ' ' + chapterNumber++; // Increment chapter number for each section
+            
+                    // Insert the <p> as the first child of the section
+                    el.insertBefore(numParagraph, el.firstChild);
+            
+                    // Append the section to the fragment in the order found
+                    fragment.appendChild(el);
                     processedIds.add(el.id); // Mark the section as processed
                 });
-                return; // Move to the next item in the order
-            } else if (exception.id) {
+            
+                return; // Exit after processing all matching sections
+            }
+             else if (exception.id) {
                 // Handle a single exception by ID
                 section = content.getElementById(exception.id);
                 if(section && section.id === "refs"){

@@ -6,7 +6,8 @@
     margin-bottom: calc(var(--baseline)*4);
 }
 
-.chapter h2::before{
+
+.generate-num-chapter{
     display: block;
     font-variant: none;
     text-transform: uppercase;
@@ -19,7 +20,7 @@
 }
 
 
-[data-id*="chapter"] h3{
+.chapter h3{
     break-after: avoid;
     font-size: calc(var(--font-size)*1.8);
     line-height: calc(var(--baseline)*1.2);

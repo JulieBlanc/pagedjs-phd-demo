@@ -38,13 +38,13 @@
         "items": [
             "cover",
             "abstract",
-            "table des matières",
+            "table of content",
             "acknowledgements",
-            "table des figures",
+            "table of figures",
             "introduction",
             "chapters",
             "conclusion",
-            "bibliographie",
+            "bibliography",
             "credits"
         ]
     }
