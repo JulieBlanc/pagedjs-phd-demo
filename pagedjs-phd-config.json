@@ -16,10 +16,11 @@
         "enabled": true,
         "container": "#toc",
         "titles":[
-           ".chapter h2",
-           ".chapter h3",
-           ".chapter h4",
-           ".chapter h5"
+            ".chapter h1",
+            ".chapter h2",
+            ".chapter h3",
+            ".chapter h4",
+            ".chapter h5"
         ],
         "style":"leaders",
         "leaders": true,

@@ -1,6 +1,4 @@
-
-
-## Poser les cadres théoriques {data-chapter="1"}
+# Poser les cadres théoriques {data-chapter="1"}
 
 <p class="first-paragraph">
 Nous nous intéressons à une nouvelle technologie introduite dans la pratique du design graphique et à ses effets sur cette pratique, elle-même ancrée dans un contexte social. Comme Bannon et Bodker[^bannon-bodker] l’ont souligné, les artefacts techniques ne doivent pas seulement être analysés pour eux-mêmes et de façon isolée, ils doivent aussi être analysés dans leur cadre d’usage qui évolue et se développe dans le temps, dans leur contexte. C'est aussi ce que préconise Rabardel : 
@@ -25,7 +23,7 @@ Nous nous focalisons plus particulièrement sur deux cadres conceptuels issus de
 
 
 
-### Le concept d’activité
+## Le concept d’activité
 
 Le concept d’activité trouve son origine dans la psychologie soviétique des années 1920 et 1930 et tout particulièrement dans les travaux de Lev&nbsp;Vygotsky, et de son disciple Alexis&nbsp;Leontiev. [^kozulin] Il est ainsi enraciné dans le paradigme constructiviste qui tente d’expliquer « les relations entre l’action humaine et les contextes culturels, institutionnels et historiques dans lesquels elle se produit [^wertsh-24] ».
 
@@ -56,7 +54,7 @@ Sur la base de ces postulats posés par la psychologie russe, les théories de l
 [^social-egalite]: @stetsenko_vygotskian_2014 .
 
 
-### L'approche instrumentale
+## L'approche instrumentale
 
 L'approche instrumentale a été abondamment développée par Pierre Rabardel dans son livre *Les hommes et les technologies ; approche cognitive des instruments contemporains* paru en 1995 aux éditions Armand Colin. À travers ce livre, il promeut une vision anthropocentré des techniques issue des théories de l’activité russes. Il nous invite à étudier la technologie comme moyen ou ressource pour l’activité du sujet en prenant en compte les transformations au long court des interactions entre le sujet, l’objet de son activité et la technologie.
 
@@ -64,7 +62,7 @@ Reprenant la proposition de Vygosky selon laquelle l’humain interagit avec l�
 
  Nous ne mobiliserons pas tous les aspects du riche cadre de l’approche instrumentale, nous nous contenterons d’en résumer ici les dimensions principales. Nous nous focaliserons plus particulièrement sur les aspects qui nous apparaissent pertinents dans une perspective de compréhension des transformations de l’activité suite à l’introduction d’une nouvelle technologie.
 
-#### Le modèle quadripolaire des situations d’activité instrumentée
+### Le modèle quadripolaire des situations d’activité instrumentée
 
 L'approche instrumentale part du postulat que toute activité instrumentée est toujours située et que les situations ont une influence déterminante sur l’activité. Il faut ici entendre par instrument, « ce que l’homme met entre lui et son environnement pour atteindre ses buts, que ceux-ci visent à transformer cet environnement ou à le transformer lui-même[^lui-meme] ». L’unité d’analyse proposée par l’approche instrumentale est donc la situation d’activité instrumentée et médiatisée[^bationo-mediatisee] où l’instrument est placé en position de médiation dans le rapport du sujet à lui-même, à autrui et à l’objet de son activité. Afin de détailler ces différentes médiations, nous nous appuyons sur un article de Vivianne&nbsp;Folcher et Pierre&nbsp;Rabardel où ils prennent l’exemple de l’appareil photo numérique comme instrument mobilisé dans l’activité des sujets[^folcher-techno].
 
@@ -84,7 +82,7 @@ De même, le sujet est également « dans un rapport à lui-même : il&nbsp
 ![Modèle quadripolaire des&nbsp;situations d’activité instrumentée présentant les&nbsp;rapports directs et médiatisés supporté par l’instrument (selon&nbsp;Bationo-Tillon et Rabardel, 2015, p. 113)](modele-rabardel.png){#figure-acritive-instrumentee}
 
 
-#### L'instrument, une entité mixte
+### L'instrument, une entité mixte
 
 Approfondissons maintenant la notion d’instrument que nous avons jusqu’à présent simplement survolée. L'instrument ne peut être confondu avec l’outil technique puisque l’approche instrumentale distingue l’outil technique (appelé « artefact » de manière plus neutre ») de son devenir en tant qu’instrument lorsqu’il est recruté dans l’activité du sujet. Ainsi, selon Rabardel, « un instrument n’existe pas en soi, un artefact devient un instrument quand un sujet a pu se l’approprier pour lui-même et l’a intégré dans sa propre activité[^propre-activite] ». En cela, il adopte une position proche de Leroi-Gourhan[^leroi-gourhan] qui avance que l’outil n’existe que dans le cycle opératoire, c’est-à-dire que l’outil n’existe réellement que dans le geste qui le rend efficace. 
 
@@ -108,7 +106,7 @@ Le concept de schème s’appuie sur les travaux de Piaget[^piaget] et Vergnaud[
 [^vergnaud-geste]: @vergnaud_pensee_2011 , p. 43.
 [^beguin-concevoir]: @beguin_concevoir_2001 .
 
- Les deux composantes de l’instrument, schème et artefact, sont associées l’une à&nbsp;l’autre dans une situation spécifique mais peuvent en même temps être indépendantes : un même schème peut s’appliquer à différents artefacts dans différentes situations d’usage, un même artefact peut s’insérer dans différents schèmes. Rabardel donne l’exemple du schème « frapper », qui de la même manière qu’il est associé communément à un marteau peut aussi être associé à une clef anglaise de manière ponctuelle pour enfoncer un clou dans un mur en béton si cette clef possède les propriétés adéquates. Les instruments ne sont par ailleurs pas isolés les uns des autres, ils sont mobilisés « au fil de l’action, en fonction des buts et des besoins opérationnels du moment[^rabardel-moment] » et s’organisent en systèmes d’instruments. 
+Les deux composantes de l’instrument, schème et artefact, sont associées l’une à&nbsp;l’autre dans une situation spécifique mais peuvent en même temps être indépendantes : un même schème peut s’appliquer à différents artefacts dans différentes situations d’usage, un même artefact peut s’insérer dans différents schèmes. Rabardel donne l’exemple du schème « frapper », qui de la même manière qu’il est associé communément à un marteau peut aussi être associé à une clef anglaise de manière ponctuelle pour enfoncer un clou dans un mur en béton si cette clef possède les propriétés adéquates. Les instruments ne sont par ailleurs pas isolés les uns des autres, ils sont mobilisés « au fil de l’action, en fonction des buts et des besoins opérationnels du moment[^rabardel-moment] » et s’organisent en systèmes d’instruments. 
 
 L'étude des instruments dans le contexte des activités humaines implique donc une analyse de la manière dont ils sont intégrés dans une activité spécifique. Un instrument est toujours rattaché à une situation et c’est donc dans l’activité, dans l’usage, que les outils techniques peuvent devenir instruments pour les individus[^samurcay]. En cela, l’instrument n’est pas d’emblée offert au sujet, il se développe dans l’activité par des processus de genèses instrumentales. 
 
@@ -118,7 +116,7 @@ L'étude des instruments dans le contexte des activités humaines implique donc 
 
 
 
-#### Les genèses instrumentales
+### Les genèses instrumentales
 
 Le concept de genèse instrumentale constitue un outil conceptuel intéressant pour comprendre l’insertion d’une technologie dans l’activité des sujets. Il permet de saisir, d’un même mouvement, l’évolution des artefacts liée à l’activité du sujet et l’émergence des schèmes d’utilisation comme participant d’un même processus d’élaboration instrumentale. 
 
@@ -126,7 +124,7 @@ Le concept de genèse instrumentale constitue un outil conceptuel intéressant p
 
 [^beguin-x348]: Béguin et Rabardel, « Concevoir pour les activités instrumentées », *op.&nbsp;cit.*
 
-##### Les processus d’instrumentalisation
+#### Les processus d’instrumentalisation
 
 « Concernent l’émergence et l’évolution des composantes artefact de l’instrument : sélection, regroupement, production et institution de fonctions, détournements et catachrèses, attribution de propriétés, transformation de l’artefact (structure, fonctionnement etc.) qui prolongent les créations et réalisations d’artefacts dont les limites sont de ce fait difficiles à déterminer[^rabardel-determiner] ». Reprenons l’exemple que nous avons précédemment donné où une clef anglaise est utilisée pour frapper, le sujet s’appuie sur les propriétés de la dureté ou de masse de la clef pour lui attribuer une nouvelle fonction, en lui associant le schème « frapper » (non prévu initialement par le concepteur de l’artefact). Si cette nouvelle fonction peut être occasionnelle, transitoire, elle peut aussi être l’objet d’une transformation, par le sujet, temporaire ou définitive de la structure matérielle de l’artefact. Nous pouvons ainsi distinguer différents niveaux dans les processus d’instrumentalisation : 
 
@@ -139,7 +137,7 @@ Ainsi l’instrumentalisation désigne le processus par lequel le sujet met l’
 [^trouche-contraintes]: @trouche_environnements_2004 .
 
 
-##### Les processus d’instrumentation 
+#### Les processus d’instrumentation 
 
 « sont relatifs à l’émergence et à l’évolution des schèmes d’utilisation : leur constitution, leur fonctionnement, leur évolution par accommodation coordination combinaison, inclusion et assimilation réciproque, l’assimilation d’artefacts nouveaux à des schèmes déjà constitués etc.[^rabardel-schemes] » 
 
@@ -171,7 +169,7 @@ La genèse instrumentale peut donc être comprise comme un processus de transfor
 [^mise-en-œuvre]: Béguin, « Concevoir pour les&nbsp;genèses professionnelles », *op.&nbsp;cit.*, p. 10.
 
 
-#### L'activité constructive ou le développement de l’activité
+### L'activité constructive ou le développement de l’activité
 
 Le processus de genèse instrumentale est donc crucial lorsque l’on s’intéresse à l’appropriation d’un dispositif technique par des sujets[^folcher-constructive]. 
 Ces transformations peuvent être durables et peuvent devenir des ressources pour l’activité future. On distingue pour cela deux types d’orientations dialectiques dans l’activité : une dimension productive et une dimension constructive. L'activité productive est « une activité finalisée, orientée et contrôlée par le sujet psychologique pour réaliser les tâches qu’il doit accomplir en fonction des caractéristiques de la situation[^samurcay-166] ». L'élaboration de ressources internes et externes (instruments, savoirs, schèmes, etc.) est l’activité constructive par laquelle l’humain produit les conditions et les ressources pour l’activité future. L'activité constructive est ainsi une activité orientée et contrôlée par le sujet qui la réalise pour construire et faire évoluer ses compétences en fonction des situations et de son domaine professionnel[^rabardel-apprentissage]. Elle s’inscrivent donc dans des horizons temporels longs « caractéristiques du développement du sujet[^pouvoir] ».
@@ -194,7 +192,7 @@ L’activité constructive est également orientée vers le développement des p
 [^individuelle-sociale]: Folcher et Rabardel, « Hommes, artefacts, activités », *op.&nbsp;cit.*
 [^parties-constituantes]: Rabardel, « Instrument, activité et&nbsp;développement du pouvoir d’agir », *op.&nbsp;cit.*, p. 263.
 
- Du point de vue de l’approche instrumentale, le développement des individus est inscrit dans leurs environnement matériel et social, en lien avec d’autres sujets. Rabardel utilise pour cela la notion de « sujet capable » :
+Du point de vue de l’approche instrumentale, le développement des individus est inscrit dans leurs environnement matériel et social, en lien avec d’autres sujets. Rabardel utilise pour cela la notion de « sujet capable » :
 
 > Le sujet capable est à la fois sujet d’activités productives au quotidien et sujet d’activités constructives, par lesquelles il modèle ses systèmes de ressources et de valeurs, ses domaines, situations et conditions d’activités pour le futur. Il est sujet en développement, et sujet de son développement, sur l’ensemble des dimensions pertinentes et valides pour ses activités. Le sujet capable est un sujet de l’agir en devenir, dont le développement se réalise à chaque moment par les activités constructives, sous des formes et selon des modalités qui articulent son histoire propre et celle de ses communautés, collectivités et groupes sociaux d’appartenance et de vie, dans un triple mouvement d’appropriation, de renouvellement et de mise en patrimoine.[^sujet-capable] 
 
@@ -202,7 +200,7 @@ L’activité constructive est également orientée vers le développement des p
 
 
 
-#### La conception vue depuis l’approche instrumentale
+### La conception vue depuis l’approche instrumentale
 
 Les processus de genèse instrumentale mis en évidence par Rabardel amènent à poser le problème de leurs relations aux processus de conception institutionnels, c’est-à-dire à ce qui est habituellement considéré comme relevant de la conception dans le système de production. 
 
@@ -215,7 +213,7 @@ Les acteur·rice·s de la conception seraient à la fois ceux·celles qui sont 
 [^dans-usage]: Béguin et Rabardel, « Concevoir pour les activités instrumentées », *op.&nbsp;cit.*
 [^concepteur-institutionel]: Viviane Folcher, « Conception pour et dans l’usage : la maîtrise d’usage en conduite de projet », *Revue des Interactions Humaines Médiatisées* 16, nᵒ 1 (2015). 
 
- Ainsi, « le processus de conception ne s’arrête pas au seuil de l’usage, il se poursuit au cours de celui-ci en genèses instrumentales, par les processus d’instrumentation orientés vers le sujet, et par les processus d’instrumentalisation qui visent directement l’artefact[^artefact-131] ». Rabardel et Folcher proposent alors d’articuler ces genèses instrumentales aux processus de conception institutionnels en concevant des artefacts qui facilitent le&nbsp;développement de genèses instrumentales et en s’inspirant des instruments issus de ces genèses pour imaginer de nouvelles fonctionnalités aux artefacts (voir de nouveaux artefacts)[^nouveau-artefact].
+Ainsi, « le processus de conception ne s’arrête pas au seuil de l’usage, il se poursuit au cours de celui-ci en genèses instrumentales, par les processus d’instrumentation orientés vers le sujet, et par les processus d’instrumentalisation qui visent directement l’artefact[^artefact-131] ». Rabardel et Folcher proposent alors d’articuler ces genèses instrumentales aux processus de conception institutionnels en concevant des artefacts qui facilitent le&nbsp;développement de genèses instrumentales et en s’inspirant des instruments issus de ces genèses pour imaginer de nouvelles fonctionnalités aux artefacts (voir de nouveaux artefacts)[^nouveau-artefact].
 
 [^artefact-131]: Rabardel, *Les hommes et les technologiess*, *op.&nbsp;cit.*, p. 131.
 [^nouveau-artefact]: Folcher et Rabardel, « Hommes, artefacts, activités : perspective instrumentale », *op.&nbsp;cit.*
@@ -234,14 +232,14 @@ Enfin, l’approche transitionnelle, conceptualisée par Anne Bationo-Tillon s�
 
 [^transitionnelle]: Anne Bationo-Tillon, Céline Poret, et Viviane Folcher, « Appréhender le&nbsp;développement des organisations à&nbsp;la&nbsp;croisée du cours d’action et&nbsp;de&nbsp;l’approche instrumentale : la&nbsp;perspective transitionnelle », *Activités* 17, nᵒ 2 (octobre 2020) ; Anne Bationo Tillon, « Chemin transitionnel. Ouverture pluridisciplinaire pour une ergonomie développementale » (Habilitation à diriger des recherches, Université Paris 8 Vincennes-Saint Denis, 2017).
 
-### La théorie historico-culturelle de l’activité
+## La théorie historico-culturelle de l’activité
 
 Partant du postulat de Leontiev que l’activité est un « système possédant une structure, des transformations internes, des conversions et un développement »[^leontiev-problem], 
 Yrgö Engeström approfondit les concepts de la théorie historico-culturelle de l’activité russe. Il propose un élargissement de la représentation initiale triadique (sujet ↔ outil ↔ objet) de l’activité par l’inscription de l’objet de l’activité dans un communauté de pratique, qui participe, avec le sujet, à la transformation ou la production de l’objet. Par la même occasion, il met au centre de sa théorie l’idée des contradictions comme moteur fondamental de développement des systèmes d’activité. L'essentiel de ses idées ont été développées dans son livre *Learning by Expanding. An&nbsp;activity-theorical approach to developmental research* dont la première édition est paru en 1987 aux éditions Orienta-Konsultit (Helsinki)[^2nd-edition].
 
 À travers une nouvelle génération de la théorie historico-culturelle, Engeström propose donc d’étendre la conception du sujet de l’activité à une dimension collective. En effet, en tant que théorie psychologique, la théorie historico-culturelle a toujours eu une forte notion du sujet individuel (tout en comprenant et en soulignant l’importance de la matrice socioculturelle dans laquelle les individus se développent). Pour Leontiev, l’objet de l’activité était ainsi principalement l’objet de l’activité individuelle, son « véritable motif (…) derrière lequel se cache toujours un besoin ou un désir, auquel il répond toujours[^leontiev-motifs]. »
 
- Le modèle proposé par Engeström embarque, lui, la relation sujet-objet dans un modèle étendu décrivant l’activité comme un phénomène collectif. Dans ce travail de recherche, le sujet de l’activité n’est donc plus un·e designer graphique, mais un groupe diversifié de designers graphiques. L’objet de l’activité peut donc aussi être défini à un niveau collectif et le résultat projeté n’est alors plus momentané et situationnel mais s’inscrit dans une préoccupation collective. Ainsi, la théorie historico-culturelle de l’activité défendue par Engeström nous permet de prendre en compte des médiations encore plus diverses dans l’activité. Elle nous invite à nous intéresser aux dimensions collectives de l’activité et de comprendre l’évolution des systèmes socio-techniques du point de vue des communautés de pratiques qui contribuent à leur développement. Nous nous proposons de structurer la description cette approche à travers cinq points essentiels[^cinq-points]: les systèmes d’activité comme unité d’analyse, la pluralité des voix dans le système d’activité, l’historicité des systèmes d’activité, les contradictions comme moteur de changement et le développement des systèmes d’activité conceptualisés en tant qu’apprentissage expansif.
+Le modèle proposé par Engeström embarque, lui, la relation sujet-objet dans un modèle étendu décrivant l’activité comme un phénomène collectif. Dans ce travail de recherche, le sujet de l’activité n’est donc plus un·e designer graphique, mais un groupe diversifié de designers graphiques. L’objet de l’activité peut donc aussi être défini à un niveau collectif et le résultat projeté n’est alors plus momentané et situationnel mais s’inscrit dans une préoccupation collective. Ainsi, la théorie historico-culturelle de l’activité défendue par Engeström nous permet de prendre en compte des médiations encore plus diverses dans l’activité. Elle nous invite à nous intéresser aux dimensions collectives de l’activité et de comprendre l’évolution des systèmes socio-techniques du point de vue des communautés de pratiques qui contribuent à leur développement. Nous nous proposons de structurer la description cette approche à travers cinq points essentiels[^cinq-points]: les systèmes d’activité comme unité d’analyse, la pluralité des voix dans le système d’activité, l’historicité des systèmes d’activité, les contradictions comme moteur de changement et le développement des systèmes d’activité conceptualisés en tant qu’apprentissage expansif.
 
 
 
@@ -251,7 +249,7 @@ Yrgö Engeström approfondit les concepts de la théorie historico-culturelle de
 [^cinq-points]: Cette structuration en cinq point a été inspirée d’un article de Yrjö Engeström : « Expansive Learning at Work : Toward an Activity Theoretical Reconceptualization », *Journal of Education and Work* 14, nᵒ 1 (février 2001) : 133‑56.
 
 
-#### Les systèmes d’activité comme unité d’analyse
+### Les systèmes d’activité comme unité d’analyse
 
 Le modèle proposé par Engeström utilise la notion de système d’activité comme unité minimale d’analyse dont la représentation graphique repose sur un triangle à neuf pôles constitués de multiples médiations entre ceux-ci (voir <a href="#fig-systeme-engestrom" class="call-fig">figure XX </a>).
 
@@ -277,11 +275,7 @@ Ainsi, le sujet dirige son activité vers un objet commun qui ne cessent de se c
 [^engestrom-object]: Yrjö Engeström, *Learning by Expanding : An Activity-Theoretical Approach to Developmental Research*, Second (Cambridge : Cambridge University Press, 2014), p. xvi. Notre traduction.
 
 
-
-
-
-
-#### La pluralité des voix dans le système d’activité { #pluralite-voix }
+### La pluralité des voix dans le système d’activité { #pluralite-voix }
 
 Un système d’activité est toujours une communauté de points de vue, de traditions et d’intérêts multiples. La division du travail dans une activité crée différentes positions pour les participants·e·s, qui apportent leurs propres histoires diverses. Le système d’activité lui-même comporte de multiples couches et bouts d’histoire gravés dans ses artefacts, règles et conventions. Ainsi, lorsque l’on s’intéresse à un système d’activité, il faut à la fois prendre en compte une pluralité de voix : les voix singulières de chacun·e mais aussi le(s) point(s) de vues institutionnel(s). De plus, un système d’activité est toujours en interaction avec d’autres systèmes d’activité – eux aussi avec leurs propres cultures et points de vues – et inscrivent par là l’activité dans un contexte sociétaire plus large. C'est à la fois une source de problèmes et d’innovation, exigeant des actions de traduction et de négociation.
 
@@ -291,9 +285,7 @@ Un système d’activité est toujours une communauté de points de vue, de trad
 [^scribner_vygotskys_1985]: Sylvia Scribner, « Vygotsky’s Uses of History », in&nbsp;*Culture, Communication, and Cognition : Vygotskian Perspectives*, éd. par James V. Wertsch (Cambridge : Cambridge University Press, 1985), 119‑45, pp. 138-139. Notre traduction.
 
 
-
-
-#### L'historicité des systèmes d’activité { #historicite-activite }
+### L'historicité des systèmes d’activité { #historicite-activite }
 
 Selon Engeström, les systèmes d’activités sont en mouvement constant. Ils prennent forme et se transforment sur de longues périodes de temps. L’approche historique est donc un élément clé pour comprendre les structures et les interactions des systèmes d’activités actuels. Leurs problèmes et leurs potentiels ne peuvent être compris que par rapport à leur propre histoire.
 
@@ -309,37 +301,26 @@ d’une trop grande généralisation et complexité. Une tâche essentielle de 
 [^activity_1999-32]: *Idem*, p. 32. Notre traduction.
 
 
-
-
-
-
-
-
-
-
-
-
-#### Les contradictions comme moteur de changement
+### Les contradictions comme moteur de changement
 
 Partant de l’idée marxiste selon laquelle « le changement social (et sociotechnique) est essentiellement le résultat des contradictions inhérentes au système économique capitaliste, exprimées à différents niveaux dans différentes fonctions sociétales[^adamides-cap] », un principe fondamental de la théorie d’Engeström est le rôle central des contradictions en tant que sources de changement et de développement des systèmes d’activité.
 
 Les contradictions peuvent être internes à un système d’activité ou se situer dans les interactions entre un système d’activité et ses systèmes d’activité voisins (« *neighbor activities* »). Elles peuvent donc se manifester soit chez le sujet lui-même, soit au niveau de la culture de la communauté ou dans le système d’activité collectif constitué de plusieurs systèmes d’activités voisins. Ainsi, Engeström distingue quatre niveaux de contradictions[^engestrom-70-73].
 
 
-
-##### (Niveau 1) Au sein de chaque pôles du système d’activité
+#### (Niveau 1) Au sein de chaque pôles du système d’activité
 
 Les contradictions primaires se manifestent au niveau de chaque pôle du système d’activité étudié : l’objet, les instruments, le sujet, la communauté, les règles et la division travail. Elles sont des tensions structurelles fondamentales qui découlent de la double nature de tout système capitaliste et du conflit entre valeur d’usage et valeur d’échange des marchandises. Par exemple, l’objet de l’activité des designers graphiques est double : concevoir des livres pour transmettre un savoir (valeur d’usage) et toucher des revenus (valeur d’échange). 
 
-##### (Niveau 2) Entre les pôles du système
+#### (Niveau 2) Entre les pôles du système
 
 Les contradictions secondaires sont celles qui apparaissent entre les pôles. La division hiérarchique rigide du travail, qui retarde et empêche les possibilités ouvertes par de nouveaux instruments, en est un exemple typique. À l’inverse, l’introduction d’une nouvelle technologie est susceptible d’interférer avec les pratiques ancrées dans un milieu, les règles qui y sont rattachées et la division du travail au sein du système. 
 
-##### (Niveau 3) Depuis un système plus avancé
+#### (Niveau 3) Depuis un système plus avancé
 
 Le troisième niveau de tensions se manifeste lorsqu’un système d’activité adopte un nouvel élément provenant de l’extérieur (par exemple, une nouvelle technologie ou un nouvel objet). Cela conduit souvent à une aggravation d’une contradiction secondaire où un ancien élément entre en conflit avec le nouveau. Le troisième niveau de contradiction désigne donc des contradictions entre l’objet/motif de la forme dominante de l’activité et l’objet/motif d’une forme culturellement plus avancée de l’activité. Notons que « l’objet et le motif culturellement plus avancés peuvent également être activement recherchés par les sujets de l’activité centrale eux-mêmes[^learnning-71a] ».
 
-##### (Niveau 4) En interaction avec des systèmes d’activité voisins
+#### (Niveau 4) En interaction avec des systèmes d’activité voisins
 
 Les contradictions quaternaires exige de prendre en considération les « activités voisines » essentielles liées au système d’activité centralement étudié. Ces activités voisines peuvent comprendre les activités qui produisent les instruments clés de l’activité centrale (activités productrices d’instruments) ou des activités qui partagent un objet commun. Dans notre cas, cela peut concerner la relation entre le système d’activité du design graphique et le système d’activité de l’édition, avec qui les designers graphiques partagent l’activité de production de livres imprimés. Cela peut aussi concerner le système d’activité propre aux concepteurs de logiciels de PAO. « Naturellement, les ‹ activités voisines › comprennent également des activités centrales qui sont d’une autre manière, pour une période plus ou moins longue, connectées ou liées à l’activité centrale donnée, s’hybridant potentiellement les unes les autres par leurs échanges[^learnning-71b]. »
 
@@ -357,10 +338,7 @@ Les contradictions doivent ainsi être comprises comme un moteur de changement, 
 [^learnning-71b]: Idem, p. 71. Notre traduction.
 [^manifestations]: Yrjö Engeström et Annalisa Sannino, « Discursive Manifestations of Contradictions in Organizational Change Efforts : A Methodological Framework », *Journal of Organi-zational Change Management* 24, nᵒ 3 (janvier 2011) : 368‑87.
 
-
-
-
-#### Le développement des systèmes d’activité par l’apprentissage expansif
+### Le développement des systèmes d’activité par l’apprentissage expansif
 
 Le dernier principe de la théorie historico-culturelle de l’activité proclame donc en ce sens la possibilité de la transformation expansive des systèmes d’activités. Les systèmes d’activité connaissent des cycles relativement longs de transformations qualitatives. 
 
@@ -371,7 +349,7 @@ Pour Engeström, les individus produisent donc le développement des systèmes d
 
 > L'essence de l’activité d’apprentissage est la production de structures d’activité objectivement et sociétalement nouvelles (y compris de nouveaux objets, instruments, etc.) à partir d’actions manifestant les contradictions internes de la forme précédente de l’activité en question. L'activité d’apprentissage est la maîtrise de l’expansion des actions vers une nouvelle activité.[^engestrom-198] 
 
- La structure de cette activité d’apprentissage est représentée par la <a href="#fig-learning-engestrom" class="call-fig">figure XX </a>. Nous pouvons y voir que la conceptualisation d’une nouvelle activité se base sur des dynamiques internes à la structure de l’apprentissage qui présentent des mouvements de résolutions de contradictions vers un caractère toujours plus collectif de l’activité. Partant du modèle de l’apprentissage expansif et des méthodologies d’analyse qui lui sont associés, Yannick Lémonie et Vincent Grosstephan[^lemonie-engestrom] démontrent ainsi que les systèmes d’activité sont porteurs de possibles apprentissages collectifs à l’origine de la transformation du travail et de son organisation et donc à l’origine de la création de nouvelles cultures.
+La structure de cette activité d’apprentissage est représentée par la <a href="#fig-learning-engestrom" class="call-fig">figure XX </a>. Nous pouvons y voir que la conceptualisation d’une nouvelle activité se base sur des dynamiques internes à la structure de l’apprentissage qui présentent des mouvements de résolutions de contradictions vers un caractère toujours plus collectif de l’activité. Partant du modèle de l’apprentissage expansif et des méthodologies d’analyse qui lui sont associés, Yannick Lémonie et Vincent Grosstephan[^lemonie-engestrom] démontrent ainsi que les systèmes d’activité sont porteurs de possibles apprentissages collectifs à l’origine de la transformation du travail et de son organisation et donc à l’origine de la création de nouvelles cultures.
 
 ![Structure de&nbsp;l’apprentissage humain (selon Engeström, 2014, p. 63)](../images/learning-engestrom.png){#fig-learning-engestrom}
 
@@ -380,12 +358,7 @@ Pour Engeström, les individus produisent donc le développement des systèmes d
 [^expansive-137]: Engeström, « Expansive Learning at Work », *op. cit.*, p. 137. Notre traduction.
 [^engestrom-198]: Engeström, *Learning by Expanding*, *op. cit.*, pp. 98-99. Notre traduction.
 
-
-
-
-
-
-#### Une théorie essentiellement pratique { #engestrom-intervention }
+### Une théorie essentiellement pratique { #engestrom-intervention }
 
 S'inscrivant dans la lignée de Marx et Vygosky et de l’idée d’une théorie essentiellement pratique, la théorie historico-culturelle de l’activité et de l’apprentissage expansif a été développée par Engeström comme un cadre théorique et conceptuel visant à soutenir des méthodologies d’intervention. Depuis 1995, le laboratoire *Center for Research on Activity, Development and Learning* (CRADLE) à Helsinki où officie Engeström a&nbsp;mis en œuvre et développé dans la pratique une méthodologie d’intervention basée sur une boîte à outils appelée le « Laboratoire du changement » (*Change Laboratory*). Cette méthode vise à transformer les situations de travail étudiées directement avec les acteur·rice·s concerné·e·s[^laboratory-change]. Ces interventions visent donc le développement par les acteur·rice·s de leur propre système d’activité. Elles sont guidées par la théorie de l’apprentissage expansif mise en œuvre de façon concrète à travers différentes sessions de travail. 
 
@@ -399,26 +372,12 @@ En ce sens, la théorie historico-culturelle de l’activité et de l’apprenti
 
 
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
 L’intérêt du modèle proposé par Engeström à travers la théorie historico-culturelle de l’activité et l’apprentissage expansif tient dans son caractère systémique. Il permet d’adopter un point de vue qui n’est pas uniquement fondé sur le(s) sujet(s) ni sur les instruments utilisés, mais qui prend en compte l’ensemble du contexte des activités. Par le même temps, il permet de rendre compte des rapports des individus à la société (à travers une activité orientée par un objet répondant à des besoins sociétaux) et de la manière dont ceux-ci participent au développement de nouvelles cultures et de nouveaux systèmes techniques par leur activité.
 
-<div class="hack-break-page-blockquote"></div>
 
 > Dire de la culture qu’elle est inséparable des sujets humains, et suggérer qu’elle renvoie à leurs rapports avec leurs environnements conduit évidemment à poser le problème de sa construction et de son évolution. Les cultures, même si elles constituent vraisemblablement des stabilisations provisoires ou plus durables de processus, sont produites par des activités, et contribuent à produire des activités. (…) Cultures et apprentissages sont en fait très liés, pour autant qu’on veuille bien donner à apprentissage le sens de transformation d’une séquence stable d’activité.[^barbier] 
 
- Ainsi, Emmanuel Adamides soutient que la théorie historico-culturelle de l’activité est particulièrement intéressante pour étudier les systèmes culturels et socio-techniques en tant qu’elle « peut être utilisée pour expliquer le changement, c’est-à-dire fournir des réponses aux raisons pour lesquelles le changement, en tant qu’événements observés (changements de régime), a lieu[^adamides-changement] ».
+Ainsi, Emmanuel Adamides soutient que la théorie historico-culturelle de l’activité est particulièrement intéressante pour étudier les systèmes culturels et socio-techniques en tant qu’elle « peut être utilisée pour expliquer le changement, c’est-à-dire fournir des réponses aux raisons pour lesquelles le changement, en tant qu’événements observés (changements de régime), a lieu[^adamides-changement] ».
 
 Mais c’est surtout le caractère pratique de cette théorie, ancrée dans les préoccupations marxistes de la *praxis* humaine qui la rend particulièrement intéressante à nos yeux, comme l’exprime Davide Nicolini :
 
