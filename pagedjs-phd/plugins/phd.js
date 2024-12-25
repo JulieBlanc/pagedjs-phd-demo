@@ -72,7 +72,7 @@ function reorderSections(content, orderArray) {
     function createSection(id, title, contentDivId) {
         const section = document.createElement('section'); 
         section.id = id; 
-        section.innerHTML = `<h1 class="generated-title">${title}</h1><div id="${contentDivId}"></div>`; 
+        section.innerHTML = `<h1 class="generated-title no-counter">${title}</h1><div id="${contentDivId}"></div>`; 
         return section; 
     }
 
@@ -127,7 +127,7 @@ function reorderSections(content, orderArray) {
                 section = content.getElementById(exception.id);
                 if(section && section.id === "refs"){
                     const header = document.createElement('h1');
-                    header.className = 'generated-title';
+                    header.className = 'generated-title no-counter';
                     header.textContent = exception.title; 
                     section.insertBefore(header, section.firstChild);
                 }
@@ -143,7 +143,7 @@ function reorderSections(content, orderArray) {
 
             if (section && section.id != "cover") {
                 const header = document.createElement('h1');
-                header.className = 'generated-title';
+                header.className = 'generated-title no-counter';
                 header.textContent = title; 
                 section.insertBefore(header, section.firstChild);
             }
