@@ -89,6 +89,7 @@ function reorderSections(content, orderArray) {
         'table-of-figures': { id: 'table-of-figures', title: 'Table of figures', divId: 'table-figures_container' },
         'table-des-figures': { id: 'table-of-figures', title: 'Table des figures', divId: 'table-figures_container' },  
         'chapters': { idPrefix: 'chapter', multi: true }, 
+        'chapitres': { idPrefix: 'chapitre', multi: true }, 
         'bibliography': { id: 'refs', title: 'Bibliography' },
         'bibliographie': { id: 'refs', title: 'Bibliographie' },
     };
