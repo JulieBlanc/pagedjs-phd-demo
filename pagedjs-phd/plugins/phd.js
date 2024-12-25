@@ -69,7 +69,6 @@ function generateTitle(id) {
 
 
 function reorderSections(content, orderArray) {
-    console.log(orderArray);
     const container = content; 
     const allSections = Array.from(container.children); // Get all initial sections as an array
     const processedIds = new Set(); // Keep track of IDs that have already been processed
@@ -78,7 +77,7 @@ function reorderSections(content, orderArray) {
     // Function to create a default section if it doesn't exist (only for table of content and table of figures)
     function createSection(id, title, contentDivId) {
         const section = document.createElement('section'); 
-        section.id = `section_${id}`; 
+        section.id = id; 
         section.innerHTML = `<h1>${title}</h1><div id="${contentDivId}"></div>`; 
         return section; 
     }
@@ -86,9 +85,12 @@ function reorderSections(content, orderArray) {
     // Table of exceptions for specific IDs and behaviors
     const exceptions = {
         'table-of-content': { id: 'table-of-content', title: 'Table of content', divId: 'toc' }, 
-        'table-of-figures': { id: 'table-of-figures', title: 'Table of figures', divId: 'table-figures' }, 
+        'table-des-matieres': { id: 'table-of-content', title: 'Table des matières', divId: 'toc' }, 
+        'table-of-figures': { id: 'table-of-figures', title: 'Table of figures', divId: 'table-figures_container' },
+        'table-des-figures': { id: 'table-of-figures', title: 'Table des figures', divId: 'table-figures_container' },  
         'chapters': { idPrefix: 'chapter', multi: true }, 
-        'bibliography': { id: 'refs' } 
+        'bibliography': { id: 'refs', title: 'Bibliography' },
+        'bibliographie': { id: 'refs', title: 'Bibliographie' },
     };
 
     // Iterate over the specified order
@@ -114,13 +116,28 @@ function reorderSections(content, orderArray) {
             } else if (exception.id) {
                 // Handle a single exception by ID
                 section = content.getElementById(exception.id);
+                if(section && section.id === "refs"){
+                    const header = document.createElement('h1');
+                    header.className = 'generated-title';
+                    header.textContent = exception.title; 
+                    section.insertBefore(header, section.firstChild);
+                }
+
                 if (!section && exception.divId) {
                     section = createSection(exception.id, exception.title, exception.divId);
                 }
+
             }
         } else {
             // For regular sections, find them by ID
             section = content.getElementById(id);
+
+            if (section && section.id != "cover") {
+                const header = document.createElement('h1');
+                header.className = 'generated-title';
+                header.textContent = title; 
+                section.insertBefore(header, section.firstChild);
+            }
         }
 
 
@@ -132,7 +149,6 @@ function reorderSections(content, orderArray) {
             console.warn(`${id} does not exist. Please create the corresponding md file.`);
         }
 
-        console.log(processedIds);
     });
 
     // Add remaining sections at the end

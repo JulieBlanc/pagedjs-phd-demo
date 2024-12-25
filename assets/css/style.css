@@ -33,3 +33,5 @@
 #credits{
   break-before: page;
 }
+
+.generated-title{ color: red; }

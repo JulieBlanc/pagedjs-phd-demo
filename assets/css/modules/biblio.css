@@ -15,7 +15,7 @@
     @top-left{ content: none; }
 }
 
-#refs::before{
+#refs h1{
     content: "Bibliographie";
     display: block;
     text-transform: uppercase;
