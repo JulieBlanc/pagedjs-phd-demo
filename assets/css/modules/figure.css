@@ -4,7 +4,6 @@ body{
 
 figure{
     width: 100%;
-    counter-increment: fig;
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -20,7 +19,11 @@ figcaption{
    font-weight: 500;
 }
 
-figcaption::before{
+
+figure:not(.no-counter){
+    counter-increment: fig;
+}
+figure:not(.no-counter) figcaption::before{
     content: "Figure " counter(fig) ". ";
 }
 

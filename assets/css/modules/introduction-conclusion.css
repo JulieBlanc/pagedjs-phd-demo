@@ -4,9 +4,13 @@
     page: introduction;
 }
 
+@page introduction:first{ 
+    @top-left{ content: none; }
+}
 
 
 /* For title, see "title.css", or you can change here */
+
 /* #introduction h1,
 #conclusion h1{
 

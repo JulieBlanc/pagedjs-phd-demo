@@ -238,6 +238,10 @@ export default class myCustomHandler extends Handler {
 
 ### To do
 
+- table des figures
+- table des tableaux
+- documenter "menu" de la config
+- full page
 - endnote (to section)
 - web version
 - metadata in pandoc template for cover ?

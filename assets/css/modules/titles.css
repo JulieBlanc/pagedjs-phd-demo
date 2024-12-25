@@ -60,6 +60,8 @@
 
 
 /* delete margin before first element of the page */
+[data-id="introduction"][data-split-from] > :first-child,
+[data-id="conclusion"][data-split-from] > :first-child,
 .chapter[data-split-from] > :first-child{
     margin-top: 0;
 }
