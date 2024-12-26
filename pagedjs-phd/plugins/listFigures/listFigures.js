@@ -3,7 +3,7 @@ import { Handler } from '../../paged.esm.js';
 export class figuresHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.figures = "figure"; // ← Select-r of figures to include in the list
+        this.figures = "figure"; // ← Selector of figures to include in the list
         this.counterBefore = "Fig. ";
         this.counterAfter = ". ";
         this.list = true; // ← Set on true if you want a table of figure
@@ -34,8 +34,6 @@ export class figuresHandler extends Handler {
        
 
       }
-    /* */
-   
 
         addFigNum({
             content: content,

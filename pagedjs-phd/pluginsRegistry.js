@@ -1,6 +1,6 @@
 import { phd } from './plugins/phd.js';
-import { figuresHandler } from './plugins/figures/figuresCountersAndTable.js';
-import { createTocHandler } from './plugins/createToc/createToc.js';
+import { figuresHandler } from './plugins/listFigures/listFigures.js';
+import { createTocHandler } from './plugins/tableOfContent/tableOfContent.js';
 import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
 import { floatElems } from './plugins/floatElems.js';
@@ -26,13 +26,13 @@ const cssPlugins = ['footnotes.css'];
 
   // createToc
   if (config.toc?.enabled) { 
-    cssPlugins.push('createToc/createToc.css'); 
+    cssPlugins.push('tableOfContent/tableOfContent.css'); 
     handlers.push(createTocHandler);
   }
 
   // counters for figures + create table of figures
   if (config.figures?.enabled) { 
-    cssPlugins.push('figures/listFigures.css'); 
+    cssPlugins.push('listFigures/listFigures.css'); 
     handlers.push(figuresHandler);
   }
 

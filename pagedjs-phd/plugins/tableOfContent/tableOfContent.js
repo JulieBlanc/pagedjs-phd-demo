@@ -6,7 +6,6 @@ export class createTocHandler extends Handler {
         this.tocContainer = "#toc"; // ← The element inside you want generate the table of content
         this.tocTitles = ["h2", "h3"]; // ← List of title levels to include in the table of contents
         this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
-    
     }
 
     beforeParsed(content){
