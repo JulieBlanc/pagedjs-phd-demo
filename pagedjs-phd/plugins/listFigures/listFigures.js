@@ -4,10 +4,10 @@ export class figuresHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
         this.figures = "figure"; // ← Selector of figures to include in the list
-        this.counterBefore = "Fig. ";
-        this.counterAfter = ". ";
+        this.counterBefore = "";
+        this.counterAfter = "";
         this.list = true; // ← Set on true if you want a table of figure
-        this.container = "#table-figures_container"; // ← The element inside you want generate the list of figuresg
+        this.container = "#table-figures"; // ← The element inside you want generate the list of figuresg
         this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
    
     }
@@ -29,6 +29,9 @@ export class figuresHandler extends Handler {
         if(config.figures.list && config.figures.list[0]){
             if(config.figures.list[0].beforepagenumber || config.figures.list[0].beforepagenumber == ""){ 
                 this.beforePageNumber  = config.figures.list[0].beforepagenumber;
+            }
+            if(config.figures.list[0].container){ 
+                this.container  = config.figures.list[0].container;
             }
         }
        

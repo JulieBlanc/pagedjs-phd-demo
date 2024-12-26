@@ -152,8 +152,6 @@ You can configure some paged.js feature in this file (works only with the pagedj
         ".chapter h2", 
         ".chapter h3"
     ],
-    "style": "leaders",
-    "counters": "true",
     "beforepagenumber": "" 
 }
 ```
@@ -161,9 +159,12 @@ You can configure some paged.js feature in this file (works only with the pagedj
 - `"enabled": true` → Enables or disables the table of contents display 
 - `"container"` → Specifies the container element where the table of contents will be inserted (find it in toc.md)
 - `"titles"` → List of title levels to include in the table of contents; additional levels can be added or removed / by default: "h2", "h3"
-- `"style": "leaders"` → Default visual style of the toc, only "leaders" option is avaible, if you don’t want it, write "false" / by default: false
-- `"counters": "true"` → Add counters before titles (if you dont’t want, set to "false") / by default: false
 - `"beforepagenumber"` → Customizes text or symbols to display before the page number (if applicable)
+
+Note: the style of the table of content can be customize into this CSS folders:
+- `assets/css/modules/table-of-content.css` → global styles
+- `assets/css/modules/leaders.css` → add leaders to your table
+- `assets/css/modules/toc-counters.css` → add counters before each toc element (don’t fordet to change in the same way into `title-counter.css`)
 
 
 #### Notes
