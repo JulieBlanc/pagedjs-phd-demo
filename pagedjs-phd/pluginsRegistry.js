@@ -1,5 +1,5 @@
 import { phd } from './plugins/phd.js';
-import { createListFigures } from './plugins/listFigures/listFigures.js';
+import { figuresHandler } from './plugins/figures/figuresCountersAndTable.js';
 import { createTocHandler } from './plugins/createToc/createToc.js';
 import { fullPageHandler } from './plugins/fullPage.js';
 import { moveElems } from './plugins/moveElems.js';
@@ -30,10 +30,10 @@ const cssPlugins = ['footnotes.css'];
     handlers.push(createTocHandler);
   }
 
-  // create table of figures
+  // counters for figures + create table of figures
   if (config.figures?.enabled) { 
-    cssPlugins.push('listFigures/listFigures.css'); 
-    handlers.push(createListFigures);
+    cssPlugins.push('figures/listFigures.css'); 
+    handlers.push(figuresHandler);
   }
 
   // fix-footnotes

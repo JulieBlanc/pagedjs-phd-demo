@@ -1,6 +1,6 @@
 import { Handler } from '../../paged.esm.js';
 
-export class createListFigures extends Handler {
+export class figuresHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
         this.figures = "figure"; // ← Selectpr of figures to include in the list
@@ -37,18 +37,7 @@ export class createListFigures extends Handler {
 
       }
     /* */
-
-    console.log(config.figures.list);
    
-
-    //   createToc({
-    //       content: content,
-    //       container: config.toc.container, 
-    //       titleElements: this.tocTitles,
-    //       leaders: this.leaders,
-    //       counters: this.counters,
-    //       before: this.beforePageNumber
-    //   });
 
         addFigNum({
             content: content,
@@ -118,6 +107,5 @@ function createList(config){
     });
 
     container.appendChild(ul);
-    console.log(ul);
 }
 
