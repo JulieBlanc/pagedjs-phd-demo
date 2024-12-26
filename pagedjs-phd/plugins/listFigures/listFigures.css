@@ -1,4 +1,8 @@
+#list-fig-generated{
+    --fig-before-page: "";
+}
+
 #list-fig-generated li a::after{ 
-    content: target-counter(attr(href), page);
+    content: var(--fig-before-page) target-counter(attr(href), page);
     float: right;
 }

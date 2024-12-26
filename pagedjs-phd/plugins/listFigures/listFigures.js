@@ -9,21 +9,26 @@ export class createListFigures extends Handler {
         this.counterAfter = ". ";
         this.leaders = false;  // ← Set on true if you want leaders
         this.counters = false; // ← Set on true if you want counters before titles 
-        this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
+        this.beforePageNumber = "p. "; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
     
     }
 
     beforeParsed(content){
 
-        console.log("listFigures ---------- ")
       /** pagedjs-design
          * Specific to pagedjs-design, overwrite values
         **/
       if(config.figures && config.figures.enabled){
-        console.log("CONFIG OVERWRITE");
         if(config.figures.selector){ this.figures = config.figures.selector; }
         if(config.figures.textBeforeCounters){ this.counterBefore  = config.figures.textBeforeCounters; }
         if(config.figures.textAfterCounters){ this.counterAfter  = config.figures.textAfterCounters; }
+        if(config.figures.list && config.figures.list[0]){
+            if(config.figures.list[0].leaders || config.figures.list[0].leaders === false){ this.leaders  = config.figures.list[0].leaders; }
+            if(config.figures.list[0].beforepagenumber || config.figures.list[0].beforepagenumber == ""){ 
+                this.beforePageNumber  = config.figures.list[0].beforepagenumber;
+            }
+        }
+       
 
       }
     /* */
@@ -48,7 +53,9 @@ export class createListFigures extends Handler {
         createList({
             content: content,
             figures: this.figures,
-            container: this.container
+            container: this.container,
+            beforePage: this.beforePageNumber,
+            leaders: this.leaders
         })
     
     
@@ -74,20 +81,24 @@ function addFigNum(config){
 
 }
 
-function  createList(config){
+function createList(config){
     let content = config.content;
     let figures = content.querySelectorAll(config.figures);
     let container = content.querySelector(config.container);
 
-    console.log(container);
     var ul = document.createElement('ul');
     ul.id = "list-fig-generated";
+    if(config.beforePage){
+        ul.style.setProperty('--fig-before-page', '"' + config.beforePage + '"');
+    }
+    if(config.leaders){
+        ul.setAttribute('data-list-style', 'leaders');
+    }
  
 
     figures.forEach(function (figure, index) {
         let figcaption = figure.querySelector("figcaption");
         if(!figure.id){
-            console.log(figure);
             let num = index + 1;
             figure.id = "figure-listed-" + num;
         }
@@ -98,5 +109,6 @@ function  createList(config){
     });
 
     container.appendChild(ul);
+    console.log(ul);
 }
 
