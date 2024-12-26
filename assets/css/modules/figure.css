@@ -1,5 +1,5 @@
 body{
-    counter-reset: fig;
+    /* counter-reset: fig; */
 }
 
 figure{
@@ -20,12 +20,12 @@ figcaption{
 }
 
 
-figure:not(.no-counter){
+/* figure:not(.unlisted-figure){
     counter-increment: fig;
 }
-figure:not(.no-counter) figcaption::before{
+figure:not(.unlisted-figure) figcaption::before{
     content: "Figure " counter(fig) ". ";
-}
+} */
 
 /* SPECIFIC */
 #aldus-maker img{

@@ -7,9 +7,21 @@ export class phd extends Handler {
 
     beforeParsed(content){
 
-        console.log(" -- CREATE PHD PHD ------------------------------")
+        // UNLIST FIGURES
+
+        let classImg =  "unlisted-figure";
+        let images = content.querySelectorAll("." + classImg);
+        images.forEach(function (img, index) {
+            let parentFig = img.closest("figure");
+            if(!parentFig.classList.contains(classImg)){
+                parentFig.classList.add(classImg);
+            }
+            img.classList.remove(classImg)
+        });
 
         
+
+        // REORDER SECTIONS ----------------------------------
 
         let defaultItems = ['cover', 'abstract', 'table of content', 'table of figures', 'foreword', 'introduction', 'chapters', 'conclusion', 'bibliography', 'glossary', 'appendix', 'acknowledgements', 'credits'];
         let items = defaultItems;

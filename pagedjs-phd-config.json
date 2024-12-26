@@ -22,11 +22,24 @@
             ".chapter h4",
             ".chapter h5"
         ],
-        "style":"leaders",
         "leaders": true,
         "counters": true,
         "beforepagenumber": ""
      },
+     "figures": {
+        "enabled": true,
+        "selector": "figure:not(.unlisted-figure)",
+        "counters": true,
+        "textBeforeCounters": "Figure ",
+        "textAfterCounters": ". ",
+        "list": [
+            {
+                "container": "#table-figures_container",
+                "beforepagenumber": "",
+                "leaders": true
+            }
+        ]
+    },
     "notes": {
         "enabled": true,
         "type": "footnote",

@@ -35,7 +35,7 @@ Une fois que le texte est imprimé, une nouvelle étape – la distribution – 
 
 [^huard]: Charles-Lucien Huard, *La&nbsp;Typographie*, L. Boulanger, <br>Le livre pour tous, 1892.
 
-![Atelier d’imprimerie, XVII<sup>e</sup>– XVIII<sup>e</sup> siècle](../images/atelier-imprimerie-17eme.jpg){#atelier-imprimerie}
+![Atelier d’imprimerie, XVII<sup>e</sup>– XVIII<sup>e</sup> siècle](../images/atelier-imprimerie-17eme.jpg)
 
 ### Le plomb mécanique : la naissance de l’industrie graphique 
 

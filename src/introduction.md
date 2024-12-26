@@ -1,11 +1,25 @@
 Les 20 et 21 octobre 2017 à la Gaîté Lyrique à Paris, se tient un salon de l'édition libre et alternative où les participant·e·s présentent des productions et ouvrages imprimés réalisés avec les technologies du web et/ou des outils expérimentaux (génératifs, collaboratifs, libres et open source). Le salon est organisé par le collectif informel PrePostPrint[^prepostprint], initié par l'artiste et designer Raphaël Bastide et la designer graphique Sarah Garcin quelques mois plus tôt. La présentation de l'évènement rend compte de ce qui anime ce groupe de participant·e·s: 
 
+![test figure](/src/images/graphic-means_1.jpeg){#test-figure .unlisted-figure}
+
+
 > Nous souhaitons nous passer des logiciels classiques de mise en page et d'édition pour nous tourner vers des technologies plus accessibles et conviviales, pouvant évoluer et s'adapter à chaque projet. La programmation devient un outil de design et permet de réinventer sans cesse le processus de création éditoriale, questionnant les formats et les formes de publications.[^ppp-gaite]
 
 [^prepostprint]: Sur le site web de PrePostPrint (URL: prepostprint.org/about, consulté le 08/03/2022), le collectif se présente ainsi : « We are now an loosely defined group of designers, artists, researchers, teachers sharing a wish to explore our tools and invent new ways of making web and print publications. »
 [^ppp-gaite]: https://prepostprint.org/gaitelyrique, consulté de 07/03/2022.
 
 Le 9 janvier 2018, dans les bureaux de MIT Press à Cambridge aux États-unis, se réunissent un ensemble d’acteur·rice·s du monde de l’édition et du web intéressé·e·s par l’utilisation des technologies du web pour l’impression et la mise en page automatisée. L'évènement, à l'initiative d'Adam Hyde, co-fondateur de la Collaborative Knowledge Foundation (Coko), a pour but de partager les diverses expériences des personnes présentes[^paged-media-mit]. Il marque surtout le départ d'une initiative collaborative pour le développement d'une approche technique libre et open source basée sur les standards du web écrits par le World Wide Web Consortium (W3C). Quelques semaines plus tard, le 23&nbsp;mars 2018[^commit-pagedjs] est publiée une première version de Paged.js, une librairie JavaScript libre et open-source qui permet l’export de PDF et l’affichage paginé dans le(s) navigateur(s) à partir des technologies du web.
+
+
+<!-- ::: {.group-figure #figure-group-1}
+- ![Image 1 caption](/src/images/graphic-means_1.jpeg)
+- ![Image 2 caption](/src/images/ateliers-sirlo.jpg)
+
+[Ceci est la legende commune]{.caption}
+::: -->
+
+
+
 
 [^paged-media-mit]: Erich Van Rijn, « Towards an Open Future for Automated TypsettingHighlights from Paged Media Event, January 9th 2018 », *Pagedmedia.org*, janvier 2018., consulté le 06/02/2020.
 [^commit-pagedjs]: Date du premier *commit* par Fred Chasen sur le *repo* de Paged.js: https://gitlab.coko.foundation/<wbr>pagedjs/<wbr>pagedjs/<wbr>-/commits/<wbr>main
