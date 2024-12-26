@@ -7,7 +7,7 @@ export class createListFigures extends Handler {
         this.counterBefore = "Fig. ";
         this.counterAfter = ". ";
         this.list = true; // ← Set on true if you want a table of figure
-        this.container = "#table-figures_container"; // ← The element inside you want generate the list of figures
+        this.container = "#table-figures_container"; // ← The element inside you want generate the list of figuresg
         this.leaders = false;  // ← Set on true if you want leaders
         this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
    
