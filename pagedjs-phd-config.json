@@ -32,7 +32,13 @@
         "counters": true,
         "textBeforeCounters": "Figure ",
         "textAfterCounters": ". ",
-        "list": []
+        "list": [
+            {
+                "container": "#table-figures_container",
+                "beforepagenumber": " ",
+                "leaders": true
+            }
+        ]
     },
     "notes": {
         "enabled": true,

@@ -3,14 +3,14 @@ import { Handler } from '../../paged.esm.js';
 export class createListFigures extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.container = "#table-figures_container"; // ← The element inside you want generate the list of figures
         this.figures = "figure"; // ← Selectpr of figures to include in the list
         this.counterBefore = "Fig. ";
         this.counterAfter = ". ";
+        this.list = true; // ← Set on true if you want a table of figure
+        this.container = "#table-figures_container"; // ← The element inside you want generate the list of figures
         this.leaders = false;  // ← Set on true if you want leaders
-        this.counters = false; // ← Set on true if you want counters before titles 
-        this.beforePageNumber = "p. "; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
-    
+        this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
+   
     }
 
     beforeParsed(content){
@@ -22,6 +22,11 @@ export class createListFigures extends Handler {
         if(config.figures.selector){ this.figures = config.figures.selector; }
         if(config.figures.textBeforeCounters){ this.counterBefore  = config.figures.textBeforeCounters; }
         if(config.figures.textAfterCounters){ this.counterAfter  = config.figures.textAfterCounters; }
+        if(config.figures.list){
+            this.list = true;
+        }else{
+            this.list = false;
+        }
         if(config.figures.list && config.figures.list[0]){
             if(config.figures.list[0].leaders || config.figures.list[0].leaders === false){ this.leaders  = config.figures.list[0].leaders; }
             if(config.figures.list[0].beforepagenumber || config.figures.list[0].beforepagenumber == ""){ 
@@ -32,6 +37,8 @@ export class createListFigures extends Handler {
 
       }
     /* */
+
+    console.log(config.figures.list);
    
 
     //   createToc({
@@ -50,14 +57,16 @@ export class createListFigures extends Handler {
             counterAfter: this.counterAfter
         });
 
-        createList({
-            content: content,
-            figures: this.figures,
-            container: this.container,
-            beforePage: this.beforePageNumber,
-            leaders: this.leaders
-        })
-    
+        if(this.list){
+            createList({
+                content: content,
+                figures: this.figures,
+                container: this.container,
+                beforePage: this.beforePageNumber,
+                leaders: this.leaders
+            })
+        }
+        
     
     }
     
