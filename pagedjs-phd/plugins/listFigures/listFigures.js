@@ -82,25 +82,30 @@ function createList(config){
     let figures = content.querySelectorAll(config.figures);
     let container = content.querySelector(config.container);
 
-    var ul = document.createElement('ul');
-    ul.id = "list-fig-generated";
-    if(config.beforePage){
-        ul.style.setProperty('--before-page', '"' + config.beforePage + '"');
-    }
+    if(container){
 
-
-    figures.forEach(function (figure, index) {
-        let figcaption = figure.querySelector("figcaption");
-        if(!figure.id){
-            let num = index + 1;
-            figure.id = "figure-listed-" + num;
+        var ul = document.createElement('ul');
+        ul.id = "list-fig-generated";
+        if(config.beforePage){
+            ul.style.setProperty('--before-page', '"' + config.beforePage + '"');
         }
-        var li = document.createElement('li');
-        li.classList.add("elem-fig")
-        li.innerHTML = '<a href="#' + figure.id + '">' + figcaption.innerHTML + '</a>';
-        ul.appendChild(li);
-    });
 
-    container.appendChild(ul);
+
+        figures.forEach(function (figure, index) {
+            let figcaption = figure.querySelector("figcaption");
+            if(!figure.id){
+                let num = index + 1;
+                figure.id = "figure-listed-" + num;
+            }
+            var li = document.createElement('li');
+            li.classList.add("elem-fig")
+            li.innerHTML = '<a href="#' + figure.id + '">' + figcaption.innerHTML + '</a>';
+            ul.appendChild(li);
+        });
+
+        container.appendChild(ul);
+    }else{
+        console.log("No container " + config.container + " find for table of figures")
+    }
 }
 
