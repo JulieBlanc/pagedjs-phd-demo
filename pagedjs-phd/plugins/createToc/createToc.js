@@ -5,8 +5,6 @@ export class createTocHandler extends Handler {
         super(chunker, polisher, caller);
         this.tocContainer = "#toc"; // ← The element inside you want generate the table of content
         this.tocTitles = ["h2", "h3"]; // ← List of title levels to include in the table of contents
-        this.leaders = false;  // ← Set on true if you want leaders
-        this.counters = false; // ← Set on true if you want counters before titles 
         this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
     
     }
@@ -18,8 +16,6 @@ export class createTocHandler extends Handler {
       if(config.toc && config.toc.enabled){
         if(config.toc.container){ this.tocContainer  = config.toc.container; }
         if(config.toc.titles){ this.tocTitles  = config.toc.titles; }
-        if(config.toc.leaders || config.toc.leaders === false){ this.leaders  = config.toc.leaders; }
-        if(config.toc.counters || config.toc.counters === false){ this.counters  = config.toc.counters; }
         if(config.toc.beforepagenumber || config.toc.beforepagenumber == ""){ this.beforePageNumber  = config.toc.beforepagenumber; }
       }
     /* */
@@ -29,8 +25,6 @@ export class createTocHandler extends Handler {
           content: content,
           container: config.toc.container, 
           titleElements: this.tocTitles,
-          leaders: this.leaders,
-          counters: this.counters,
           before: this.beforePageNumber
       });
     
@@ -42,13 +36,9 @@ export class createTocHandler extends Handler {
 
 function createToc(config) {
 
- 
     const content = config.content;
     const tocElement = config.container;
     const titleElements = config.titleElements;
-
-
-  
   
     let tocElementDiv = content.querySelector(tocElement)
     if(!tocElementDiv) return console.warn('couldn’t start the toc')
@@ -56,18 +46,11 @@ function createToc(config) {
     let tocUl = document.createElement('ul')
     tocUl.id = 'list-toc-generated'
 
-    if(config.leaders){
-      tocUl.setAttribute('data-toc-style', 'leaders');
-    }
-    if(config.counters){
-      tocUl.setAttribute('data-toc-set-counter', 'true');
-    }
+
     if(config.before){
-      tocUl.style.setProperty('--toc-before-page', '"' + config.before + '"');
+      tocUl.style.setProperty('--before-page', '"' + config.before + '"');
     }
  
-   
-  
   
     tocElementDiv.appendChild(tocUl)
   

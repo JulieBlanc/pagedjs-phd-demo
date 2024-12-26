@@ -1,5 +1,0 @@
-/* Overwrite or add some styles from pagedjs-phd/plugins/createToc/createToc.css */
-
-#list-toc-generated[data-toc-style="leaders"]{ 
-    --toc-bg: white!important;
-}

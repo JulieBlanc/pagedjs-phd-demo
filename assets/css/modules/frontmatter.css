@@ -39,10 +39,57 @@
 } 
 
 
-/* Keywords */
+/* Keywords ---------------------- */
 #resume p + h1,
 #abstract p + h1{
     margin-top: calc(var(--baseline)*2);
     margin-bottom: var(--baseline)!important;
 
+}
+
+
+/* TABLE OF CONTENT ------------------------------------------------------------ */
+/* Overwrite or add some styles from pagedjs-phd/plugins/createToc/createToc.css */
+
+#table-of-content { 
+    --toc-bg: white!important;
+    --toc-indent: 3ch;
+}
+
+
+#table-of-content #list-toc-generated .toc-element-level-1{
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#table-of-content #list-toc-generated .toc-element-level-2{
+    margin-left: calc(var(--toc-indent)*1);
+}
+
+#table-of-content #list-toc-generated .toc-element-level-3{
+    margin-left: calc(var(--toc-indent)*2);
+}
+
+#table-of-content #list-toc-generated .toc-element-level-4{
+    margin-left: calc(var(--toc-indent)*3);
+}
+
+#table-of-content #list-toc-generated .toc-element-level-5{
+    margin-left: calc(var(--toc-indent)*4);
+}
+
+#table-of-content #list-toc-generated .toc-element-level-6{
+    margin-left: calc(var(--toc-indent)*5);
+}
+
+
+
+/* TABLE OF FIGURES ------------------------------------------------------------ */
+
+#table-of-figures ul li{
+    margin-bottom: calc(var(--baseline)*0.5);
+}
+
+#table-of-figures .fig-num{
+    font-weight: bold;
 }

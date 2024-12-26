@@ -3,12 +3,11 @@ import { Handler } from '../../paged.esm.js';
 export class figuresHandler extends Handler {
     constructor(chunker, polisher, caller) {
         super(chunker, polisher, caller);
-        this.figures = "figure"; // ← Selectpr of figures to include in the list
+        this.figures = "figure"; // ← Select-r of figures to include in the list
         this.counterBefore = "Fig. ";
         this.counterAfter = ". ";
         this.list = true; // ← Set on true if you want a table of figure
         this.container = "#table-figures_container"; // ← The element inside you want generate the list of figuresg
-        this.leaders = false;  // ← Set on true if you want leaders
         this.beforePageNumber = ""; // ← If you want to add some text before the page number ("page ", "p. ", ...) 
    
     }
@@ -28,7 +27,6 @@ export class figuresHandler extends Handler {
             this.list = false;
         }
         if(config.figures.list && config.figures.list[0]){
-            if(config.figures.list[0].leaders || config.figures.list[0].leaders === false){ this.leaders  = config.figures.list[0].leaders; }
             if(config.figures.list[0].beforepagenumber || config.figures.list[0].beforepagenumber == ""){ 
                 this.beforePageNumber  = config.figures.list[0].beforepagenumber;
             }
@@ -51,8 +49,7 @@ export class figuresHandler extends Handler {
                 content: content,
                 figures: this.figures,
                 container: this.container,
-                beforePage: this.beforePageNumber,
-                leaders: this.leaders
+                beforePage: this.beforePageNumber
             })
         }
         
@@ -87,12 +84,9 @@ function createList(config){
     var ul = document.createElement('ul');
     ul.id = "list-fig-generated";
     if(config.beforePage){
-        ul.style.setProperty('--fig-before-page', '"' + config.beforePage + '"');
+        ul.style.setProperty('--before-page', '"' + config.beforePage + '"');
     }
-    if(config.leaders){
-        ul.setAttribute('data-list-style', 'leaders');
-    }
- 
+
 
     figures.forEach(function (figure, index) {
         let figcaption = figure.querySelector("figcaption");

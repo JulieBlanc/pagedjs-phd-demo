@@ -1,0 +1,72 @@
+/*  leader() doesn't work for now, replace with the hack bellow */
+    /* #list-toc-generated[data-toc-style="leaders"] .toc-element a::after{
+    content: leader('.') " p. " target-counter(attr(href), page);
+    float: right;
+} */
+
+/* hack for leaders --------------------------------------------------- */
+
+
+#table-of-content ul,
+#table-of-figures ul,
+#list-of-tables ul{  
+    list-style: none;
+    --toc-bg: white;
+}
+
+
+#table-of-content ul li,
+#table-of-figures ul li,
+#list-of-tables ul li{  
+    overflow-x: hidden;
+    position: relative;
+    display: flex; 
+}
+
+#table-of-content ul li::before,
+#table-of-figures ul li::before,
+#list-of-tables ul li::before{
+    background-color: var(--toc-bg);
+}
+
+#table-of-content ul li::after,
+#table-of-figures ul li::after,
+#list-of-tables ul li::after{
+    content: ".................................................................................................................................................";
+
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    padding-left: 5px;
+    letter-spacing: 2px;
+    z-index: -1;
+}
+
+
+
+#table-of-content ul li a::after,
+#table-of-figures ul li a::after,
+#list-of-tables ul li a::after{
+    float: unset;
+    text-decoration: underline var(--toc-bg) 3px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -2px;
+    display: inline-block;
+    text-align: right;
+    justify-self: end;
+    position: absolute;
+    right: 0ch;
+    bottom: 0px;
+    background-color: var(--toc-bg);
+    padding-left: 5px;
+
+}
+
+#table-of-content ul li a,
+#table-of-figures ul li a,
+#list-of-tables ul li a{
+    padding-right: 5ch; /* keep space for num */
+    text-decoration: underline var(--toc-bg) 3px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -2px;
+}
