@@ -40,30 +40,12 @@ pandoc --defaults pandoc/files.yaml --table-of-contents --template=pandoc/templa
 ```
 
 
-```
-for file in src/cover.md src/abstract.md src/toc.md; do
-  [ -f "$file" ] || echo "" > "$file.tmp"
-done
-
-pandoc $(for file in src/cover.md src/abstract.md src/toc.md; do [ -f "$file" ] && echo "$file" || echo "$file.tmp"; done) src/chapters/*.md \
-  --template=assets/templates/print.html \
-  --metadata-file=meta.yaml \
-  --lua-filter=assets/add_section_ids.lua \
-  --lua-filter=assets/update-image-paths.lua \
-  --citeproc \
-  -o output/print.html
-
-# Nettoyage des fichiers temporaires
-rm -f src/*.tmp
-```
-
-
 Create a file for each printed chapter
 
 ```
 for file in src/chapters/*.md; do    
 	filename=$(basename -- "$file" .md)    
-	pandoc src/cover.md "$file" --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/update-image-paths.lua --citeproc -o "output/${filename}-print.html" 
+	pandoc src/cover.md "$file" --template=pandoc/template.html --metadata-file meta.yaml --lua-filter=pandoc/add_section_ids.lua --lua-filter=pandoc/update-image-paths.lua --citeproc -o "output/${filename}-print.html" 
 	done
 ```
 
@@ -73,15 +55,13 @@ for file in src/chapters/*.md; do
 
 
 
-
-
 ### src/
 
 Folder with all your content. 
 
-- `chapters` → the markdown files of each chapter, please respect the denomination for the chapters (`chapter-01.md`, `chapter-02.md`, etc.)
-- `toc.md` → a special file for the generated table of content with paged.js
-- `cover.md`, `abstract.md`, `acknowledgements.md` → qdd directly the mardown files you need (don’t forget to add this style to your pandoc command line)
+- `chapters/` → the markdown files of each chapter, please respect the denomination for the chapters (`chapter-01.md`, `chapter-02.md`, etc.)
+- `cover.md`, `abstract.md`, `acknowledgements.md` → add directly the mardown files you need (don’t forget to add this filese to `pandoc/files.yaml`)
+- `generated/` → folder of specific files for generated content (table of content, list of figures, list of tables) / You can change the titles but be carefull woth html div
 - `images/` → put here the images of your content
 - `biblio/` 
   - `biblio.bib` ' → the file of your bibliography export from zotero
@@ -92,6 +72,13 @@ Folder with all your content.
 File with metadata that you can reuse in pandoc template (title, author, affiliation) ... + path to your bibliographic files (maybe you need to update if you change the citation style)
 
 
+### pandoc/
+
+- `files.yaml` → list of all the markdown files used in your content (add or remove here)
+- `template/` → templates HTML for Pandoc
+- `add_section_ids.lua` → a script for Pandoc to create an HMTL section that wrap the content of the markdown files, with id based on the name of the file (the content of `abstract.md` is wrapped into  `<section id="abstract"></section`)
+- `update-image-paths.lua` → a script for Pandoc to update the image file paths by standardizing them to the base directory (`../src/images/`)
+
 ### assets/
 
 - `css/` → folder with your css separete in differents modules. If you want to add a module, don’t forget to import it in `style.css`, import also the style sheet of your fonts like this:
@@ -101,10 +88,6 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
   ```
 
 - `fonts/` → add this folder with your fonts
-
-- `template/` → templates HTML for Pandoc
-
-- `update-image-paths.lua` → a script for Pandoc to update the image file paths by standardizing them to the base directory (`../src/images/`)
 
 - `js/` → Folder where you can add your custom Javascript. Use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js. Don’t forget to load your custom file in `pagedjs-phd-config.json`
 
@@ -146,7 +129,7 @@ You can configure some paged.js feature in this file (works only with the pagedj
 ```json
 "toc": {
     "enabled": true,
-    "container": "#toc-here",
+    "container": "#toc_container",
     "titles": [
         ".chapter h2", 
         ".chapter h3"
@@ -168,7 +151,7 @@ Note: the style of the table of content can be customize into this CSS folders
 
 #### Notes
 
-Determine if you want footnotes
+Determine if you want footnotes, sidenotes or margin-notes (create the correct HTML, styles need to be added in your custom css)
 
 ```json
 "notes": {
@@ -182,7 +165,7 @@ Determine if you want footnotes
 
 - `"enabled": true` →  Enables or disables the notes feature (it will inline the notes in list from Pandoc)
 - `"type"` → Specifies the type of notes. Option avaible: `"footnote"`, `"sidenote"`, `"margin-notes"`
-- `"resetCounter"`→ CSS element where the counter note reset (if you want to reset on the page: "page", reset on the page work only  with footnotes)
+- `"resetCounter"`→ CSS element where the counter note reset (if you want to reset on the page: `"page"`, reset on the page work only with footnotes)
 - `"callInput"` → Identifies the elements used to reference notes in the text / by default: ".footnote-ref"
 - `"containerNotes"` → Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering) / by default: "#footnotes" 
 
