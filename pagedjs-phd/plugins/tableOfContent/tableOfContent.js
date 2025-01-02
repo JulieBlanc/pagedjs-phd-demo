@@ -62,7 +62,7 @@ function createToc(config) {
       titleElement.forEach(function (element) {
         // check if shouldbe shown
         if (
-          !element.classList.contains('toc-ignore')
+          !element.classList.contains('toc-ignore') || !element.classList.contains('toc-ignore')
         ) {
           // add classes to the element
           element.classList.add('title-element')

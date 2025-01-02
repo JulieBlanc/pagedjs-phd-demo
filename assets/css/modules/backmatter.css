@@ -1,7 +1,7 @@
-#credits h1,
-#glossary h1,
-#glossaire h1,
-#index h1{
+section#credits h1,
+section#glossary h1,
+section#bibliography h1,
+section#index h1{
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -9,16 +9,25 @@
     font-size: var(--font-size);
     line-height: var(--baseline);
     margin-bottom: calc(var(--baseline)*1);
+    string-set: title content(text);
+
 }
 
 
-#glossary,
-#glossaire,
-#index{
+section#bibliography,
+section#glossary,
+section#index{
     break-before: right;
-
+    page: backmatter;
 }
 
-#credits{
+
+@page backmatter :first{
+    @top-left{ 
+        content: none;
+    }
+}
+
+section#credits{
     break-before: page;
 }

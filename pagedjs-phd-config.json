@@ -14,7 +14,7 @@
     },
     "toc":{
         "enabled": true,
-        "container": "#toc",
+        "container": "#toc_container",
         "titles":[
             "h1",
             ".chapter h2",
@@ -26,13 +26,13 @@
      },
      "figures": {
         "enabled": true,
-        "selector": "figure:not(.unlisted-figure)",
+        "selector": "figure:not(.unlisted)",
         "counters": true,
         "textBeforeCounters": "Figure ",
         "textAfterCounters": ". ",
         "list": [
             {
-                "container": "#table-figures_container",
+                "container": "#list-figures_container",
                 "beforepagenumber": ""
             }
         ]
@@ -43,21 +43,6 @@
         "resetCounter": ".chapter",
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"
-    },
-    "menu": {
-        "lang": "fr",
-        "items": [
-            "cover",
-            "abstract",
-            "table of content",
-            "acknowledgements",
-            "table of figures",
-            "introduction",
-            "chapters",
-            "conclusion",
-            "bibliography",
-            "credits"
-        ]
     }
 
 

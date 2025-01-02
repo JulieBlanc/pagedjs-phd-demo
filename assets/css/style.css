@@ -39,3 +39,8 @@
   --pagedjs-float-elem: next-page;
 }
 
+
+
+#figure-2{
+  --pagedjs-full-page: page;
+}

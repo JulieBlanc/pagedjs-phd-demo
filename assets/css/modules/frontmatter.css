@@ -3,9 +3,9 @@
 #resume,
 #acknowledgments,
 #remerciements,
-#table-of-content,
-#table-of-figures,
-#table-of-tables,
+section#table-of-content,
+section#list-of-figures,
+section#list-of-tables,
 #preface,
 #foreword, 
 #avant-propos{
@@ -23,9 +23,9 @@
 #resume h1,
 #acknowledgments h1,
 #remerciements h1,
-#table-of-content h1,
-#table-of-figures h1,
-#table-of-tables h1,
+section#table-of-content h1,
+section#list-of-figures h1,
+section#list-of-tables h1,
 #preface h1,
 #foreword h1, 
 #avant-propos h1{
@@ -50,12 +50,12 @@
 
 
 
-/* TABLE OF FIGURES ------------------------------------------------------------ */
+/* LIST OF FIGURES ------------------------------------------------------------ */
 
-#table-of-figures ul li{
+section#list-of-figures ul li{
     margin-bottom: calc(var(--baseline)*0.5);
 }
 
-#table-of-figures .fig-num{
+section#list-of-figures .fig-num{
     font-weight: bold;
 }

@@ -1,4 +1,4 @@
-import { phd } from './plugins/phd.js';
+import { pandocTransform } from './plugins/pandocTransform.js';
 import { figuresHandler } from './plugins/listFigures/listFigures.js';
 import { createTocHandler } from './plugins/tableOfContent/tableOfContent.js';
 import { fullPageHandler } from './plugins/fullPage.js';
@@ -14,7 +14,7 @@ import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 // Export the array of plugin handlers
 export function getHandlersAndCSS(config) {
   const handlers = [
-    phd,
+    pandocTransform,
     moveElems,
     floatElems,
     fullPageHandler,
