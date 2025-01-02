@@ -7,6 +7,7 @@
 
 
 # Composer avec les&nbsp;technologies du&nbsp;web {.unlisted}
+
 ## Genèses instrumentales collectives <br>pour le développement d'une communauté <br>de pratique de designers graphiques {.unlisted}
 
 

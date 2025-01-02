@@ -16,7 +16,7 @@
         "enabled": true,
         "container": "#toc_container",
         "titles":[
-            "h1",
+            "h1:not(.unlisted)",
             ".chapter h2",
             ".chapter h3",
             ".chapter h4",

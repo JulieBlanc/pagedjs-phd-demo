@@ -10,12 +10,12 @@
         counter-reset: counterTocLevel1; 
     }
 
-    #list-toc-generated .toc-element-level-1:not(.no-counter){ 
+    #list-toc-generated .toc-element-level-1.toc-chapter:not(.no-counter){ 
         counter-increment: counterTocLevel1; 
         counter-reset: counterTocLevel2; 
     }
 
-    #list-toc-generated .toc-element-level-1:not(.no-counter)::before{ 
+    #list-toc-generated .toc-element-level-1.toc-chapter:not(.no-counter)::before{ 
         content: counter(counterTocLevel1) ". ";
         white-space: nowrap;
         padding-right: 5px;
