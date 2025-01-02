@@ -1,3 +1,5 @@
+# Conclusion
+
 En conclusion, nous aimerions mettre en perspective quelques points de ce travail de recherche par rapport à ce que nous avons pu observer à travers notre pratique et à travers nos interactions avec le monde du design graphique de manière plus générale durant ces quelques années de travail. Nous en profitons pour ouvrir quelques questions laissées en suspens et qui concernent l'avenir de ces nouvelles pratiques utilisant les technologies du web pour la conception, la composition et la mise en page de divers supports imprimés. 
 
 

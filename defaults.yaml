@@ -1,0 +1,9 @@
+input-files:
+  - src/cover.md
+  - src/abstract.md
+  - src/introduction.md
+  - src/chapters/chapter-01.md
+  - src/chapters/chapter-02.md
+  - src/chapters/chapter-03.md
+  - src/conclusion.md
+  - src/credits.md

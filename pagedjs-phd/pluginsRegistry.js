@@ -14,7 +14,7 @@ import { fixFootnotes } from './plugins/fix-footnotes/fix-footnotes.js';
 // Export the array of plugin handlers
 export function getHandlersAndCSS(config) {
   const handlers = [
-    phd,
+    // phd,
     moveElems,
     floatElems,
     fullPageHandler,

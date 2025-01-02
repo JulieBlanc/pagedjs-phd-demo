@@ -30,15 +30,13 @@ Create print.html file (all content)
 
 
 ```
-pandoc src/cover.md src/abstract.md src/introduction.md src/chapters/*.md src/conclusion.md src/credits.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua  --lua-filter=assets/add_fig_num.lua --citeproc -o output/print.html
+pandoc src/cover.md src/abstract.md src/introduction.md src/chapters/*.md src/conclusion.md src/credits.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --lua-filter=assets/add_fig_num.lua --citeproc -o output/print.html
 ```
 
 
-
+````
+pandoc --defaults defaults.yaml --table-of-contents --lua-filter=assets/exclude_toc.lua --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
 ```
-pandoc src/cover.md src/abstract.md src/introduction.md src/chapters/*.md src/conclusion.md src/credits.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/group-figures.lua --citeproc -o output/print.html
-```
-
 
 
 ```

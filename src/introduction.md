@@ -1,3 +1,5 @@
+# Introduction 
+
 Les 20 et 21 octobre 2017 à la Gaîté Lyrique à Paris, se tient un salon de l'édition libre et alternative où les participant·e·s présentent des productions et ouvrages imprimés réalisés avec les technologies du web et/ou des outils expérimentaux (génératifs, collaboratifs, libres et open source). Le salon est organisé par le collectif informel PrePostPrint[^prepostprint], initié par l'artiste et designer Raphaël Bastide et la designer graphique Sarah Garcin quelques mois plus tôt. La présentation de l'évènement rend compte de ce qui anime ce groupe de participant·e·s: 
 
 ![test figure](/src/images/graphic-means_1.jpeg){#test-figure .unlisted-figure}
