@@ -9,7 +9,7 @@
 }
 
 
-.generate-num-chapter{
+.chapter h1::before{
     display: block;
     font-variant: none;
     text-transform: uppercase;

@@ -30,12 +30,13 @@ Create print.html file (all content)
 
 
 ```
-pandoc src/cover.md src/abstract.md src/introduction.md src/chapters/*.md src/conclusion.md src/credits.md --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --lua-filter=assets/add_fig_num.lua --citeproc -o output/print.html
+pandoc --defaults pandoc/files.yaml --template=pandoc/template.html --metadata-file meta.yaml --lua-filter=pandoc/add_section_ids.lua --lua-filter=pandoc/update-image-paths.lua --citeproc -o output/print.html
 ```
 
 
-````
-pandoc --defaults defaults.yaml --table-of-contents --lua-filter=assets/exclude_toc.lua --template=assets/templates/print.html --metadata-file meta.yaml --lua-filter=assets/add_section_ids.lua --lua-filter=assets/update-image-paths.lua --citeproc -o output/print.html
+With table of content from pandoc:
+```
+pandoc --defaults pandoc/files.yaml --table-of-contents --template=pandoc/template.html --metadata-file meta.yaml --lua-filter=pandoc/add_section_ids.lua --lua-filter=pandoc/update-image-paths.lua --citeproc -o output/print.html
 ```
 
 

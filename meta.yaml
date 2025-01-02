@@ -6,5 +6,4 @@ affiliation: "Université Paris 8 – ED&nbsp;224 / EnsadLab / EUR ArTeC"
 object: "Thèse de doctorat en ergonomie"
 bibliography: src/biblio/biblio.bib
 csl: src/biblio/chicago-full-note.csl
-
 ---
