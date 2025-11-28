@@ -2,11 +2,9 @@
 
 Demonstration of a thesis workflow based on pandoc and paged.js
 
-(need more documentation)
 
 
-
-## Requierment
+## Requirements
 
 - [Pandoc](https://pandoc.org/), the universal converter
 - [Better Bibtex for Zotero](https://retorque.re/zotero-better-bibtex/) for generating citation keys
@@ -229,9 +227,6 @@ export default class myCustomHandler extends Handler {
 
 ### To do
 
-- table des figures
-- table des tableaux
-- documenter "menu" de la config
 - full page
 - endnote (to section)
 - web version
