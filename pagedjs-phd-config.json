@@ -39,7 +39,7 @@
     },
     "notes": {
         "enabled": true,
-        "type": "footnote",
+        "type": "margin-note",
         "resetCounter": ".chapter",
         "callInput": ".footnote-ref", 
         "containerNotes": "#footnotes"

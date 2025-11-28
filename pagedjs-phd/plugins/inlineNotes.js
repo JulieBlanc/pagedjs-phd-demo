@@ -8,6 +8,7 @@ export class inlineNotesHandler extends Handler {
         this.input = ".footnote-ref"; // ← CSS selector of the call element 
         this.containerNotes = "#footnotes"; // ← CSS selector of the container of the footnote
         this.type = "footnote"; // ← Type of notes (just to add a class: ".pagedjs_footnote")
+    
     }
 
 

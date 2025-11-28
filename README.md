@@ -164,7 +164,7 @@ Determine if you want footnotes, sidenotes or margin-notes (create the correct H
 ```
 
 - `"enabled": true` →  Enables or disables the notes feature (it will inline the notes in list from Pandoc)
-- `"type"` → Specifies the type of notes. Option avaible: `"footnote"`, `"sidenote"`, `"margin-notes"`
+- `"type"` → Specifies the type of notes. Option avaible: `"footnote"`, `"sidenote"`, `"margin-note"`
 - `"resetCounter"`→ CSS element where the counter note reset (if you want to reset on the page: `"page"`, reset on the page work only with footnotes)
 - `"callInput"` → Identifies the elements used to reference notes in the text / by default: ".footnote-ref"
 - `"containerNotes"` → Specifies the container element where the notes are displayed by pandoc (this element is deleted after rendering) / by default: "#footnotes" 
