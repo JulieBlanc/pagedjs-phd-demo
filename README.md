@@ -41,6 +41,23 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 - Don't forget to add new markdown files to `pandoc/files.yaml` to include them in the final document
 
 
+## Generate PDF
+
+Once your HTML file is generated and displayed in the browser:
+
+1. Open the file in your browser (`localhost:5500/output/print.html`)
+2. Wait for Paged.js to finish rendering all pages
+3. Use the browser's print function:
+   - **Chrome/Chromium**: File → Print or Ctrl+P (Cmd+P on Mac)
+   - **Firefox**: File → Print or Ctrl+P (Cmd+P on Mac)
+4. In the print dialog:
+   - Destination: "Save as PDF"
+   - Paper size: A4 (or your chosen format)
+   - Margins: None
+   - Background graphics: Enabled
+5. Save the PDF
+
+**Note:** For best results, use Chrome or a Chromium-based browser (Edge, Brave, etc.) as they have better support for CSS print features.
 
 
 ## Pandoc commands
@@ -108,10 +125,10 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
 
 ### pandoc/
 
-- `files.yaml` → list of all the markdown files used in your content (add or remove here)
-- `template/` → templates HTML for Pandoc
-- `add_section_ids.lua` → a script for Pandoc to create an HMTL section that wrap the content of the markdown files, with id based on the name of the file (the content of `abstract.md` is wrapped into  `<section id="abstract"></section`)
-- `update-image-paths.lua` → a script for Pandoc to update the image file paths by standardizing them to the base directory (`../src/images/`)
+- `files.yaml` → list of all the markdown files used in your content (add or remove files here to include them in the final document)
+- `template.html` → HTML template for Pandoc output (defines the structure of the generated HTML file)
+- `add_section_ids.lua` → Lua filter that wraps each markdown file content in an HTML `<section>` tag with an ID based on the filename (e.g., content from `abstract.md` becomes `<section id="abstract">...</section>`)
+- `update-image-paths.lua` → Lua filter that standardizes image paths to use the base directory structure (`../src/images/`)
 
 ### assets/
 
@@ -356,10 +373,10 @@ export default class myCustomHandler extends Handler {
 - Try a hard refresh in your browser (Ctrl+Shift+R or Cmd+Shift+R)
 
 
-### To do
+  ## Roadmap (to do)
 
-- full page
-- endnote (to section)
-- web version
-- metadata in pandoc template for cover ?
-- ajouter une page si ce n’est pas un multiple de 2 ou 4
+  - Full-page elements support 
+  - Endnotes (notes grouped by section instead of footnotes/sidenotes)
+  - Web version
+  - Enhanced metadata handling in Pandoc template for cover page customization
+  - Automatic blank page insertion to ensure page count is multiple of 4 (for booklet printing)
