@@ -137,9 +137,25 @@ Create this directory if doesn’t exist, before launching Pandoc command. It’
 
 ### pagedjs-phd/
 
-A ready-to-start Paged.js environnement with some preloaded plugins and interface to see pages. Licence: MIT licence, Julie Blanc.
+  A ready-to-start Paged.js environment with preloaded plugins and interface to view pages. License: MIT license, Julie Blanc.
 
-Normaly, you don’t need to touch anything here.
+  This folder contains:
+  - `paged.esm.js` → Paged.js core library (ES module)
+  - `main-script.js` → Main initialization script
+  - `pluginsRegistry.js` → Plugin registry and loader
+  - `css/` → Interface styles (baseline, page display, recto-verso view)
+  - `plugins/` → Pre-installed plugins:
+    - `tableOfContent.js` → Automatic table of contents generation
+    - `listFigures.js` → Automatic list of figures generation
+    - `inlineNotes.js` → Inline notes from Pandoc footnotes
+    - `sidenotes.js` → Sidenote positioning and rendering
+    - `marginNotes.js` → Margin note positioning and rendering
+    - `floatElems.js` → Floating elements management
+    - `fullPage.js` → Full-page elements support
+    - `pandocTransform.js` → Pandoc HTML structure transformations
+    - `reload-in-place.js` → Auto-reload without losing page position
+
+  Normally, you don't need to modify anything here. All configuration is done through `pagedjs-phd-config.json`.
 
 
 
@@ -295,6 +311,34 @@ export default class myCustomHandler extends Handler {
     }
 }
 ```
+
+
+## Troubleshooting
+
+### The local server doesn't work
+- Check that the Live Server extension is properly installed in VS Codium
+- Verify that the HTML file exists in the `output/` folder
+- Try a different port if 5500 is already in use
+
+### Images don't display
+- Check that images are in the `src/images/` folder
+- Verify that the image paths in your markdown files are correct
+- Make sure the `update-image-paths.lua` filter is included in the Pandoc command
+
+### Styles are not applied
+- Check that `style.css` is properly linked in `pagedjs-phd-config.json`
+- Verify that all CSS modules are imported in `assets/css/style.css`
+- Clear your browser cache and reload the page
+
+### Footnotes/sidenotes/margin-notes rendering issues
+- Check the `notes` configuration in `pagedjs-phd-config.json`
+- Verify that the corresponding CSS module is imported (footnotes.css, sidenotes.css, or margin-notes.css)
+- Make sure the `containerNotes` selector matches your document structure
+
+### Changes don't appear after regenerating
+- Check that you're regenerating the correct output file
+- Verify that your local server is pointing to the right file
+- Try a hard refresh in your browser (Ctrl+Shift+R or Cmd+Shift+R)
 
 
 ### To do
