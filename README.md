@@ -30,6 +30,7 @@ This workflow handles all the essential features for academic thesis layout:
   - [Figures & list of figures](#figures)
   - [Notes (footnotes, sidenotes, margin notes)](#notes)
   - [Custom Script (handlers)](#custom-script-handlers)
+- [License](#license)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap-to-do)
 
@@ -199,7 +200,7 @@ Create this directory if it doesn't exist, before launching Pandoc command. It's
 
 ### pagedjs-phd/
 
-  A ready-to-start Paged.js environment with preloaded plugins and interface to view pages. License: MIT license, Julie Blanc.
+  A ready-to-start Paged.js environment with preloaded plugins and interface to view pages. License: CC BY-NC 4.0, Julie Blanc.
 
   This folder contains:
   - `paged.esm.js` → Paged.js core library (ES module)
@@ -375,6 +376,21 @@ export default class myCustomHandler extends Handler {
 ```
 
 
+## License
+
+This project is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (Creative Commons Attribution-NonCommercial 4.0 International).
+
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+- Attribution — You must give appropriate credit
+- NonCommercial — You may not use the material for commercial purposes
+
+
+
+
 ## Troubleshooting
 
 ### The local server doesn't work
@@ -401,6 +417,8 @@ export default class myCustomHandler extends Handler {
 - Check that you're regenerating the correct output file
 - Verify that your local server is pointing to the right file
 - Try a hard refresh in your browser (Ctrl+Shift+R or Cmd+Shift+R)
+
+
 
 
   ## Roadmap (to do)
