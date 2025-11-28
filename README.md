@@ -428,3 +428,15 @@ Under the following terms:
   - Web version
   - Enhanced metadata handling in Pandoc template for cover page customization
   - Automatic blank page insertion to ensure page count is multiple of 4 (for booklet printing)
+
+
+
+  ## Push
+
+  Gitlab: https://gitlab.com/JulieBlanc/pagedjs-phd-demo/
+  Github: https://github.com/JulieBlanc/pagedjs-phd-demo
+
+```
+  git push origin main
+git push github main
+```
