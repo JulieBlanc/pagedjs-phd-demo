@@ -20,7 +20,12 @@ Demonstration of a thesis workflow based on pandoc and paged.js
   - [assets/](#assets)
   - [output/](#output)
   - [pagedjs-phd/](#pagedjs-phd)
-  - [pagedjs-phd-config.json](#pagedjs-phd-configjson)
+- [Configuration (pagedjs-phd-config.json)](#configuration-pagedjs-phd-configjson)
+  - [Stylesheet configuration](#stylesheet-configuration)
+  - [Table of content](#table-of-content)
+  - [Figures](#figures)
+  - [Notes](#notes)
+  - [Custom Script (handlers)](#custom-script-handlers)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap-to-do)
 
@@ -212,11 +217,11 @@ Create this directory if it doesn't exist, before launching Pandoc command. It's
 
 
 
-### pagedjs-phd-config.json
+## Configuration (pagedjs-phd-config.json)
 
-You can configure some paged.js features in this file (works only with the pagedjs-phd environment):
+The `pagedjs-phd-config.json` file is the central configuration file for your thesis layout and behavior. This is where you control how your document is rendered, including styles, table of contents, figures, and notes. All these settings work with the pagedjs-phd environment without needing to modify the JavaScript code.
 
-#### Update the path of your stylesheet
+### Stylesheet configuration
 
 ```json
  "style": {
@@ -231,7 +236,7 @@ You can configure some paged.js features in this file (works only with the paged
 - `"files"` → files of the style, you can add multiple ones    
 
 
-#### Table of content
+### Table of content
 
 ```json
 "toc": {
@@ -256,7 +261,7 @@ Note: the style of the table of content can be customize into this CSS folders
 - `assets/css/modules/toc-counters.css` → add counters before each toc element (don't forget to change in the same way into `title-counter.css`)
 
 
-#### Figures
+### Figures
 
 Configure automatic figure numbering and generate a list of figures:
 
@@ -288,7 +293,7 @@ Configure automatic figure numbering and generate a list of figures:
 Note: the style of the list of figures can be customized in `assets/css/modules/figure.css`
 
 
-#### Notes
+### Notes
 
 Determine if you want footnotes, sidenotes or margin-notes (create the correct HTML, styles need to be added in your custom css)
 
@@ -330,7 +335,7 @@ It’s also possible to make sidenotes (`"type": "sidenote"`) or margin notes (`
 - `"align"` → Determines the top alignment of the sidenote relative to this element (the first on the page) / works only for sidenotes
 
 
-#### Custom Script (handlers)
+### Custom Script (handlers)
 
 You can add your custom Javascript. For this, use [handlers](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/) from Paged.js [(see documentation)](https://pagedjs.org/documentation/10-handlers-hooks-and-custom-javascript/). Add your files in `/assets/js/` and load your custom file like this:
 
