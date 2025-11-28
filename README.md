@@ -13,11 +13,32 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 - Web browser (caution: there may be differences in rendering between browsers)
 
 
-## Use
+## Quick Start
 
-- Every time you change something in the markdown file, use the Pandoc command to regenerate your html file.
-- Launch Live server to see the result in the browser.
-- Go to → `localhost:5500/output/print.html`
+1. **Create the output directory** (if it doesn't exist):
+   ```bash
+   mkdir output
+   ```
+
+2. **Generate your HTML file** with Pandoc:
+   ```bash
+   pandoc --defaults pandoc/files.yaml --template=pandoc/template.html --metadata-file meta.yaml --lua-filter=pandoc/add_section_ids.lua --lua-filter=pandoc/update-image-paths.lua --citeproc -o output/print.html
+   ```
+
+3. **Start a local server** (e.g., with Live Server extension in VS Codium)
+
+4. **View the result** in your browser at `localhost:5500/output/print.html` (the port number may vary depending on your local server configuration)
+
+5. **Edit your content** in `src/` folder and regenerate the HTML file each time you make changes
+
+
+## Workflow
+
+- Every time you change something in the markdown files, use the Pandoc command to regenerate your html file
+- The local server (Live Server) can automatically reload the page when the HTML file changes
+- You can customize the visual output by editing the CSS modules in `assets/css/modules/`
+- To update the configuration (notes, table of content, figures), edit `pagedjs-phd-config.json`
+- Don't forget to add new markdown files to `pandoc/files.yaml` to include them in the final document
 
 
 
@@ -58,7 +79,7 @@ for file in src/chapters/*.md; do
 Folder with all your content. 
 
 - `chapters/` → the markdown files of each chapter, please respect the denomination for the chapters (`chapter-01.md`, `chapter-02.md`, etc.)
-- `cover.md`, `abstract.md`, `acknowledgements.md` → add directly the markdown files you need (don't forget to add these files to `pandoc/files.yaml`)
+- `cover.md`, `abstract.md`, `introduction.md`, `conclusion.md`, `credits.md` → add directly the markdown files you need (don't forget to add these files to `pandoc/files.yaml`)
 - `generated/` → folder of specific files for generated content (table of content, list of figures, list of tables) / You can change the titles but be careful with html div
 - `images/` → put here the images of your content
 - `biblio/`
@@ -79,11 +100,30 @@ File with metadata that you can reuse in pandoc template (title, author, affilia
 
 ### assets/
 
-- `css/` → folder with your css separete in differents modules. If you want to add a module, don’t forget to import it in `style.css`, import also the style sheet of your fonts like this:
+- `css/` → folder with your css separate in different modules. If you want to add a module, don't forget to import it in `style.css`, import also the style sheet of your fonts like this:
 
   ```
   @import "../fonts/Brill_webfont/stylesheet.css";
   ```
+
+  Available CSS modules:
+  - `modules/var.css` → CSS variables (colors, fonts, spacing)
+  - `modules/layout.css` → page layout and margins
+  - `modules/text.css` → typography and text styles
+  - `modules/figure.css` → figure and image styles
+  - `modules/footnotes.css` → footnote styles
+  - `modules/sidenotes.css` → sidenote styles
+  - `modules/margin-notes.css` → margin note styles
+  - `modules/titles.css` → heading styles
+  - `modules/titles-counter.css` → heading numbering
+  - `modules/introduction-conclusion.css` → styles for introduction and conclusion sections
+  - `modules/cover.css` → cover page styles
+  - `modules/table-of-content.css` → table of contents styles
+  - `modules/toc-counters.css` → table of contents numbering
+  - `modules/leaders.css` → leader dots for table of contents
+  - `modules/frontmatter.css` → front matter section styles
+  - `modules/biblio.css` → bibliography styles
+  - `modules/backmatter.css` → back matter section styles
 
 - `fonts/` → add this folder with your fonts
 
