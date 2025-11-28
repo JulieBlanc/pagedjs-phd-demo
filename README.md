@@ -3,6 +3,27 @@
 Demonstration of a thesis workflow based on pandoc and paged.js
 
 
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+- [Workflow](#workflow)
+- [Generate PDF](#generate-pdf)
+- [Pandoc commands](#pandoc-commands)
+  - [Generate complete document](#generate-complete-document)
+  - [Alternative: Generate with Pandoc's table of contents](#alternative-generate-with-pandocs-table-of-contents)
+  - [Generate individual chapter files](#generate-individual-chapter-files)
+- [Files organisation](#files-organisation)
+  - [src/](#src)
+  - [meta.yml](#metayml)
+  - [pandoc/](#pandoc)
+  - [assets/](#assets)
+  - [output/](#output)
+  - [pagedjs-phd/](#pagedjs-phd)
+  - [pagedjs-phd-config.json](#pagedjs-phd-configjson)
+- [Troubleshooting](#troubleshooting)
+- [Roadmap](#roadmap-to-do)
+
 
 ## Requirements
 
