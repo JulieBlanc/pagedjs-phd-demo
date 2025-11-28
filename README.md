@@ -15,7 +15,7 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 
 ## Use
 
-- Every time you change something in the markdown file, use the Pandoc command to regenerate yout html file.
+- Every time you change something in the markdown file, use the Pandoc command to regenerate your html file.
 - Launch Live server to see the result in the browser.
 - Go to → `localhost:5500/output/print.html`
 
@@ -58,11 +58,11 @@ for file in src/chapters/*.md; do
 Folder with all your content. 
 
 - `chapters/` → the markdown files of each chapter, please respect the denomination for the chapters (`chapter-01.md`, `chapter-02.md`, etc.)
-- `cover.md`, `abstract.md`, `acknowledgements.md` → add directly the mardown files you need (don’t forget to add this filese to `pandoc/files.yaml`)
-- `generated/` → folder of specific files for generated content (table of content, list of figures, list of tables) / You can change the titles but be carefull woth html div
+- `cover.md`, `abstract.md`, `acknowledgements.md` → add directly the markdown files you need (don't forget to add these files to `pandoc/files.yaml`)
+- `generated/` → folder of specific files for generated content (table of content, list of figures, list of tables) / You can change the titles but be careful with html div
 - `images/` → put here the images of your content
-- `biblio/` 
-  - `biblio.bib` ' → the file of your bibliography export from zotero
+- `biblio/`
+  - `biblio.bib` → the file of your bibliography export from zotero
   - `chicago-full-note.csl` → choosen citation style in Citation Style Language (CSL). See here the complete list of style you can choose → https://github.com/citation-style-language/styles (download the correct one and replace it)
 
 ### `meta.yml`
@@ -144,7 +144,39 @@ You can configure some paged.js feature in this file (works only with the pagedj
 Note: the style of the table of content can be customize into this CSS folders:
 - `assets/css/modules/table-of-content.css` → global styles
 - `assets/css/modules/leaders.css` → add leaders to your table
-- `assets/css/modules/toc-counters.css` → add counters before each toc element (don’t fordet to change in the same way into `title-counter.css`)
+- `assets/css/modules/toc-counters.css` → add counters before each toc element (don't forget to change in the same way into `title-counter.css`)
+
+
+#### Figures
+
+Configure automatic figure numbering and generate a list of figures:
+
+```json
+"figures": {
+    "enabled": true,
+    "selector": "figure:not(.unlisted)",
+    "counters": true,
+    "textBeforeCounters": "Figure ",
+    "textAfterCounters": ". ",
+    "list": [
+        {
+            "container": "#list-figures_container",
+            "beforepagenumber": ""
+        }
+    ]
+}
+```
+
+- `"enabled"` → Enables or disables automatic figure numbering
+- `"selector"` → CSS selector to target figures (use `:not(.unlisted)` to exclude specific figures from numbering, add the class `.unlisted` in your content)
+- `"counters"` → Enables or disables counter display before figure captions
+- `"textBeforeCounters"` → Text displayed before the figure number (e.g., "Figure ", "Fig. ")
+- `"textAfterCounters"` → Text displayed after the figure number (e.g., ". ", " - ")
+- `"list"` → Configuration for generating list of figures
+  - `"container"` → Specifies the container element where the list of figures will be inserted (find it in `src/generated/list-of-figures.md`)
+  - `"beforepagenumber"` → Customizes text or symbols to display before the page number (e.g., "Page", "p.")
+
+Note: the style of the list of figures can be customized in `assets/css/modules/figure.css`
 
 
 #### Notes
@@ -205,7 +237,7 @@ You can add your custom Javascript. For this, use [handlers](https://pagedjs.o
 ```
 
 - `"directory"` → path of the directory
-- `"files"` → yout js files with custom handlers   
+- `"files"` → your js files with custom handlers   
 
 
 Template to create handlers with paged.esm.js (module ECMAScript.):
