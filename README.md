@@ -1,6 +1,16 @@
 # PHD demo
 
-Demonstration of a thesis workflow based on pandoc and paged.js
+Demonstration of a thesis workflow based on Markdown, Pandoc and Paged.js.
+
+Write your thesis in Markdown, convert it to HTML with Pandoc, and get a print-ready layout with Paged.js. Customizable CSS-based styling.
+
+This workflow handles all the essential features for academic thesis layout:
+- Automatic table of contents
+- Figure numbering and list of figures
+- Bibliography management with citations
+- Flexible notes system (footnotes, sidenotes, or margin notes)
+- Chapter numbering and structuring
+
 
 
 ## Table of Contents
@@ -23,8 +33,8 @@ Demonstration of a thesis workflow based on pandoc and paged.js
 - [Configuration (pagedjs-phd-config.json)](#configuration-pagedjs-phd-configjson)
   - [Stylesheet configuration](#stylesheet-configuration)
   - [Table of content](#table-of-content)
-  - [Figures](#figures)
-  - [Notes](#notes)
+  - [Figures & list of figures](#figures)
+  - [Notes (footnotes, sidenotes, margin notes)](#notes)
   - [Custom Script (handlers)](#custom-script-handlers)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap-to-do)
@@ -261,7 +271,7 @@ Note: the style of the table of content can be customize into this CSS folders
 - `assets/css/modules/toc-counters.css` → add counters before each toc element (don't forget to change in the same way into `title-counter.css`)
 
 
-### Figures
+### Figures & list of figures
 
 Configure automatic figure numbering and generate a list of figures:
 
@@ -293,7 +303,7 @@ Configure automatic figure numbering and generate a list of figures:
 Note: the style of the list of figures can be customized in `assets/css/modules/figure.css`
 
 
-### Notes
+### Notes (footnotes, sidenotes, margin notes)
 
 Determine if you want footnotes, sidenotes or margin-notes (create the correct HTML, styles need to be added in your custom css)
 
